@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Reisekarte</title>
 <link rel="stylesheet" href="map.css" />
-<!--<meta charset="UTF-8">-->
+<meta charset="UTF-8">
 <style type="text/css">
 	html, body, #mapDiv {
 		margin: 0;
@@ -302,9 +302,9 @@
 	  	}
 	  	content += "<\/table><\/div>";
 	  	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-	  		var contentadmin = "<span class='admin'><br><table><tr><td><a class='button button-blue' style='color: #fff;' href='javascript:loeschen();'>Löschen</a></td><td><a class='button button-green' style='color: #fff;' href='javascript:updatemarker();'>Update</a></td></tr></table></span>"
+	  		var contentadmin = "<span class='admin'><br><table><tr><td><a class='button button-blue' style='color: #fff;' href='javascript:loeschen();'>LÃ¶schen</a></td><td><a class='button button-green' style='color: #fff;' href='javascript:updatemarker();'>Update</a></td></tr></table></span>"
 		} else {
-	  		var contentadmin = "<span class='admin'><br><table><tr><td><a href='javascript:loeschen();'><img src='icon-trash.gif' alt='Löschen'/></a></td><td><a href='javascript:updatemarker();'><img src='edit_ico.png' alt='Update Marker'/></a></td></tr></table></span>"
+	  		var contentadmin = "<span class='admin'><br><table><tr><td><a href='javascript:loeschen();'><img src='icon-trash.gif' alt='LÃ¶schen'/></a></td><td><a href='javascript:updatemarker();'><img src='edit_ico.png' alt='Update Marker'/></a></td></tr></table></span>"
 	  	}
 		//var infowindow = new google.maps.InfoWindow({
         	//	content: content
@@ -337,7 +337,7 @@
 	        		markerdelete = marker;
 	        		if (zugriff == 3) {$('span.admin').show(); } else {$('span.admin').hide();}
 	        		//infowindow.open(map,marker); //alle bleiben offen
-	        		//nochmal öffnen um volle größe zu erlangen...
+	        		//nochmal Ã¶ffnen um volle grÃ¶ÃŸe zu erlangen...
 	        		//google.maps.event.addListenerOnce(infoWindow, 'domready', function(){
 	        		//	infoWindow.open(map,marker);
 	        		//});
@@ -346,7 +346,7 @@
         	//google.maps.event.addListener(marker, 'rightclick', function() {
         	//	if (zugriff == 3) { alert("bin da");}
     		//});
-        	if (loading == 1) {//wird bei "newentry" und update ausgeführt
+        	if (loading == 1) {//wird bei "newentry" und update ausgefÃ¼hrt
         		markerClusterer.addMarker(marker);//, opt_nodraw:boolean)
         		markerdelete = marker;
         		loading = 0;
@@ -427,7 +427,7 @@
       var bestaetigung;
       function loeschen() {
       	bestaetigung = 0;
-        $.fancybox.open("Wollen Sie diesen Marker wirklich löschen?<br><br><br><div align=\"right\"><a class=\"button button-green\" style=\"color: #fff;\" href=\"javascript:bestaetigung=1;$.fancybox.close();\">Löschen<\/a><a title=\"Close\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">Abbruch<\/a><\/div>", { 
+        $.fancybox.open("Wollen Sie diesen Marker wirklich lÃ¶schen?<br><br><br><div align=\"right\"><a class=\"button button-green\" style=\"color: #fff;\" href=\"javascript:bestaetigung=1;$.fancybox.close();\">LÃ¶schen<\/a><a title=\"Close\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">Abbruch<\/a><\/div>", { 
         		afterClose : function() { if (bestaetigung == 1) {loeschen2(); }}, 
         		closeBtn : false,
         		helpers : {
@@ -480,7 +480,7 @@
       function updatemarker() {
       	$('#ueberschrift').val(markerdelete.title);
       	$('#beschreibung').val(markerdelete.mybeschreibung);
-      	//daten ins tinymce übernehmen
+      	//daten ins tinymce Ã¼bernehmen
       	//if (init == 1) {tinyMCE.get('beschreibung').setContent(markerdelete.mybeschreibung, {format : 'raw'});}
       	$('#koordinaten').val(markerdelete.mycoordinate);
       	$('#visit').val(markerdelete.mycategory);
@@ -489,7 +489,7 @@
       	$('#land').val(markerdelete.myland);
       	$('#land_kurz').val(markerdelete.mylandkurz);
       	$('#adresse').val("");
-      	//$('#insert-data-output').val("Daten erfolgreich übernommen!");
+      	//$('#insert-data-output').val("Daten erfolgreich Ã¼bernommen!");
       	$("#btn_update").css('display', '');
       	$("#btn_newentry").css('display', 'none');
       	$("#someID").click();
@@ -497,16 +497,16 @@
       function updatemarker2(callback) {
         if (loading != 0) { 
         	if (loading == 2) {
-      			callback("Das Update wird bereits durchgeführt, bitte warten!");
+      			callback("Das Update wird bereits durchgefÃ¼hrt, bitte warten!");
       		} else {
       			callback("Geocoder arbeitet, bitte warten!");
       		}
       		return; 
       	}
       	loading = 2;
-      	//prüfen ob leer
+      	//prÃ¼fen ob leer
       	if ($('#ueberschrift').val() == '' || $('#koordinaten').val() == ''){
-      		$('#insert-data-output').val("Abbruch: Bitte füllen Sie die Pflichtfelder 'Adresse' und 'Überschrift' aus!");
+      		$('#insert-data-output').val("Abbruch: Bitte fÃ¼llen Sie die Pflichtfelder 'Adresse' und 'Ãœberschrift' aus!");
       		loading = 0;
       		return;
       	}
@@ -528,8 +528,8 @@
         var insert = [];
         insert.push('UPDATE ');
         insert.push(tableId);
-        insert.push(' SET '); //(\'Überschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz)
-        insert.push("\'Überschrift\' = '" + $('#ueberschrift').val() + "', ");
+        insert.push(' SET '); //(\'Ãœberschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz)
+        insert.push("\'Ãœberschrift\' = '" + $('#ueberschrift').val() + "', ");
         insert.push("Beschreibung = '" + $('#beschreibung').val() + "', ");
         insert.push("Location = '" + $('#koordinaten').val() + "', ");
         insert.push("Visit = '" + $('#visit').val() + "', ");
@@ -554,7 +554,7 @@
         	//var retObj = gapi.auth.getToken();
         	//console.log(retObj);
         	refresh = new Date();
-        	//query ausführen nach refresh token
+        	//query ausfÃ¼hren nach refresh token
         	query(insert.join(''), function (ret) {
         	callback(ret); 
         	//$("#btn_search").css('display', '');
@@ -595,16 +595,16 @@
       function newentry(callback) { 
         if (loading != 0) {
         	if (loading == 1) {
-      			callback("Es wird bereits hinzugefügt, bitte warten!");
+      			callback("Es wird bereits hinzugefÃ¼gt, bitte warten!");
       		} else {
       			callback("Geocoder arbeitet, bitte warten!");
       		}
       		return; 
       	}
       	loading = 1;
-      	//prüfen ob leer
+      	//prÃ¼fen ob leer
       	if ($('#ueberschrift').val() == '' || $('#koordinaten').val() == ''){
-      		$('#insert-data-output').val("Abbruch: Bitte füllen Sie die Pflichtfelder 'Adresse' und 'Überschrift' aus!");
+      		$('#insert-data-output').val("Abbruch: Bitte fÃ¼llen Sie die Pflichtfelder 'Adresse' und 'Ãœberschrift' aus!");
       		loading = 0;
       		return;
       	}
@@ -625,7 +625,7 @@
         var insert = [];
         insert.push('INSERT INTO ');
         insert.push(tableId);
-        insert.push(' (\'Überschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz) VALUES (');
+        insert.push(' (\'Ãœberschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz) VALUES (');
         insert.push("'" + $('#ueberschrift').val() + "', ");
         insert.push("'" + $('#beschreibung').val() + "', ");
         insert.push("'" + $('#koordinaten').val() + "', ");
@@ -720,9 +720,9 @@
         var restRequest = gapi.client.request(request);
         //restRequest.execute(callback);
         restRequest.execute(function(resp) {
-        	//console.log(resp); //resp.status sollte 200 zurückgeben https://groups.google.com/forum/?fromgroups#!topic/fusion-tables-users-group/ilcu87_OM1M
+        	//console.log(resp); //resp.status sollte 200 zurÃ¼ckgeben https://groups.google.com/forum/?fromgroups#!topic/fusion-tables-users-group/ilcu87_OM1M
         	//console.log(resp);
-        	//update und löschen
+        	//update und lÃ¶schen
         	//columns[0] == "affected_rows"
         	//rows[0][0] == "1"
         	//kind == "fusiontables#sqlresponse"
@@ -777,7 +777,7 @@
 		}*/
 		google.maps.event.addListener(marker2, 'dragend', function() {
 			if (loading != 0) {
-				$('#insert-data-output').val("Es ist ein Prozess im Gange! Verschieben nicht möglich!");
+				$('#insert-data-output').val("Es ist ein Prozess im Gange! Verschieben nicht mÃ¶glich!");
 				var arr = $('#koordinaten').val().toString().split(","); //new google.maps.LatLng(
 				marker2.setPosition(new google.maps.LatLng(arr[0], arr[1]));
 				return;
@@ -813,7 +813,7 @@
 									Ort = v.long_name;
 								}						
 							});
-						$('#insert-data-output').val("Geocode erfolgreich durchgeführt!");
+						$('#insert-data-output').val("Geocode erfolgreich durchgefÃ¼hrt!");
 						//console.log("Pos. geo.: " + results[0].geometry.location.Ya + ", " + results[0].geometry.location.Za)
 						//marker2.setPosition(new google.maps.LatLng(results[0].geometry.location.Ya, results[0].geometry.location.Za));
 						//map2.setCenter(marker2.getPosition());//new google.maps.LatLng(
@@ -844,9 +844,9 @@
       function detailinformationen(addresse, callback) {
       	if (loading != 0) { 
       		if (loading == 3) {
-      			callback("Geocoding wird bereits durchgeführt, bitte warten!");
+      			callback("Geocoding wird bereits durchgefÃ¼hrt, bitte warten!");
       		} else {
-      			callback("Geocoding nicht möglich, es läuft bereits ein Update des Markers!");
+      			callback("Geocoding nicht mÃ¶glich, es lÃ¤uft bereits ein Update des Markers!");
       		}
       		return; 
       	}
@@ -856,7 +856,7 @@
       		loading = 0;
       		return;
       	} else if (addresse == alte_adresse) {
-      		callback("Geocode wurde bereits mit dieser Adresse durchgeführt!");
+      		callback("Geocode wurde bereits mit dieser Adresse durchgefÃ¼hrt!");
       		loading = 0;
       		return;
       	} else {
@@ -888,7 +888,7 @@
 						Ort = v.long_name;
 					}
 				});
-				callback("Geocode erfolgreich durchgeführt!");
+				callback("Geocode erfolgreich durchgefÃ¼hrt!");
 				//vorschaukarte
 				showpreviewmarker(results[0].geometry.location.lat(),results[0].geometry.location.lng());
 			} else {
@@ -1019,7 +1019,7 @@
 		 	}
 		 	//$("span.admin").show();
 		 	//$("span.admin").css('display', '');
-		 	$.fancybox.open("Sie wurden erfolgreich eingeloggt!<br>Sie können mittels der Schaltfläche \'map editor\' einen Eintrag hinzufügen!<br><br><br><div align=\"right\"><a title=\"OK\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">OK<\/a><\/div>", {
+		 	$.fancybox.open("Sie wurden erfolgreich eingeloggt!<br>Sie kÃ¶nnen mittels der SchaltflÃ¤che \'map editor\' einen Eintrag hinzufÃ¼gen!<br><br><br><div align=\"right\"><a title=\"OK\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">OK<\/a><\/div>", {
 		 		closeBtn : false,
       				helpers : { 
       					title : null, //{
@@ -1282,7 +1282,7 @@
     	var Staedte = 0;
         test(function(ret) { 
         	test2(function(ret){
-        		document.getElementById ('description1').innerHTML = "<b>Wir haben " + Staedte + " Städte in " + Laender + " unterschiedlichen Ländern gesehen.</b>"; 
+        		document.getElementById ('description1').innerHTML = "<b>Wir haben " + Staedte + " StÃ¤dte in " + Laender + " unterschiedlichen LÃ¤ndern gesehen.</b>"; 
         		});
         });*/
         
@@ -1292,7 +1292,7 @@
         function test2(callback) {
         	//var query = "SELECT 'Ueberschrift Name', Address, Beschreibung FROM " + '15UY2pgiz8sRkq37p2TaJd64U7M_2HDVqHT3Quw';
         	//SELECT COUNT(DISTINCT Land) AS Laender FROM 1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs
-        	var query = "SELECT \'Überschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz, ROWID FROM " + '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs' + " ORDER BY Land_kurz";
+        	var query = "SELECT \'Ãœberschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz, ROWID FROM " + '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs' + " ORDER BY Land_kurz";
         	var encodedQuery = encodeURIComponent(query);
         	// Construct the URL
         	var url = ['https://www.googleapis.com/fusiontables/v1/query'];
@@ -1335,7 +1335,7 @@
         			}
         			//markerCluster.addMarkers(markers);
         			// markerClusterer = new MarkerClusterer(map, markers);
-        			//$("#description").text("©2012 MCPat. Wir haben " + z + " Städte in x unterschiedlichen Ländern gesehen.");
+        			//$("#description").text("Â©2012 MCPat. Wir haben " + z + " StÃ¤dte in x unterschiedlichen LÃ¤ndern gesehen.");
         		}           
         	}).complete(function() { 
         		markerClusterer = new MarkerClusterer(map, markers, {
@@ -1344,10 +1344,10 @@
              			imagePath: "m"
              		});
              		//Staedte = z;
-             		$("#description1").html("<b>Wir haben " + z + " Städte in " + y + " unterschiedlichen Ländern gesehen.</b>"); 
-             		//document.getElementById ('description1').innerHTML = "<b>Wir haben " + z + " Städte in " + y + " unterschiedlichen Ländern gesehen.</b>"
+             		$("#description1").html("<b>Wir haben " + z + " StÃ¤dte in " + y + " unterschiedlichen LÃ¤ndern gesehen.</b>"); 
+             		//document.getElementById ('description1').innerHTML = "<b>Wir haben " + z + " StÃ¤dte in " + y + " unterschiedlichen LÃ¤ndern gesehen.</b>"
              		callback(z);
-             		//$("#description").text("©2012 MCPat. Wir haben " + z + " Städte in " + 0 + " unterschiedlichen Ländern gesehen.");
+             		//$("#description").text("Â©2012 MCPat. Wir haben " + z + " StÃ¤dte in " + 0 + " unterschiedlichen LÃ¤ndern gesehen.");
              		//nicht gesehen ausblenden
              		//hide("0");
              	});
@@ -1374,7 +1374,7 @@
                         		Laender += 1;
                         		//Staedte += rows[i][1];
                         	}         
-                        	//$("description").text("©2012 MCPat. Wir haben " + z + " Städte in " + Laender + " unterschiedlichen Ländern gesehen.");
+                        	//$("description").text("Â©2012 MCPat. Wir haben " + z + " StÃ¤dte in " + Laender + " unterschiedlichen LÃ¤ndern gesehen.");
                         }
                }).complete(function() { 
         		callback(Laender);
@@ -1430,7 +1430,7 @@
 	<div id="mapBorder">
 		<div id="mapDiv"></div>
 	</div><div id="legWrap" style="top: 45px; "><div id="legDiv" style="display: block; "><!--<form action="#">--><span id="legendDesc">Unsere Ziele: </span><input type="checkbox" id="1box" checked="yes" onclick="boxclick(this,'1')" /><span style="background-image: url(beachflag_small.png); background-repeat:no-repeat; ">Gesehen</span>&nbsp;&nbsp;<input type="checkbox" id="2box" checked="yes" onclick="boxclick(this,'2')" /><span style="background-image: url(favorit_small.png); background-repeat:no-repeat; ">Favorit</span>&nbsp;&nbsp;<input type="checkbox" id="0box" onclick="boxclick(this,'0')" /><span style="background-image: url(notvisited.png); background-repeat:no-repeat; ">Geplant</span>&nbsp;&nbsp;<input type="checkbox" id="3box" checked="yes" onclick="boxclick(this,'3')" />Markercluster<!--</form>--></div></div>
-	<div id="descriptionWrap"><div id="description">©2012 MCPat. <span id="description1"></span></div></div>
+	<div id="descriptionWrap"><div id="description">Â©2012 MCPat. <span id="description1"></span></div></div>
 	</div>
 	
 </body>
@@ -1441,7 +1441,7 @@
 				<tr><td>Adresse:</td><td><input id="adresse" style="border: 1px solid #A4A4A4; width: 200px; padding: 1px;" type="text" />&nbsp;<a title="Suche" id="btn_search" class="button button-green" style="color: #fff;" href="javascript:detailinformationen($('#adresse').val(), function(ret){$('#insert-data-output').val(ret); });"><img id="sucheloading" style="vertical-align:middle; margin-right: 10px; display:none;" height="16px" width="16px" src="loading_transparent2.gif" alt="Loading"/>Suche</a></td><td rowspan=11 valign=top ><div id="mapDiv2" style="width: 250px; height: 400px"></div></td></tr>
 				<tr><td>Ort:</td><td><input id="ort" style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" readonly /></td></tr>
 				<tr><td>Land:</td><td><input id="land" style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" readonly /></td></tr>
-				<tr><td>Länderkürzel:</td><td><input style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 30px; padding: 1px;" id="land_kurz" type="text" readonly /></td></tr>
+				<tr><td>LÃ¤nderkÃ¼rzel:</td><td><input style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 30px; padding: 1px;" id="land_kurz" type="text" readonly /></td></tr>
 				<tr><td>Koordinaten<font color="#ff0000">*</font>:</td><td><input style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" id="koordinaten" type="text" readonly /></td></tr>
 				<tr><td>Besuchstatus:</td><td>
 					<select id="visit" style="border: 1px solid #A4A4A4; width: 120px; padding: 1px;" >
@@ -1450,7 +1450,7 @@
 						<option value="2">Favorit</option>
 					</select></td></tr>
 				<tr><td>Fotourl:</td><td><input id="foto" style="border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" /></td></tr>
-				<tr><td>Überschrift<font color="#ff0000">*</font>:</td><td><input id="ueberschrift" style="border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" /></td></tr>
+				<tr><td>Ãœberschrift<font color="#ff0000">*</font>:</td><td><input id="ueberschrift" style="border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" /></td></tr>
 				<!--<tr><td>Beschreibung:</td><td><input id="beschreibung" style="border: 1px solid #A4A4A4;" type="text" size="70" ></td></tr>-->
 				<tr><td>Beschreibung:</td><td><textarea id="beschreibung" style='border: 1px solid #A4A4A4; width: 597px; height: 197px; padding: 1px;' class="tinymce"></textarea></td></tr>
 				<tr><td>&nbsp;</td></tr>
@@ -1461,7 +1461,7 @@
 			<!--</p>
 			<p>-->
 			<div align="right">
-				<a id="btn_newentry" title="Add" class="button button-green" style="color: #fff;" href="javascript:newentry(function(ret){$('#insert-data-output').val(ret);});">Hinzufügen</a>
+				<a id="btn_newentry" title="Add" class="button button-green" style="color: #fff;" href="javascript:newentry(function(ret){$('#insert-data-output').val(ret);});">HinzufÃ¼gen</a>
 				<a id="btn_update" title="Add" class="button button-green" style="color: #fff; display:none;" href="javascript:updatemarker2(function(ret){$('#insert-data-output').val(ret);});">Update</a>
 				<a id="btn_close" title="Close" class="button button-blue" style="color: #fff;" href="javascript:$.fancybox.close();">Abbruch</a>
 				<!--<div id="fancybox-loading"><div></div></div>-->
