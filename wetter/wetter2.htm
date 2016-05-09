@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Weather Widget</title>
+<!--<style type="text/css">
+/* CSS goes here */
+#wxWrap {
+    width: 350px;
+    background: #EEE; /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(224,224,224,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,240,240,1)), color-stop(100%,rgba(224,224,224,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, rgba(240,240,240,1) 0%,rgba(224,224,224,1) 100%); /* W3C */
+    padding: 2px 13px 2px 11px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#wxIntro {
+    display: inline-block;
+    font: 14px/20px Arial,Verdana,sans-serif;
+    color: #666;
+    vertical-align: top;
+    padding-top: 9px;
+}
+#wxIcon {
+    display: inline-block;
+    width: 61px;
+    height: 34px;
+    margin: 2px 0 -1px 1px;
+    overflow: hidden;
+    background: url('http://l.yimg.com/a/lib/ywc/img/wicons.png') no-repeat 61px 0;
+}
+#wxIcon2 {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin: 1px 6px 0 8px;
+    overflow: hidden;
+}
+#wxTemp {
+    display: inline-block;
+    font: 20px/28px Arial,Verdana,sans-serif;
+    color: #333;
+    vertical-align: top;
+    padding-top: 5px;
+    margin-left: 0;
+}
+</style>-->
+<style type="text/css">
+    body {
+        font-family: "Trebuchet MS", Tahoma, Verdana;
+        font-size: 10px;
+        font-weight: normal;
+        color: #777777;
+        text-decoration: none;
+        background-color: #FFFFFF;
+    }
+    #weather {
+        width: 192px;
+        height: 96px;
+    }
+    #current {
+        width: 192px;
+        height: 96px;
+        text-align: right;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    #current #temp {
+        font-size: 20px;
+        font-style: normal;
+        padding-top: 38px;
+        padding-right: 12px;
+        height: 24px;
+    }
+    #current #fore {
+        padding-right: 12px;
+        font-size: 10px;
+        height: 12px;
+    }
+    #current #city {
+        padding-right: 12px;
+    }
+    </style>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    function k(time) {
+    	//var datetime = Date.parse('01 Jul 2012 ' + time);
+    	//var datetime = new Date("Jul 31 2012 " + time);
+    	//return datetime;
+    	d = new Date;
+        return r = new Date(d.toDateString() + " " + time)
+    }
+function wetter(location, platzhalter) {
+var query = encodeURIComponent('select item.condition, location, item.forecast, astronomy, item.pubDate from weather.forecast where woeid="' + location + '" AND u="c"'), 
+    url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";  //item
+ //https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%2C%20location%2C%20item.forecast%2C%20astronomy%2C%20item.pubDate%20from%20weather.forecast%20where%20woeid%3D548536%20%20AND%20u%3D%22c%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
+    $.getJSON(url, function(data) { 
+    	//console.log(data);
+        var info = data.query.results.channel[0].item.condition;
+        var ort = data.query.results.channel[0].location;
+        var vorschau = data.query.results.channel[0].item.forecast;
+        var sonne = data.query.results.channel[0].astronomy;
+        
+        wpd = data.query.results.channel[0].item.pubDate;
+        n = wpd.indexOf(":");
+        tpb=k(wpd.substr(n-2,8));
+        tsr=k(sonne.sunrise);
+        tss=k(sonne.sunset);
+        ampm=tpb>tsr&&tpb<tss?"d":"n";
+        //alert("Daynight: " + daynight + ' - ' + tpb + ' - ' + tsr + ' - ' + tss);
+        
+        /*var t = info.date;
+        t = t.replace(/ pm /g," pm (");
+        t = t.replace(/ am /g," am (") + ")";
+        var aktualisiert = new Date(t);
+        var ampm = "n";
+        var t2 = sonne.sunrise.split(":");
+        var t3 = t2[1].split(" ");
+        var stunde = parseInt(t2[0]);
+        if (t3[1] == "pm") {stunde += 12;}
+        var t4 = sonne.sunset.split(":");
+        var t5 = t4[1].split(" ");
+        var stunde2 = parseInt(t4[0]);
+        if (t5[1] == "pm") {stunde2 += 12;}
+        var sunrise = new Date(aktualisiert.getFullYear(),aktualisiert.getMonth(),aktualisiert.getDate(),stunde, t3[0],0);
+        var sunset = new Date(aktualisiert.getFullYear(),aktualisiert.getMonth(),aktualisiert.getDate(),stunde2, t5[0],0); //new Date(aktualisiert.getFullYear() + '-' + (aktualisiert.getMonth() + 1) + '-' + aktualisiert.getDate() + ' ' + sonne.sunset);
+        //console.log(ort.city);
+        //console.log("Akt: " + aktualisiert);
+        //console.log("sunrise: " + sunrise + '(' + sonne.sunrise + ')');
+        //console.log("sunset: " + sunset + '(' + sonne.sunset + ')');       
+        if (aktualisiert > sunrise && aktualisiert < sunset) {
+        	ampm = "d";
+        } */
+        //Country
+        var country = ort.country
+        switch(country){
+        	/*case 'Maldives':
+        		country = 'Maldives'
+        		break;*/
+        	case 'United States':
+        		country = 'USA'
+        		break;
+        	default:
+        		
+        }
+        $(platzhalter).children('#current').children('#temp').html(info.temp + '&deg;C');
+        $(platzhalter).children('#current').children('#city').html(ort.city + ', ' + country);
+        $(platzhalter).children('#current').children('#fore').html(vorschau.low + '&deg;C - ' + vorschau.high + '&deg;C');
+        var imageUrl = 'icon' + ampm + '.png';
+        $(platzhalter).css({backgroundSize: '152px auto', backgroundImage: 'url(' + imageUrl + ')',backgroundRepeat: 'no-repeat',backgroundPosition: '32px 38px'}); 
+        $(platzhalter).children('#current').css({backgroundSize: '100% auto', backgroundImage: 'url(http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px 0px'}); //http://l.yimg.com/a/i/us/nws/weather/gr/29d.png
+        $(platzhalter).children('#current').attr('title',info.text);   
+});
+}
+wetter('548536','#weather');
+wetter('1105779','#weather2');
+wetter('1100908','#weather3');
+wetter('1105762','#weather4');
+/*
+$(function(){
+    // Specify the ZIP/location code and units (f or c)
+    var loc = 'AUXX0008'; // or e.g. SPXX0050
+    var u = 'c'; //c=celsius, f=fahrenheit
+
+    var query = "SELECT item.condition, location, item.forecast, astronomy FROM weather.forecast WHERE location='" + loc + "' AND u='" + u + "'";
+    var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    var url = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json' //&_nocache=' + cacheBuster;
+
+    window['wxCallback'] = function(data) {
+    	//console.log(data);
+        var info = data.query.results.channel.item.condition;
+        var ort = data.query.results.channel.location;
+        var vorschau = data.query.results.channel.item.forecast;
+        var sonne = data.query.results.channel.astronomy;
+        //$('#wxIcon').css({
+        //    backgroundPosition: '-' + (61 * info.code) + 'px 0'
+        //}).attr({
+        //    title: info.text
+        //});
+        //$('#wxIcon2').append('<img src="http://l.yimg.com/a/i/us/we/52/' + info.code + '.gif" width="34" height="34" title="' + info.text + '" />');
+        //$('#wxIntro').html('Wetter in ' + ort.city + ', ' + ort.country + '(L' + vorschau[0].low + '°C, H' + vorschau[0].high + '°C)');
+        //$('#wxIcon2').append('<img src="http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + 'd.png" width="34" height="34" title="' + info.text + '" />'); //http://l.yimg.com/a/i/us/nws/weather/gr/
+        //$('#wxTemp').html(info.temp + '&deg;' + (u.toUpperCase()));
+        
+        //neu
+        var t = info.date;
+        t = t.replace(/ pm /g," pm (");
+        t = t.replace(/ am /g," am (") + ")";
+        var aktualisiert = new Date(t);
+        //var date = new Date("Mon, 30 Jul 2012 9:49 am (CEST)");
+        var ampm = "n";
+        var sunrise = new Date(aktualisiert.getFullYear() + '-' + (aktualisiert.getMonth() + 1) + '-' + aktualisiert.getDate() + ' ' + sonne.sunrise);
+        var sunset = new Date(aktualisiert.getFullYear() + '-' + (aktualisiert.getMonth() + 1) + '-' + aktualisiert.getDate() + ' ' + sonne.sunset);
+        //console.log("Akt: " + aktualisiert);
+        //console.log("sunrise: " + sunrise);
+        //console.log("sunset: " + sunset);
+        if (aktualisiert > sunrise && aktualisiert < sunset) {
+        	ampm = "d";
+        } 
+        //Country
+        var country = ort.country
+        switch(country){
+        	case 'AU':
+        		country = 'Austria'
+        		break;
+        	case 'GM':
+        		country = 'Germany'
+        		break;
+        	default:
+        		
+        }
+        $('#weather').children('#current').children('#temp').html(info.temp + '&deg;' + (u.toUpperCase()));
+        $('#weather').children('#current').children('#city').html(ort.city + ', ' + country);
+        $('#weather').children('#current').children('#fore').html(vorschau[0].low + '°C - ' + vorschau[0].high + '°C');
+        var imageUrl = 'icon' + ampm + '.png';
+        $('#weather').css({backgroundImage: 'url(' + imageUrl + ')',backgroundRepeat: 'no-repeat',backgroundPosition: '40px 40px'});
+        $('#weather').children('#current').css({backgroundImage: 'url(http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px -10px'});
+        $('#weather').children('#current').attr('title',info.text);
+    };
+    $.ajax({
+        url: url,
+        dataType: 'jsonp',
+        cache: true,
+        jsonpCallback: 'wxCallback'
+    });
+}); */
+</script>
+</head>
+
+<body style="background-color:transparent">
+    <div id="weather"><!-- style="background:url('icond.png') no-repeat 40px 40px;"> <?php echo $ampm; ?>-->
+        <div id="current"><!-- style="background:url('http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/29d.png') no-repeat 0px -10px;">-->
+            <div id="temp"></div>
+            <div id="fore"></div>
+            <div id="city"></div>
+        </div>
+    </div>
+    <div id="weather2">
+        <div id="current">
+            <div id="temp"></div>
+            <div id="fore"></div>
+            <div id="city"></div>
+        </div>
+    </div>
+    <div id="weather3">
+        <div id="current">
+            <div id="temp"></div>
+            <div id="fore"></div>
+            <div id="city"></div>
+        </div>
+    </div>
+    <div id="weather4">
+        <div id="current">
+            <div id="temp"></div>
+            <div id="fore"></div>
+            <div id="city"></div>
+        </div>
+    </div>
+<!--<div id="wxWrap">
+    <span id="wxIntro"></span>
+    <span id="wxIcon2"></span>
+    <span id="wxTemp"></span>
+</div>-->
+</body>
+</html>
