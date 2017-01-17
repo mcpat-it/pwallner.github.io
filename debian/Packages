@@ -1,0 +1,91 @@
+Package: enigma2-plugin-systemplugins-mcpat-build
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Source: ftp://www.unknown.com
+Version: 0.9-r0
+Depends: enigma2 (>=4.3), coreutils (>=8.25), ncurses (>=6.0), grep (>=2.23), wget (>=1.17), libz-dev (>=1.2.8)
+Filename: ./build-essential-0.9-r0.deb
+Size: 16366954
+MD5sum: fa82e3b10e63b35003c0b34e2a3a5060
+SHA1: 33afa3f066e1a3c1b06ecdf72f2f62f517bf9019
+SHA256: 4a1a001b6356b945336a693cacb2e0770f1fa074c6cb7646ca9a32586d26294a
+SHA512: 4d67227e69aa96fa61b8894098fb186539b13fa1a0d7e911b3e1bb0eb130e33552e0a5b9b736160074a80e871a26ece7953c5c1c6d54b26b871233f475cad367
+Description: Build essentials ~ 41,0MB
+ Build essentials (based on debian jessie)
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
+
+Package: gp-cam-feed-configs
+Priority: optional
+Section: base
+Maintainer: onestep.cc
+Architecture: armhf
+Version: 2.1-r0.1
+Filename: ./gp-cam-feed-configs_2.1-r0.1_armhf.deb
+Size: 1668
+MD5sum: 1b7dc87de003f0f11908bf88e8b10efe
+SHA1: 4e6a184219adfba90779cf6c7f3ba5bc46300013
+SHA256: 7ceedd3b4df2de28ee9aaef96ff802087ac59ef67cee6487ae7c87ef87a2a017
+SHA512: 5f64f1e3c4d699528e31a3f7b49b5d3129d718acbcf4d61fcf07d5f439d97dd08e78227c89738501fea16cba80050a864377ed3cdb0c3174ad94a95e00aaf9f3
+Description: onestep.cc gemini cam feed
+ onestep.cc gemini cam feed.
+OE: gp-cam-feed-configs
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.onestep.cc
+
+Package: dreamciplus
+Priority: optional
+Section: base
+Maintainer: unknown <unknown@unknown.com>
+Architecture: all
+Version: 5.1-r2
+Replaces: dream-ci-plus
+Provides: dream-ci-plus
+Conflicts: dream-ci-plus
+Filename: ./dreamciplus_5.1-r2_all.deb
+Size: 962100
+MD5sum: 2109b754d62bc88696bac9965992e3ba
+SHA1: 845889e5108cd97516e17acda72c448875149945
+SHA256: 4a37fe136bd258e67d565df393c1ccb005fdeb115fa1a37a7d9e41561adadfc2
+SHA512: 42d9549f3fbfe9bdff7397338598bcb30b7c3eab62c333ae321ee9dc771fc6c1a4198fc0d3b18b50cbd385471f770e31aa5923a417e871f90b1397569785e6cf
+Description: dreambox ci module plus
+
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 5.7
+Depends: enigma2 (>= 4.3.0r22), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_5.7_all.deb
+Size: 1127722
+MD5sum: 891c725b3a8cbb0fe2809a2485102e9e
+SHA1: 4f8163ff20a4784cb10bc35ef4f4af3b4b2019e4
+SHA256: 8ddc3cb21af0609150704b1d9e8e6d1ed878fc82056be1ad8484067e24a8327d
+SHA512: 94c2b071121ed907559c3fae846ab64890a20e474d752e72240460b1cc0d3e221af0fcb903a35a27485193b585dddbed015277c872820b79f1d7b754db2801b3
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+PackageArch: mips32el
+Homepage: wwww.nachtfalke.biz
+
+Package: gp-cam-oscam-1.20
+Priority: optional
+Section: cam
+Maintainer: unknown
+Architecture: armhf
+Source: ftp://www.unknown.com
+Version: 1.20-svn11342-r0
+Depends: enigma2 (>=4.3), libusb-1.0-0 (>= 1.0.20), libcrypto1.0.0 (>= 1.0.2h)
+Filename: ./gp-cam-oscam-1.20.deb
+Size: 672850
+MD5sum: 19d6e83d064fc987d858a484797b68e4
+SHA1: 185c2c36f143fc9178f53c41cd4d6632b6911295
+SHA256: 3980cb8529def62ebb6ac7417fe3b59d3dc903d3224254c93f6f42236b356b2a
+SHA512: 12488501fcb4054d0c0ee7c0e4205cf3d7a37ac7bf2624604cde16bb72e954be925d3b26644b9626dc4db735324f10c3d75f989324527575e07516b3d14ea0e0
+Description: OScam 1.20 svn11342 (Standard WebIf, SSL, ipv6) ~ 0,8MB
+ OScam 1.20 svn11342 (Standard WebIf, SSL, ipv6) and OSEmu Startscript. No Config included!
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.unknown.com
+
