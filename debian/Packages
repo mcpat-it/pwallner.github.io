@@ -20,19 +20,41 @@ OE: apr
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
 
+Package: libserf1
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: serf
+Version: 1.3.9
+Depends: libapr1 (>= 1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libgssapi-krb5-2 (>= 1.13.6), libssl1.0.0 (>= 1.0.2)
+Filename: ./libserf1_1.3.9_armhf.deb
+Size: 230838
+MD5sum: 4d1da718d9ee81cec19eff0f820bab1c
+SHA1: 7dc90b16145d672576c6ae0077b969068e014be9
+SHA256: 2338a020c36258228f8f49b2605acb2ab0da572ea034f5df1c74982504ce6b53
+SHA512: 86e1c286b2a372c15749d773241a2696da4225e2184526e84fe3283b5e44d09f1fa393da576395c277411c2a944850ba798c722e7c48b7b485a3f72b7456c266
+Description: high-performance asynchronous HTTP client library
+ serf library is a C-based HTTP client library built upon the Apache
+ Portable Runtime (APR) library.  It multiplexes connections, running the
+ read/write communication asynchronously.  Memory copies and
+ transformations are kept to a minimum to provide high performance
+ operation.
+Homepage: http://code.google.com/p/serf/
+
 Package: subversion
 Priority: optional
 Section: vcs
 Maintainer: mcpat
 Architecture: armhf
 Version: 1.9.5
-Depends: libapr1 (>= 1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libsqlite3-0 (>=3:3.11.0), libexpat1 (>=2.1.0)
+Depends: libapr1 (>= 1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libsqlite3-0 (>=3:3.11.0), libexpat1 (>=2.1.0), libserf1 (>=1.3.9)
 Filename: ./subversion_1.9.5_armhf.deb
-Size: 7733512
-MD5sum: 10c5dcd8e2f2756f57d775618a48986e
-SHA1: 0cd4d48acee32b6829bd38a8648a85437317b804
-SHA256: cc987dc41460bf3de7dbcd858ae1eb44ff7a47eb80157ae01a805390082a600f
-SHA512: 91e4c388954607b2233804622842df8a6328ee956ca93f4160206efd070535b8f39b9938bff9d828b1cef41d714e2669879549ab85ac079c49212ef7938cd361
+Size: 8337838
+MD5sum: a33fce9ad26f4898dae4afda58df1b50
+SHA1: c5e9de5aad33dc1b289966ce415dcc3c9fa81a86
+SHA256: b7613a3e86cd50e4e368ec2af3234a328a87b7c8370349252ba19810d3fe0fab
+SHA512: 29007918b60db19930b6bafb3ddd655ef030e601345d1ae49f25dc1269b9a3421f06e7758c87b3dee4ab6ceb84856660d216bc08633c1282b0243dd9c739d469
 Description: Advanced version control system
  Apache Subversion, also known as svn, is a centralised version control
  system.  Version control systems allow many individuals (who may be
@@ -44,6 +66,30 @@ Description: Advanced version control system
  This package includes the Subversion client (svn), repository
  administration tools (svnadmin, svnlook) and a network server (svnserve).
 Homepage: http://subversion.apache.org/
+
+Package: libpcsclite1
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: pcsc-lite
+Version: 1.8.20
+Depends: libc6 (>= 2.23)
+Filename: ./libpcsclite1_1.8.20_armhf.deb
+Size: 80422
+MD5sum: b8be29feb762be70d653a1c288787f25
+SHA1: 35bddc65f8df5ed43ab1451f9bc7d0e753a72e38
+SHA256: 3a467de65f637e624989013b7c7fa0fe8029be9e336cced65dbe525259a7376c
+SHA512: b55173be65c3acf92b977c1946057a34f53115e007701f13a7f29db2f53431d5f0cd071d798f2c994e276b99d172404c838aef8972d59ad604199616a301b1f8
+Description: Middleware to access a smart card using PC/SC (library)
+ The purpose of PC/SC Lite is to provide a Windows(R) SCard interface
+ in a very small form factor for communicating to smartcards and
+ readers.
+ .
+ The PC/SC Lite library is used to connect to the PC/SC daemon from
+ a client application and provide access to the desired reader.
+Multi-Arch: same
+Homepage: http://pcsclite.alioth.debian.org/
 
 Package: dialog
 Priority: optional
@@ -80,6 +126,37 @@ Description: Displays user-friendly dialog boxes from shell scripts
   editbox          Allows editing an existing file
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://invisible-island.net/dialog/dialog.html
+
+Package: sshpass
+Priority: extra
+Section: utils
+Installed-Size: 49
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.06
+Depends: libc6 (>= 2.23)
+Recommends: ssh-client
+Filename: ./sshpass-1.06_arm.deb
+Size: 12690
+MD5sum: 71ab2e17538367af7903a48697609231
+SHA1: d0814ff4eaacf9094153335c9e8249b7058020a3
+SHA256: 4058f75067d0ff5bdeb54a7edf452b2246ed514009250de51d14474d8960c6de
+SHA512: bcd7ecb8455e9aa167572f95168a88aba2d415601a376dc651b1e0efdd1d221f7f790fc919fadd335000395c1f49cb1125c8921af193a025a8cf54cfc69527c9
+Description: Non-interactive ssh password authentication
+ SSH's (secure shell) most common authentication mode is called "interactive
+ keyboard password authentication", so called both because it is typically
+ done via keyboard, and because openssh takes active measures to make sure
+ that the password is, indeed, typed interactively by the keyboard. Sometimes,
+ however, it is necessary to fool ssh into accepting an interactive password
+ non-interactively. This is where sshpass comes in.
+ .
+ SECURITY NOTE: There is a reason openssh insists that passwords be typed
+ interactively. Passwords are harder to store securely and to pass around
+ securely between programs. If you have not looked into solving your needs
+ using SSH's "public key authentication", perhaps in conjunction with the ssh
+ agent (RTFM ssh-add), please do so before being tempted into using this
+ package.
+Homepage: http://sourceforge.net/projects/sshpass
 
 Package: libucl1
 Priority: optional
@@ -180,4 +257,33 @@ Description: efficient live-compressor for executables
  .
  NOTE: This package is based on the UCL library, which is licensed under GPL.
 Homepage: http://upx.sourceforge.net/
+
+Package: libccid
+Priority: extra
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: ccid
+Version: 1.4.26
+Depends: libc6 (>= 2.23), libusb-1.0-0 (>= 1.0.20)
+Filename: ./libccid_1.4.26_armhf.deb
+Size: 153058
+MD5sum: 8ef545901276f329e0342dd79f66e08c
+SHA1: 0976884472ddf43ceebe7c4c6ad51d1e600d410e
+SHA256: d010a69ca2a94b4be195112147af45dd924072c6475aadc2feb425f1db252947
+SHA512: 1326296ff56a4831d1d110d5040c161f7cd78f0631bfbd72324a189f2a0588a33e45b570cc1ecb8b3164eb324d9a784416490f2e804d242abf97bf19f3512461
+Description: PC/SC driver for USB CCID smart card readers
+ This library provides a PC/SC IFD handler implementation for the USB smart
+ card drivers compliant to the CCID protocol.
+ .
+ This package is needed to communicate with the CCID smartcard readers through
+ the PC/SC Lite resource manager (pcscd).
+ .
+ For an exhaustive list of supported reader see
+ http://pcsclite.alioth.debian.org/section.html
+ .
+ This driver also supports the GemPC Twin connected to a serial port and
+ the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
+ Gemplus GemPC Express (Express54 card).
+Homepage: http://pcsclite.alioth.debian.org/ccid.html
 
