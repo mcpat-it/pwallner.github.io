@@ -1,3 +1,20 @@
+Package: ssmtp
+Priority: extra
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.64
+Depends: libc6 (>= 2.23), mailutils (>= 3.0)
+Filename: ./ssmtp-2.64_armhf.deb
+Size: 13002
+MD5sum: 6078c18558456c7022f9bd287dd7d157
+SHA1: 7166dbd9696dfc4381dc89d545beb385e6ddf487
+SHA256: fc6a7b6780c61cbff4728576a7c1650f7f085ea1e9ff5982c1667c7cead16a2f
+SHA512: 7d2bf6f8242ec5fb3c8a782770c910df32baad37b05bfe09c71ef736b6bd88d3f7a91885719cdcaeb23e6425ca74e271cc9aaca6e670e27c9765b8e8a049ab00
+Description: ssmtp
+ ssmtp
+Homepage: http://sourceforge.net/projects/sshpass
+
 Package: libapr1
 Priority: optional
 Section: libs
@@ -19,6 +36,22 @@ Description: Apache Portable Runtime (APR) library
 OE: apr
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
+
+Package: mailutils
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.0
+Filename: ./mailutils-3.0_armhf.deb
+Size: 2656736
+MD5sum: 03da72fddd551b5c421d813da9bdae1d
+SHA1: 1c92add453aeacadc996241558645abf5b5d1c4c
+SHA256: ae44971bd9d9f3c760f72253cfc5ce03cabff711d1a7fc39bd1f038813f21f5b
+SHA512: 1a4396e7067f99a8d4fdd2386d868c451690c8e3d9795ee9f750ea4d29ebdefc59db680307ed4db79c5ecf27e6f2bae7cd91134eb51643dad3603fbf5b9494e7
+Description: mailutils
+ mailutils
+PackageArch: cortexa15hf-neon-vfpv4
 
 Package: libserf1
 Priority: optional
