@@ -91,6 +91,22 @@ Description: Middleware to access a smart card using PC/SC (library)
 Multi-Arch: same
 Homepage: http://pcsclite.alioth.debian.org/
 
+Package: autoconf
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.69
+Filename: ./autoconf-2.69_armhf.deb
+Size: 546294
+MD5sum: 0ec018174f86ba17b2aedae910f7d316
+SHA1: e89a098e08b034099131a9cfe12017f1c7612145
+SHA256: 5699f1b816b6d39afd36115585a55ea6e213806e7335c7efe93c2d8d3d70038e
+SHA512: 877563ab57bfb25471eb96e9810f8283de0f00c30eaef308c2f9772f06c19852a7c3aeecb96d35942a4fff31ee683d01fc24c69f1ee9a566440e5fb0696bfe0a
+Description: autoconf
+ autoconf
+PackageArch: cortexa15hf-neon-vfpv4
+
 Package: dialog
 Priority: optional
 Section: base
@@ -221,14 +237,14 @@ Priority: optional
 Section: base
 Maintainer: arki
 Architecture: all
-Version: 5.7
+Version: 5.8
 Depends: enigma2 (>= 4.3.0r22), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_5.7_all.deb
-Size: 1127722
-MD5sum: 891c725b3a8cbb0fe2809a2485102e9e
-SHA1: 4f8163ff20a4784cb10bc35ef4f4af3b4b2019e4
-SHA256: 8ddc3cb21af0609150704b1d9e8e6d1ed878fc82056be1ad8484067e24a8327d
-SHA512: 94c2b071121ed907559c3fae846ab64890a20e474d752e72240460b1cc0d3e221af0fcb903a35a27485193b585dddbed015277c872820b79f1d7b754db2801b3
+Filename: ./enigma2-skin-metrixstylehd_5.8_all.deb
+Size: 1177264
+MD5sum: e620c2b0cde6c7a67ff9216600a291ad
+SHA1: d27d8f2441d2e83ee7c5bda8f9a767421b4c3f49
+SHA256: cd98bcd3fcbaf5dd61bb90e136fc212455a88bf12ef9928246bb90eef9c1dae5
+SHA512: d374bd9badb00bf7470b2eca895cabe468d9eab435288823cd9d91814abc496004ed3e0bbd2528aa0896824ffd920cb0d3efb83fd3b8bcafb367a8174467e6d4
 Description: Skin MetrixStyleHD
  HD-Skin for DreamOS with Controler
 PackageArch: mips32el
