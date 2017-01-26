@@ -250,6 +250,24 @@ Description: Skin MetrixStyleHD
 PackageArch: mips32el
 Homepage: wwww.nachtfalke.biz
 
+Package: texinfo
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 6.2
+Depends: enigma2 (>=4.3)
+Filename: ./texinfo-6.2_armhf.deb
+Size: 1203668
+MD5sum: 30e62245bd9a7d853b064f8d05075083
+SHA1: 362c558da78f6df5470835855583d865ceafe327
+SHA256: c64bd739d127a70468e0d624f53827421085e1ebf794a51a3299be75ab97cd8c
+SHA512: b311d639a707f22003f82d8dbcadd04b926f862881197af838bb0c2f995b6b233305a281202453808d18ab57047a6b7c94527deafc2ad80b9b03ce774a16820a
+Description: texinfo
+ texinfo
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
+
 Package: libccid
 Priority: extra
 Section: libs
@@ -278,6 +296,22 @@ Description: PC/SC driver for USB CCID smart card readers
  the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
  Gemplus GemPC Express (Express54 card).
 Homepage: http://pcsclite.alioth.debian.org/ccid.html
+
+Package: podlators
+Priority: extra
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 4.09
+Filename: ./podlators-release-4.09.deb
+Size: 38610
+MD5sum: 6560a099d101448624dd2274b3476127
+SHA1: 344eac8771d09aeb08f78b21d1673a45fbfa346e
+SHA256: 6efb7d5edf4640b765b8cb5aa94e42feb40c20e6fe3f3c23c1f6670a36a53417
+SHA512: 86ae58e828da7a4fe43bee54b3fb2b9878e10cb35755561696e35b2fb128b011f196e832aeb05a2932ef5f43aa9a89e4160f7358ccf7470c9f76ae820fef6896
+Description: podlators
+ podlators
+Homepage: http://xxx
 
 Package: upx-ucl
 Priority: optional
