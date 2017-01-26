@@ -42,6 +42,21 @@ Description: high-performance asynchronous HTTP client library
  operation.
 Homepage: http://code.google.com/p/serf/
 
+Package: dejagnu
+Priority: optional
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.6.1-git
+Filename: ./dejagnu_1.6.1-git_armhf.deb
+Size: 127752
+MD5sum: 97d190e650f4655b608620da6996597a
+SHA1: 6db99f46c8bd9891d1ae7915bf81d743e6b16f2e
+SHA256: d72fb27e85786e513e590199066cf9894199a6a23489f6a33d1f4cc8684f8b26
+SHA512: d8b4a75f4b749dc66848e906689526dc0e7b92a6aa23ffc0d76e6e7f0f1e796b7073ec8aa4ec81dd5b41064628aff4f55771487ac210f23e13dd920dfcd4f841
+Description: Dejagnu
+ Dejagnu
+Homepage: http://xxx/
+
 Package: subversion
 Priority: optional
 Section: vcs
@@ -336,4 +351,38 @@ Description: efficient live-compressor for executables
  .
  NOTE: This package is based on the UCL library, which is licensed under GPL.
 Homepage: http://upx.sourceforge.net/
+
+Package: expect
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 5.45
+Filename: ./expect-5.45-armhf.deb
+Size: 148952
+MD5sum: 85ed538f31bd243a3c693d25cffb3a8f
+SHA1: 8e1e4f61302902b97022b47fd2c5be8455de3d66
+SHA256: ff35f047ae9d4a1402e4b33f52ad773a721ccfcdc0cdc80bdfef1ff12f4ac860
+SHA512: c23bd37b8ac56c8e5d56b59566abaf689ff3479f93455385e186393f087209a8fafce24be574a8b1cd3a2f58269cef95e3cb59e1ecfec7956db65299d35b08dd
+Description: expect
+ expect for testing gcc
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
+
+Package: tcl
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 8.6.6
+Filename: ./tcl-8.6.6_armhf.deb
+Size: 1954616
+MD5sum: b29d60d896485b547a4ca1cddda051b4
+SHA1: 59fe3f1c66c3237daa019f03d2ecc8bc572c3ff3
+SHA256: a0a5171c40ee9ee2029212f01f1c41fb5bae81870d192118835f2a65c8cee5e3
+SHA512: e28ab4682930a560c7628b07b272fe78a666924b447e91610fd38c6c9f4751a7a5899191f28373ccf07becca2be80732d1b665443e1967c7c54ec0bbe7288bca
+Description: tcl
+ tcl for testing gcc
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
 
