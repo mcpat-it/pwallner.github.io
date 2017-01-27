@@ -263,23 +263,6 @@ Description: Build essentials ~ 95,0MB
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
 
-Package: ssmtp
-Priority: extra
-Section: utils
-Maintainer: mcpat
-Architecture: armhf
-Version: 2.64-r1
-Depends: libc6 (>= 2.23), mailutils (>= 3.0), openssl (>=1.0.2h), libcrypto1.0.0 (>=1.0.2h)
-Filename: ./ssmtp-2.64-TLS_armhf.deb
-Size: 43230
-MD5sum: 1f969f82a360a15929f473ef33d84b44
-SHA1: 5c72a455eb995e85517c855127e6c25950212c91
-SHA256: 4f446d0b73c37abfc0e8f39d0ed6a75bd9fbccba2484a855fcd352b1049ef018
-SHA512: 26122985ac41746447090f5f0f91be980d03c3162eb12e692d75361ccb65d9427a500a25eb46c22482c44e71a2507b5b8384f543b687124ec93648ecb1c21178
-Description: ssmtp with TLS patch
- ssmtp with TLS patch
-Homepage: http://sourceforge.net/projects/sshpass
-
 Package: enigma2-skin-metrixstylehd
 Priority: optional
 Section: base
@@ -401,6 +384,29 @@ Description: expect
  expect for testing gcc
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
+
+Package: ssmtp
+Priority: extra
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.64-r2
+Depends: libc6 (>= 2.23), mailutils (>= 3.0), openssl (>=1.0.2h), libcrypto1.0.0 (>=1.0.2h)
+Filename: ./ssmtp-2.64-r2_armhf.deb
+Size: 43440
+MD5sum: c92dbaa832daf4798ada70723a1f617f
+SHA1: b72c8249fc24163fa02fe19ecf756996ffacb195
+SHA256: b6891bbf9790810ae9849a2719173e91f3f2151010e034474879d2adebed325b
+SHA512: 530cd170ca20b885c6c7d0eda21bebad1048f92e0e7eebd8a82cb2dd444d58dfd5a4d565e79fa31b852abf23d0f074233195336077542bccb21091683a874a86
+Description: ssmtp with patches
+ with DEBIAN patches and mcpat patches
+ *TLS patch (made by mcpat)
+ *Libcrypto patch (made by mcpat)
+ *557741-remote-addr.patch
+ *508759-garbage.patch
+ *LDFLAGS.patch
+ *bug584162-fix.patch
+Homepage: http://sourceforge.net/projects/sshpass
 
 Package: tcl
 Priority: optional
