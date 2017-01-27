@@ -42,13 +42,13 @@ Priority: optional
 Section: base
 Maintainer: mcpat
 Architecture: armhf
-Version: 3.0
-Filename: ./mailutils-3.0_armhf.deb
-Size: 2656736
-MD5sum: 03da72fddd551b5c421d813da9bdae1d
-SHA1: 1c92add453aeacadc996241558645abf5b5d1c4c
-SHA256: ae44971bd9d9f3c760f72253cfc5ce03cabff711d1a7fc39bd1f038813f21f5b
-SHA512: 1a4396e7067f99a8d4fdd2386d868c451690c8e3d9795ee9f750ea4d29ebdefc59db680307ed4db79c5ecf27e6f2bae7cd91134eb51643dad3603fbf5b9494e7
+Version: 3.0-r1
+Filename: ./mailutils-3.0-r1_armhf.deb
+Size: 2651160
+MD5sum: f5bef630314c130ad648f476efaf1067
+SHA1: c6bedfa8fdb7214c4007a7693495ed7333b48093
+SHA256: ed222dfe44a339f2cf6bc12cb4596bc466108207af2770d9cd8c0bd5abb8c75d
+SHA512: b623ad796c40ceaf940ab1b218bc26147156319e3e0a9f11eff1c94d5ba52d92d7047d13e95f0d47a9d155e86188e9d6f453969e3b5a84b90dbc9f74b06669c6
 Description: mailutils
  mailutils
 PackageArch: cortexa15hf-neon-vfpv4
