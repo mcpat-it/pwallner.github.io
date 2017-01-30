@@ -1,3 +1,20 @@
+Package: automake
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.15
+Depends: autoconf (>= 2.69)
+Filename: ./automake-1.15_armhf.deb
+Size: 530992
+MD5sum: 83f405d3ceef297a839fef6cc4358e8a
+SHA1: abb2fe7626ea5af1e989fa9b4c2a0cd0b08de995
+SHA256: 70f41e3d24ee854e68e137d0f35ceb784d3b3b307414fa5779d63c5182c9c810
+SHA512: decac99c912768cecd2dff16fffe46f94f16b655f8353e1e1f0195e9eb1804aaf182379f30059d68d9c5c995eed36f9b10541696c9542345afdec69a1121258b
+Description: automake
+ automake
+PackageArch: cortexa15hf-neon-vfpv4
+
 Package: libapr1
 Priority: optional
 Section: libs
@@ -34,6 +51,23 @@ SHA256: ed222dfe44a339f2cf6bc12cb4596bc466108207af2770d9cd8c0bd5abb8c75d
 SHA512: b623ad796c40ceaf940ab1b218bc26147156319e3e0a9f11eff1c94d5ba52d92d7047d13e95f0d47a9d155e86188e9d6f453969e3b5a84b90dbc9f74b06669c6
 Description: mailutils
  mailutils
+PackageArch: cortexa15hf-neon-vfpv4
+
+Package: autoconf
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.69-r1
+Depends: perl (>= 5.22.1), m4 (>= 1.4.17)
+Filename: ./autoconf-2.69-r1_armhf.deb
+Size: 546466
+MD5sum: 54e6c509a475292b10c6f14b85a2adfb
+SHA1: 11db4e77a85fbc022ebebeaa4e2cc28d8866c47e
+SHA256: e199baf7b28be3219bf7cf3bf930e30eef5945ad03584f33c8488876a7092cd4
+SHA512: 9ae3678ab3b0808efa39130e1f734ff4f44293528cfdc0e4945c5cce32835f114aa5fac1bc94eb1d088841e94e6541321296e32211805b59c9511bf1eabb1340
+Description: autoconf
+ autoconf
 PackageArch: cortexa15hf-neon-vfpv4
 
 Package: libserf1
@@ -122,22 +156,6 @@ Description: Middleware to access a smart card using PC/SC (library)
 Multi-Arch: same
 Homepage: http://pcsclite.alioth.debian.org/
 
-Package: autoconf
-Priority: optional
-Section: base
-Maintainer: mcpat
-Architecture: armhf
-Version: 2.69
-Filename: ./autoconf-2.69_armhf.deb
-Size: 546294
-MD5sum: 0ec018174f86ba17b2aedae910f7d316
-SHA1: e89a098e08b034099131a9cfe12017f1c7612145
-SHA256: 5699f1b816b6d39afd36115585a55ea6e213806e7335c7efe93c2d8d3d70038e
-SHA512: 877563ab57bfb25471eb96e9810f8283de0f00c30eaef308c2f9772f06c19852a7c3aeecb96d35942a4fff31ee683d01fc24c69f1ee9a566440e5fb0696bfe0a
-Description: autoconf
- autoconf
-PackageArch: cortexa15hf-neon-vfpv4
-
 Package: dialog
 Priority: optional
 Section: base
@@ -222,6 +240,22 @@ Description: libucl1
  libucl1
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.mcpat.com
+
+Package: help2man
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.47.4
+Filename: ./help2man-1.47.4_armhf.deb
+Size: 14146
+MD5sum: cbbda6e7a234772a019b25b71bfa6142
+SHA1: 522daa68384a11e5e5b5cbf7464446956b6c54ca
+SHA256: e5f6ddc06f3d0c28f2bfe2647c73288c190f1b5cccdda58ed94544721a41d57b
+SHA512: 7dd509cb45380bf817b81868b7e2d3807b2d767bdf7764eae260033b6f738edbbbbfd728c942e38b5b90d114d339c63b15a04af45c29ba45a879730a55d9f0ee
+Description: help2man
+ help2man
+PackageArch: cortexa15hf-neon-vfpv4
 
 Package: libaprutil1
 Priority: optional
