@@ -3,17 +3,28 @@ Priority: optional
 Section: base
 Maintainer: mcpat
 Architecture: armhf
-Version: 1.15
+Version: 1.15-r1
 Depends: autoconf (>= 2.69)
-Filename: ./automake-1.15_armhf.deb
-Size: 530992
-MD5sum: 83f405d3ceef297a839fef6cc4358e8a
-SHA1: abb2fe7626ea5af1e989fa9b4c2a0cd0b08de995
-SHA256: 70f41e3d24ee854e68e137d0f35ceb784d3b3b307414fa5779d63c5182c9c810
-SHA512: decac99c912768cecd2dff16fffe46f94f16b655f8353e1e1f0195e9eb1804aaf182379f30059d68d9c5c995eed36f9b10541696c9542345afdec69a1121258b
-Description: automake
- automake
+Filename: ./automake-1.15-r1_armhf.deb
+Size: 531302
+MD5sum: c2f7d6f7acb0437808911319f7f7c5f9
+SHA1: 7049de5f14e7bbaf04ecd747dccdcf23785ac848
+SHA256: 0b91ac4476174050039f3718fe9ec98ffa77fa80cd3d2229ea94e8f7c1a1be1a
+SHA512: 054dadef60f344b9d9c47f9fdb532c29ac6719f76880118e45f0bafd1c26626eb54a676912b2871d093254a978dc50efcd65ba6e2b42f586d4fc8994c0d47ff7
+Description: Tool for generating GNU Standards-compliant Makefiles
+ Automake is a tool for automatically generating `Makefile.in's from
+ files called `Makefile.am'.
+ .
+ The goal of Automake is to remove the burden of Makefile maintenance
+ from the back of the individual GNU maintainer (and put it on the back
+ of the Automake maintainer).
+ .
+ The `Makefile.am' is basically a series of `make' macro definitions
+ (with rules being thrown in occasionally).  The generated
+ `Makefile.in's are compliant with the GNU Makefile standards.
+ .
 PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.gnu.org/software/automake/
 
 Package: libapr1
 Priority: optional
