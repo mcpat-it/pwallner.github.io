@@ -326,23 +326,6 @@ Description: Skin MetrixStyleHD
 PackageArch: mips32el
 Homepage: wwww.nachtfalke.biz
 
-Package: dreamciplus
-Priority: optional
-Section: base
-Maintainer: unknown <unknown@unknown.com>
-Architecture: all
-Version: 6.0
-Replaces: dream-ci-plus
-Provides: dream-ci-plus
-Conflicts: dream-ci-plus
-Filename: ./dreamciplus_6.0_all.deb
-Size: 963134
-MD5sum: 6923e890132e9da24893e256015bd47d
-SHA1: e303881d2b6acc389429dd2ecca483c3dbd6b739
-SHA256: 57b70cd8f807a5ded45c2b908ff5cc48aa4f4827e828572ed963f27a2622a248
-SHA512: d9ae95c96635eba102dca9417e97102c7e1194e2ca0bfac8fcba2a05d216eecb8606a43e3af9d21449ffa554717a7027fb61144ff491e3b0eb347514b69c4d87
-Description: dreambox ci module plus
-
 Package: texinfo
 Priority: optional
 Section: base
