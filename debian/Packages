@@ -394,15 +394,15 @@ Priority: optional
 Section: utils
 Maintainer: mcpat
 Architecture: armhf
-Version: 3.91
+Version: 3.91-r1
 Provides: upx
 Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2)
 Filename: ./upx-3.91-armhf.deb
-Size: 274446
-MD5sum: 26f73f9f9362dafcd5ac7f0a10abffa8
-SHA1: aca242174c50a8426aa96f2a22c6e3826c7b601a
-SHA256: 4eb900316f3fa082b6a8bcd89e89da568dd84a5cc20859ec45b10a344168e92e
-SHA512: a1773d7fdc671bee522784896af0d358f5d78f412163224ba797d206956edfaa74e30879a492809ec12760076818f9ae56f10aa1bc0ae57e9f0da4cf7f9d07de
+Size: 269806
+MD5sum: f8b5b885e53846d68dfca60d3ab24a8d
+SHA1: bb24c8c8e1a1f09c0bf5ffb3338747cfa56f72c3
+SHA256: f95b1e1cd24e5f3bc8fb2265cfc2e90675337f50b9b5876f7d9f79e65f994195
+SHA512: a3d4ab7bd52d32b1f198c2647a3593fcd6677ed4c155f76f764ec4821aa85a234bda0de20d63bd949ff13a1983ce6f376a1003d20e050427c710fc0e9e86eed2
 Description: efficient live-compressor for executables
  UPX is an advanced executable file compressor. UPX will typically
  reduce the file size of programs and DLLs by around 50%-70%, thus
@@ -411,6 +411,7 @@ Description: efficient live-compressor for executables
  amd64, ppc32) and some other files for different OS.
  .
  NOTE: This package is based on the UCL library, which is licensed under GPL.
+ NoTE: This package is compiled with LZMA SDK version 16.04
 Homepage: http://upx.sourceforge.net/
 
 Package: expect
