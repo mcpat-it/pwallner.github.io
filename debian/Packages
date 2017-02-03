@@ -326,6 +326,34 @@ Description: Skin MetrixStyleHD
 PackageArch: mips32el
 Homepage: wwww.nachtfalke.biz
 
+Package: lzma-dev
+Priority: optional
+Section: utils
+Maintainer: mcpat
+Architecture: all
+Source: lzma
+Version: 16.04
+Filename: ./lzma-dev-16.04-armhf.deb
+Size: 48592
+MD5sum: 76b3c6641f37a6e197aa0f21b565a89b
+SHA1: 0921f40a6233af069c9bbc30f41ced18f0b2d3a9
+SHA256: 271c889d5bfb086975c1f47cbc76a12c1b44e9fb8a33b2d1252dec83a1d636db
+SHA512: c833ae92f61d04ecb89168081593237eb58be40d02b4c92900dbe5e85ab2d04ad9c4c8cd0cf793706cf4413a142372ae67ec8f87c557e565a3396f5f7761e1b6
+Description: Compression and decompression in the LZMA format - development files
+ The Lempel-Ziv Markov-chain Algorithm is a compression method based on
+ the famous LZ77 algorithm, and was first introduced by 7-Zip for use in
+ 7z archives.
+ .
+ Its main characteristics are a very high compression ratio, with high RAM
+ usage, and fast decompression, with low RAM usage. These properties make
+ it well suited to embedded uses, such as for ROM (firmware) compression.
+ .
+ This package contains the headers and libraries of lzma. It is
+ experimental and will be replaced by the library as soon as it is
+ available.
+ Note: Depends: zlib1g-dev?
+Homepage: http://www.7-zip.org/sdk.html
+
 Package: texinfo
 Priority: optional
 Section: base
@@ -396,13 +424,13 @@ Maintainer: mcpat
 Architecture: armhf
 Version: 3.91-r1
 Provides: upx
-Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2)
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2), libz1 (>=1.2.8)
 Filename: ./upx-3.91-armhf.deb
-Size: 269806
-MD5sum: f8b5b885e53846d68dfca60d3ab24a8d
-SHA1: bb24c8c8e1a1f09c0bf5ffb3338747cfa56f72c3
-SHA256: f95b1e1cd24e5f3bc8fb2265cfc2e90675337f50b9b5876f7d9f79e65f994195
-SHA512: a3d4ab7bd52d32b1f198c2647a3593fcd6677ed4c155f76f764ec4821aa85a234bda0de20d63bd949ff13a1983ce6f376a1003d20e050427c710fc0e9e86eed2
+Size: 269814
+MD5sum: 3eb554c5f957735bd6f52d8722c3cc4c
+SHA1: 206ef5c3299ec2ecf7592386195b6f8bfcdc6b4e
+SHA256: 11cd9840e7d04f1d0d2ade0ee7ec9bec3d37a47950837ba41c75dcf49a3585d2
+SHA512: bc4f1d540f3f6486760a33e78212b094ceed38d811e97ca2cf7703a628695a6cb55a5eb04e028f63d77775588fc39e259f8cfa0fbdbf21b12d5aa6db06b8c09f
 Description: efficient live-compressor for executables
  UPX is an advanced executable file compressor. UPX will typically
  reduce the file size of programs and DLLs by around 50%-70%, thus
