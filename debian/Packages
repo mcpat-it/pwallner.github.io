@@ -476,6 +476,24 @@ Description: expect
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
 
+Package: cmake
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.7.2
+Depends: openssl (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libstdc++6 (>= 5.3.0), libncurses5, enigma2-plugin-systemplugins-mcpat-build-essentials
+Filename: ./cmake-3.7.2_armhf.deb
+Size: 8762024
+MD5sum: f5864c213ce3cabe1455a6eb9945db43
+SHA1: 5959e6c2270f920ca15b32608e82b56f249b69d1
+SHA256: c680d7394e7943c710b19df93584f5823230c2c6b672fe58b3de793c801090f9
+SHA512: 2d62b72ad422ed4139da109413bad824e664203c6727ea96cea923288a9de7c2aec4013e4cc96ff6df701335d2a3448b1bd150dae197ddd912a15255fd408993
+Description: cmake
+ cmake
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://xxxx/
+
 Package: ssmtp
 Priority: extra
 Section: utils
