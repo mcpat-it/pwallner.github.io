@@ -349,22 +349,6 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
-Package: dreamciplus
-Priority: optional
-Section: base
-Maintainer: unknown <unknown@unknown.com>
-Architecture: all
-Version: 6.1
-Replaces: dream-ci-plus
-Provides: dream-ci-plus
-Filename: ./dreamciplus_6.1_all.deb
-Size: 962920
-MD5sum: 57aa76e6b67695ff6cfca4b92f1d3e8c
-SHA1: 8b36eb8e4d29c87df24bbe497b2c3d69f27691c3
-SHA256: c1fbad89056cf73a8cabd0c7e4d5c2b43de3a7bb4f33565beb0ba76465ee65c0
-SHA512: da725e04ba4e1582141bbe31bd061ae0e13fc6087a5c7d5cec69d46a1ace61d1e73cad605890c8ee63627a1ea22cd545b6f86c932adccc265ec87576db547863
-Description: dreambox ci module plus
-
 Package: libaprutil1
 Priority: optional
 Section: base
