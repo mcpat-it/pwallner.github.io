@@ -103,6 +103,24 @@ Description: autoconf
  autoconf
 PackageArch: cortexa15hf-neon-vfpv4
 
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 6.1
+Depends: enigma2 (>= 4.3.0r22), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_6.1_all.deb
+Size: 1301790
+MD5sum: b6f17695a60013b6fcbade04386fb0aa
+SHA1: 174c0f13d5706a7a904284ca44ce7b003f26519c
+SHA256: 35a99d7b21a215a81f48fe226a2a8b504c2e73a69c5bfe3d8dbe65c52a0fdaf5
+SHA512: e189637b1d3c8e07ff522f55cc914f91b2e92fabcbff59fe32134e23622e17c2895480fa506d863e76586aa0911765a07a1ea5129678d5ad885cd2bab742b4e1
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+PackageArch: mips32el
+Homepage: wwww.nachtfalke.biz
+
 Package: dejagnu
 Priority: optional
 Maintainer: mcpat
@@ -303,24 +321,6 @@ Description: Build essentials ~ 95,0MB
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
 
-Package: enigma2-skin-metrixstylehd
-Priority: optional
-Section: base
-Maintainer: arki
-Architecture: all
-Version: 5.8
-Depends: enigma2 (>= 4.3.0r22), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_5.8_all.deb
-Size: 1177264
-MD5sum: e620c2b0cde6c7a67ff9216600a291ad
-SHA1: d27d8f2441d2e83ee7c5bda8f9a767421b4c3f49
-SHA256: cd98bcd3fcbaf5dd61bb90e136fc212455a88bf12ef9928246bb90eef9c1dae5
-SHA512: d374bd9badb00bf7470b2eca895cabe468d9eab435288823cd9d91814abc496004ed3e0bbd2528aa0896824ffd920cb0d3efb83fd3b8bcafb367a8174467e6d4
-Description: Skin MetrixStyleHD
- HD-Skin for DreamOS with Controler
-PackageArch: mips32el
-Homepage: wwww.nachtfalke.biz
-
 Package: lzma-dev
 Priority: optional
 Section: utils
@@ -348,6 +348,22 @@ Description: Compression and decompression in the LZMA format - development file
  available.
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
+
+Package: dreamciplus
+Priority: optional
+Section: base
+Maintainer: unknown <unknown@unknown.com>
+Architecture: all
+Version: 6.1
+Replaces: dream-ci-plus
+Provides: dream-ci-plus
+Filename: ./dreamciplus_6.1_all.deb
+Size: 962920
+MD5sum: 57aa76e6b67695ff6cfca4b92f1d3e8c
+SHA1: 8b36eb8e4d29c87df24bbe497b2c3d69f27691c3
+SHA256: c1fbad89056cf73a8cabd0c7e4d5c2b43de3a7bb4f33565beb0ba76465ee65c0
+SHA512: da725e04ba4e1582141bbe31bd061ae0e13fc6087a5c7d5cec69d46a1ace61d1e73cad605890c8ee63627a1ea22cd545b6f86c932adccc265ec87576db547863
+Description: dreambox ci module plus
 
 Package: libaprutil1
 Priority: optional
