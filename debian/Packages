@@ -1,3 +1,21 @@
+Package: intltool
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 0.51.0
+Depends: perl-module-xml-parser (>= 2.44), automake (>= 1.15), file (>= 5.25), gettext (>= 0.19.6), patch (>= 2.7.5), perl (>= 5.22.1)
+Filename: ./intltool-0.51.0_armhf.deb
+Size: 34278
+MD5sum: 8f46a97ada3f26b861e4fce6e07edac4
+SHA1: 0d72779f4a00301ee5e2f1e08c5b5138e196616c
+SHA256: 0b3779f3454b5289a542e70bd783b98646c8aa26ccc72ce354c93858b79be112
+SHA512: fa4a71cf07b4896ecdde2c053b6aa25f859ff515511010846332084ccf462a4b20677a194f072c2adc0d89a72b88d5231820676cefc8380dc7837bf6361d1f38
+Description: intltool
+ intltool
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://xxxx/
+
 Package: libserf1
 Priority: optional
 Section: libs
@@ -48,6 +66,30 @@ Description: Tool for generating GNU Standards-compliant Makefiles
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.gnu.org/software/automake/
 
+Package: libpcsclite1
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: pcsc-lite
+Version: 1.8.20-r1
+Depends: libc6 (>= 2.23), udev (>= 1:230), libudev1 (>= 1:230)
+Filename: ./libpcsclite1_1.8.20-r1_armhf.deb
+Size: 192476
+MD5sum: 13b6d6020e9ab2610ae326c504b2e172
+SHA1: 2180a61be2136367020f6f6b6691fc4bdc349f4a
+SHA256: 0be3b988320316d10d06ed7c7e7c2c56cb5471e844b495070c0a0a4627295622
+SHA512: 863a6052af5045c9099e0f1fedb231c55f2e5516bab2001df0616d53f0c68859a808ab31a11f5c87c832e9db76fe406bbca64c917f3117321882288eb6798f15
+Description: Middleware to access a smart card using PC/SC (library)
+ The purpose of PC/SC Lite is to provide a Windows(R) SCard interface
+ in a very small form factor for communicating to smartcards and
+ readers.
+ .
+ The PC/SC Lite library is used to connect to the PC/SC daemon from
+ a client application and provide access to the desired reader.
+Multi-Arch: same
+Homepage: http://pcsclite.alioth.debian.org/
+
 Package: libapr1
 Priority: optional
 Section: libs
@@ -85,6 +127,34 @@ SHA512: b623ad796c40ceaf940ab1b218bc26147156319e3e0a9f11eff1c94d5ba52d92d7047d13
 Description: mailutils
  mailutils
 PackageArch: cortexa15hf-neon-vfpv4
+
+Package: perl-module-xml-parser
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.44
+Depends: libexpat1 (>= 2.1.0), perl (>= 5.22.1), libc6 (>= 2.23)
+Filename: ./XML-Parser-2.44_armhf.deb
+Size: 165716
+MD5sum: 28ea2be241038ef72967a4670543407c
+SHA1: 96ed09539f54fc4055dc79d3ce6d84e26df4a7e4
+SHA256: c9e4eade02f86bcf1306e3c761ada086b4f62a57b34f3cfa4c23dd084322445b
+SHA512: 1690508aaf01c46c5459b09355ee6c6820fa6cb61e4d9325f5d67bd1b3e6eb5581ed25dac36edfe41c2c37daa9000139a6d542bb264dcef21c81b02b5ae51d2a
+Description: perl-module-xml-parser
+ This module provides ways to parse XML documents. 
+ It is built on top of XML::Parser::Expat, which is 
+ a lower level interface to James Clark's expat library. 
+ Each call to one of the parsing methods creates a new
+ instance of XML::Parser::Expat which is then used to 
+ parse the document. Expat options may be provided 
+ when the XML::Parser object is created. These options
+ are then passed on to the Expat object on each parse
+ call. They can also be given as extra arguments to 
+ the parse methods, in which case they override 
+ options given at XML::Parser creation time.x
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
 
 Package: autoconf
 Priority: optional
@@ -135,30 +205,6 @@ SHA512: d8b4a75f4b749dc66848e906689526dc0e7b92a6aa23ffc0d76e6e7f0f1e796b7073ec8a
 Description: Dejagnu
  Dejagnu
 Homepage: http://xxx/
-
-Package: libpcsclite1
-Priority: optional
-Section: libs
-Maintainer: mcpat
-Architecture: armhf
-Source: pcsc-lite
-Version: 1.8.20
-Depends: libc6 (>= 2.23)
-Filename: ./libpcsclite1_1.8.20_armhf.deb
-Size: 80422
-MD5sum: b8be29feb762be70d653a1c288787f25
-SHA1: 35bddc65f8df5ed43ab1451f9bc7d0e753a72e38
-SHA256: 3a467de65f637e624989013b7c7fa0fe8029be9e336cced65dbe525259a7376c
-SHA512: b55173be65c3acf92b977c1946057a34f53115e007701f13a7f29db2f53431d5f0cd071d798f2c994e276b99d172404c838aef8972d59ad604199616a301b1f8
-Description: Middleware to access a smart card using PC/SC (library)
- The purpose of PC/SC Lite is to provide a Windows(R) SCard interface
- in a very small form factor for communicating to smartcards and
- readers.
- .
- The PC/SC Lite library is used to connect to the PC/SC daemon from
- a client application and provide access to the desired reader.
-Multi-Arch: same
-Homepage: http://pcsclite.alioth.debian.org/
 
 Package: perl-module-pod-pod2html
 Priority: optional
@@ -303,6 +349,35 @@ Description: help2man
  help2man
 PackageArch: cortexa15hf-neon-vfpv4
 
+Package: libccid
+Priority: extra
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: ccid
+Version: 1.4.26-r1
+Depends: libc6 (>= 2.23), libusb-1.0-0 (>= 1.0.20), udev (>= 1:230), libudev1 (>= 1:230)
+Filename: ./libccid_1.4.26-r1_armhf.deb
+Size: 153368
+MD5sum: fd353b07f08cc909ca6593bf047ece01
+SHA1: 13825c25efe0afa27799cf1a4ced11d82247050f
+SHA256: fa95e67633b0351f4453f86894b8c94585045538cf96440266ec6188c5d2b6cd
+SHA512: 06ff2c96d7b8fdddfaedb81dc30794285f99347260e60f85c8fbde569b956da863cd508aef7db562aa9a4c63866ecf347fe702a35891044d501aa3b6524a7ed0
+Description: PC/SC driver for USB CCID smart card readers
+ This library provides a PC/SC IFD handler implementation for the USB smart
+ card drivers compliant to the CCID protocol.
+ .
+ This package is needed to communicate with the CCID smartcard readers through
+ the PC/SC Lite resource manager (pcscd).
+ .
+ For an exhaustive list of supported reader see
+ http://pcsclite.alioth.debian.org/section.html
+ .
+ This driver also supports the GemPC Twin connected to a serial port and
+ the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
+ Gemplus GemPC Express (Express54 card).
+Homepage: http://pcsclite.alioth.debian.org/ccid.html
+
 Package: enigma2-plugin-systemplugins-mcpat-build-essentials
 Priority: optional
 Section: base
@@ -388,35 +463,6 @@ Description: texinfo
  texinfo
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
-
-Package: libccid
-Priority: extra
-Section: libs
-Maintainer: mcpat
-Architecture: armhf
-Source: ccid
-Version: 1.4.26
-Depends: libc6 (>= 2.23), libusb-1.0-0 (>= 1.0.20)
-Filename: ./libccid_1.4.26_armhf.deb
-Size: 153058
-MD5sum: 8ef545901276f329e0342dd79f66e08c
-SHA1: 0976884472ddf43ceebe7c4c6ad51d1e600d410e
-SHA256: d010a69ca2a94b4be195112147af45dd924072c6475aadc2feb425f1db252947
-SHA512: 1326296ff56a4831d1d110d5040c161f7cd78f0631bfbd72324a189f2a0588a33e45b570cc1ecb8b3164eb324d9a784416490f2e804d242abf97bf19f3512461
-Description: PC/SC driver for USB CCID smart card readers
- This library provides a PC/SC IFD handler implementation for the USB smart
- card drivers compliant to the CCID protocol.
- .
- This package is needed to communicate with the CCID smartcard readers through
- the PC/SC Lite resource manager (pcscd).
- .
- For an exhaustive list of supported reader see
- http://pcsclite.alioth.debian.org/section.html
- .
- This driver also supports the GemPC Twin connected to a serial port and
- the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
- Gemplus GemPC Express (Express54 card).
-Homepage: http://pcsclite.alioth.debian.org/ccid.html
 
 Package: podlators
 Priority: extra
@@ -533,4 +579,26 @@ Description: tcl
  tcl for testing gcc
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
+
+Package: pkg-config
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 0.29.1
+Depends: libglib-2.0-0 (>= 1:2.46.2), libpcre1 (>= 8.38), libc6 (>= 2.23)
+Filename: ./pkg-config-0.29.1_armhf.deb
+Size: 59118
+MD5sum: 768bea6dec0572d633125eceeb03a2cc
+SHA1: 22cb9e5568fc6e0fa0c028d058baee0516f056ed
+SHA256: 79ca563778e48381e322faab3ecfe3218ede4aaa765238cec7322d27ef58b5e1
+SHA512: 6cb3e711649a72aa98c0fe88ba6974978431f8427a0f5e8577833e95d474cfde346a35a90ea5912fa68d90e649d2820d8fed81fecd6beb71fb43a83ae0569e82
+Description: manage compile and link flags for libraries
+ pkg-config is a system for managing library compile and link flags that
+ works with automake and autoconf.
+ .
+ Increasingly libraries ship with ".pc" files that allow querying of the
+ compiler and linker flags needed to use them through the pkg-config(1)
+ program.
+Homepage: http://pkg-config.freedesktop.org
 
