@@ -130,6 +130,23 @@ OE: apr
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
 
+Package: gdp
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.12.1
+Depends: libncurses5 (>= 6.0)
+Filename: ./gdb-7.12.1_armhf.deb
+Size: 2863314
+MD5sum: 9688dda9c3d4e651cc559ec761fc1c13
+SHA1: e2ea8931b1971334e4255e032065a7c7de70230e
+SHA256: 61cf5f03ea9ed60febd308f96bf9c9c04951b44c5ad9b2fc8ef8349df36cfc4b
+SHA512: 5d8a8167ca134e44ecb8f29db971b307d7e323881a10fd27453ec0d818f23f405cf9c710126db1d6d3bf5fd847405279c8b668cd574b7b9576b58b41dff29fb9
+Description: gdp
+ gdp
+PackageArch: cortexa15hf-neon-vfpv4
+
 Package: mailutils
 Priority: optional
 Section: base
