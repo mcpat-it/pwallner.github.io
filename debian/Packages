@@ -1,3 +1,21 @@
+Package: texinfo
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 6.3
+Depends: enigma2 (>=4.3)
+Filename: ./texinfo-6.3_armhf.deb
+Size: 1204014
+MD5sum: 7b3bad9ff90b665266ae48d8309c0c86
+SHA1: 5b2878ed60f3adf966195c07b11a11014de7e9c2
+SHA256: b6fecfe893c0e269616de32e811eba8da8f40a6f9fc6ca56fc285ed7c4a52e70
+SHA512: 02225d4a9b3bfc565c296600898a32e3551b304c0891b2130476640cac71d3d8f2c48b00907e6c435b9ae92fdf5bfb9fc29919370c9a8e560e59e33445cf332d
+Description: texinfo
+ texinfo
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
+
 Package: intltool
 Priority: optional
 Section: base
@@ -445,24 +463,6 @@ Description: Apache Portable Runtime (APR) companion library
 OE: apr-util
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
-
-Package: texinfo
-Priority: optional
-Section: base
-Maintainer: mcpat
-Architecture: armhf
-Version: 6.2
-Depends: enigma2 (>=4.3)
-Filename: ./texinfo-6.2_armhf.deb
-Size: 1203668
-MD5sum: 30e62245bd9a7d853b064f8d05075083
-SHA1: 362c558da78f6df5470835855583d865ceafe327
-SHA256: c64bd739d127a70468e0d624f53827421085e1ebf794a51a3299be75ab97cd8c
-SHA512: b311d639a707f22003f82d8dbcadd04b926f862881197af838bb0c2f995b6b233305a281202453808d18ab57047a6b7c94527deafc2ad80b9b03ce774a16820a
-Description: texinfo
- texinfo
-PackageArch: cortexa15hf-neon-vfpv4
-HomePage: http://www.mcpat.com
 
 Package: podlators
 Priority: extra
