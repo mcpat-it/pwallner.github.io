@@ -258,6 +258,30 @@ Description: pod2html
  Perl module pod2html
 Homepage: http://www.cpan.org/src/
 
+Package: upx-ucl
+Priority: optional
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.94-git-483db31acd0a
+Provides: upx
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2)
+Filename: ./upx-3.94-git-483db31acd0a_armhf.deb
+Size: 295612
+MD5sum: 5357a68f16b5b1a98a1d3c811298d0e7
+SHA1: e0ed9c3bb6155178dd67352508f78e57b87e0b95
+SHA256: 5a6533d13b8683c482bb0fccd26c5b8312e5ef7ea56f28b7a5bc608bbc5af55d
+SHA512: f057a9a96bab699ceefe509c0097d66817ab0b60302f4eccb3973f9eb4cf44d6d1ae9392ab030539512d728da8066494409f8476a743499211f9a927a4f65f0a
+Description: efficient live-compressor for executables
+ UPX is an advanced executable file compressor. UPX will typically
+ reduce the file size of programs and DLLs by around 50%-70%, thus
+ reducing disk space, network load times, download times etc. The
+ current version can compress executables for DOS, Linux/ELF (i386,
+ amd64, ppc32) and some other files for different OS.
+ .
+ NOTE: This package is based on the UCL library, which is licensed under GPL.
+Homepage: http://upx.sourceforge.net/
+
 Package: subversion
 Priority: optional
 Section: vcs
@@ -496,31 +520,6 @@ SHA512: 86ae58e828da7a4fe43bee54b3fb2b9878e10cb35755561696e35b2fb128b011f196e832
 Description: podlators
  podlators
 Homepage: http://xxx
-
-Package: upx-ucl
-Priority: optional
-Section: utils
-Maintainer: mcpat
-Architecture: armhf
-Version: 3.91-r1
-Provides: upx
-Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2), libz1 (>=1.2.8)
-Filename: ./upx-3.91-armhf.deb
-Size: 269814
-MD5sum: 3eb554c5f957735bd6f52d8722c3cc4c
-SHA1: 206ef5c3299ec2ecf7592386195b6f8bfcdc6b4e
-SHA256: 11cd9840e7d04f1d0d2ade0ee7ec9bec3d37a47950837ba41c75dcf49a3585d2
-SHA512: bc4f1d540f3f6486760a33e78212b094ceed38d811e97ca2cf7703a628695a6cb55a5eb04e028f63d77775588fc39e259f8cfa0fbdbf21b12d5aa6db06b8c09f
-Description: efficient live-compressor for executables
- UPX is an advanced executable file compressor. UPX will typically
- reduce the file size of programs and DLLs by around 50%-70%, thus
- reducing disk space, network load times, download times etc. The
- current version can compress executables for DOS, Linux/ELF (i386,
- amd64, ppc32) and some other files for different OS.
- .
- NOTE: This package is based on the UCL library, which is licensed under GPL.
- NoTE: This package is compiled with LZMA SDK version 16.04
-Homepage: http://upx.sourceforge.net/
 
 Package: expect
 Priority: optional
