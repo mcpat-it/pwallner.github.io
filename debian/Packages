@@ -147,22 +147,6 @@ Description: gdp
  gdp
 PackageArch: cortexa15hf-neon-vfpv4
 
-Package: mailutils
-Priority: optional
-Section: base
-Maintainer: mcpat
-Architecture: armhf
-Version: 3.0-r1
-Filename: ./mailutils-3.0-r1_armhf.deb
-Size: 2651160
-MD5sum: f5bef630314c130ad648f476efaf1067
-SHA1: c6bedfa8fdb7214c4007a7693495ed7333b48093
-SHA256: ed222dfe44a339f2cf6bc12cb4596bc466108207af2770d9cd8c0bd5abb8c75d
-SHA512: b623ad796c40ceaf940ab1b218bc26147156319e3e0a9f11eff1c94d5ba52d92d7047d13e95f0d47a9d155e86188e9d6f453969e3b5a84b90dbc9f74b06669c6
-Description: mailutils
- mailutils
-PackageArch: cortexa15hf-neon-vfpv4
-
 Package: perl-module-xml-parser
 Priority: optional
 Section: base
@@ -537,6 +521,22 @@ Description: expect
  expect for testing gcc
 PackageArch: cortexa15hf-neon-vfpv4
 HomePage: http://www.mcpat.com
+
+Package: mailutils
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.1.1
+Filename: ./mailutils-3.1.1_armhf.deb
+Size: 1123664
+MD5sum: e888a133ab3a675b65b2199f2f242ba2
+SHA1: f39c08be432450f4b4a8a2393c0c7ab5e492a540
+SHA256: 13b9e80bba882f430ab1f459db5e970f502c2b6da09e9ef5a9b866ae0abcbc41
+SHA512: 50a5f7d1c3dea43d20137352fb893d97c754c9c1853189ae8100ea3672f17270d251a6c1e6d03f2d67d0d0eb8c69990082b1beaeee6abf6a59683af9850d3a96
+Description: mailutils
+ mailutils
+PackageArch: cortexa15hf-neon-vfpv4
 
 Package: cmake
 Priority: optional
