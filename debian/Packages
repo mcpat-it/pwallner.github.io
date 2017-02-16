@@ -56,6 +56,24 @@ Description: high-performance asynchronous HTTP client library
  operation.
 Homepage: http://code.google.com/p/serf/
 
+Package: perl-module-config-file
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.50
+Depends: perl (>= 5.22.1)
+Filename: ./perl-module-config-file-1.50_armhf.deb
+Size: 2878
+MD5sum: e2115d5f622c0d4b3770130e8b12cfeb
+SHA1: 415ced02582a11694027fe9bb92e8ed34332be7a
+SHA256: d6b2bc70ec2cd78c9ca6c6982136e771b7c0345e26e340860776461ad834fd82
+SHA512: 1047dac998c67c6a1316c8c03a767f4fc0fb9830301cc375196be988f47b96d78786cb16d37e67daebfb4af56263d482a2251be988badd5ba5d8d771da911a53
+Description: perl-module-config-file
+ perl-module-config-file
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
+
 Package: automake
 Priority: optional
 Section: base
@@ -146,6 +164,24 @@ SHA512: 5d8a8167ca134e44ecb8f29db971b307d7e323881a10fd27453ec0d818f23f405cf9c710
 Description: gdp
  gdp
 PackageArch: cortexa15hf-neon-vfpv4
+
+Package: perl-module-test-pod-coverage
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.10
+Depends: perl (>= 5.22.1)
+Filename: ./perl-module-test-pod-coverage-1.10_armhf.deb
+Size: 4084
+MD5sum: 4ad2cc45cd38c6be139e9d5ee9f15ca5
+SHA1: 0efee121fc0ba1f2cfe590516a947bda5565f473
+SHA256: 707b95515a84b96f10eee6ba48aa68450f5770410be112ca2f7fc652dcd8b817
+SHA512: c0930b7225039cd9a85afc46ec755470ce6fc29c9492c5b822b7a6388b895ad1ab446973aec013464b1d22352dd7f23420dcc5e98f388c89c2423c77fa73dc93
+Description: perl-module-test-pod-coverage
+ perl-module-test-pod-coverage
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
 
 Package: perl-module-xml-parser
 Priority: optional
@@ -265,6 +301,24 @@ Description: efficient live-compressor for executables
  .
  NOTE: This package is based on the UCL library, which is licensed under GPL.
 Homepage: http://upx.sourceforge.net/
+
+Package: perl-module-test-pod
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.51
+Depends: perl (>= 5.22.1)
+Filename: ./perl-module-test-Pod-1.51_armhf.deb
+Size: 3928
+MD5sum: d91aff20b28453556bdfd086e8b82bd8
+SHA1: a556a0d0ca98486b3d2399c2307db61b659c6b33
+SHA256: cd9f5750161431b72776d07e8b8cc59bd286d9edea34c8275ebc6e2d5eb79ebe
+SHA512: f5757910c43691859844ba748a7415d53dd17130c9251a018c35643f358a93c1571c3e050faed01ffea2ddaca26291363bf1fe8b2e70e07abdcb26ed6e4a55da
+Description: perl-module-test-pod
+ perl-module-test-pod
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
 
 Package: subversion
 Priority: optional
@@ -488,6 +542,26 @@ Description: Apache Portable Runtime (APR) companion library
 OE: apr-util
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
+
+Package: dpkg-sig
+Priority: optional
+Section: devel
+Maintainer: mcpat
+Architecture: all
+Version: 0.13.1+nmu2
+Depends: perl (>= 5.22.1), gnupg (>= 1.4.7), perl-module-digest-md5 (>= 5.22.1), perl-module-config-file (>= 1.50)
+Filename: ./dpkg-sig-0.13.1+nmu2_armhf.deb
+Size: 14626
+MD5sum: eb618ff46b25e3eae5fdfcbd8bbd903c
+SHA1: 0d7e08306d9ab1dd554401738b3d0ae3b23698a0
+SHA256: a4242c7547fc269e22f7e565e17acc2d40af63d7c246f1d13238f8432da7a781
+SHA512: 477d6b1059e7468069aed6466d79df7f0b3dcc90eb6d6a06b7157435cceb4d95e29f7237979b12c7ff7d2868d3f7f8b1bbdd214e9b3d96842ae4981d05406853
+Description: create and verify signatures on .deb-files
+ dpkg-sig is a low-level tool for creation and verification of
+ signature on Debian binary packages (.deb-files).
+ .
+ The created signed packages are strict compatible with dpkg and the
+ apt-utils.
 
 Package: podlators
 Priority: extra
