@@ -148,7 +148,7 @@ OE: apr
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
 
-Package: gdp
+Package: gdb
 Priority: optional
 Section: base
 Maintainer: mcpat
@@ -156,13 +156,13 @@ Architecture: armhf
 Version: 7.12.1
 Depends: libncurses5 (>= 6.0)
 Filename: ./gdb-7.12.1_armhf.deb
-Size: 2863314
-MD5sum: 9688dda9c3d4e651cc559ec761fc1c13
-SHA1: e2ea8931b1971334e4255e032065a7c7de70230e
-SHA256: 61cf5f03ea9ed60febd308f96bf9c9c04951b44c5ad9b2fc8ef8349df36cfc4b
-SHA512: 5d8a8167ca134e44ecb8f29db971b307d7e323881a10fd27453ec0d818f23f405cf9c710126db1d6d3bf5fd847405279c8b668cd574b7b9576b58b41dff29fb9
-Description: gdp
- gdp
+Size: 2863316
+MD5sum: 07c9fef913d4c7a1d7696b6bb4a42fb0
+SHA1: 35837134aa559ff77c0cfb436144939930941ae7
+SHA256: f2999374deb0787ca80e6ae87336336de081a4a322846294046428b167f6609b
+SHA512: 78e6f3ecb69f9e65cf33abc66afbdd44ddec788e1c39b54df98d2d4431d92e1a7b7fceb59eb1cbded59b01759553497cdfaaf7daf53837187055800e59ae3945
+Description: gdb
+ gdb
 PackageArch: cortexa15hf-neon-vfpv4
 
 Package: perl-module-test-pod-coverage
