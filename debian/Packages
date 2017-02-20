@@ -52,6 +52,23 @@ Description: perl-module-config-file
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://unkown/
 
+Package: perl-module-pod-pod2text
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: all
+Version: 5.22.1
+Depends: perl-module-pod-text (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-parselink (>= 5.22.1), perl-module-pod-text-color (>= 5.22.1), perl-module-pod-text-overstrike (>= 5.22.1), perl-module-pod-text-termcap (>= 5.22.1)
+Filename: ./perl-module-pod-pod2text.deb
+Size: 5098
+MD5sum: ea25780182aebaf57c8c5f98cc15b8ef
+SHA1: 5013feab76b26c053ce881019aeb19c61862c76e
+SHA256: 2419860e6720d6e012d3c2a0c4c035cfade8f3a3ff0863ab1b052ab1152b3e22
+SHA512: ffc5cff8ffab02df1758ce92d23bcee7d6022158b6beb9091e778bf2f4cc67d3819d6d332e337abbb95a3805f50d09ba2bd59e358e8cfec23fdf1ce33f8ea349
+Description: pod2text
+ Perl module pod2text
+Homepage: http://unkown/
+
 Package: automake
 Priority: optional
 Section: base
@@ -387,6 +404,23 @@ SHA512: f5757910c43691859844ba748a7415d53dd17130c9251a018c35643f358a93c1571c3e05
 Description: perl-module-test-pod
  perl-module-test-pod
 PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
+
+Package: perl-module-pod-pod2man
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: all
+Version: 5.22.1
+Depends: perl-module-pod-man (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-parselink (>= 5.22.1), perl-module-pod-simple (>= 5.22.1)
+Filename: ./perl-module-pod-pod2man.deb
+Size: 6054
+MD5sum: 43be84ca2d5a7bc9c674b44ece4f5388
+SHA1: cfb2b3af06e128d23c7eeabcb3a197022dc87ec5
+SHA256: 87c8198056b6bcb9abb9e5f79575ea357e2eefab08eddcba5442fdebf4179d93
+SHA512: b6e8a1867a20575d688144b756547939e0d59e5daaf185838659dbf7c0add0e640cc53a6a718a65229c3fdab7fe17f3e6a99d9e20741cce503f50d9235487f60
+Description: pod2man
+ Perl module pod2man
 Homepage: http://unkown/
 
 Package: dialog
