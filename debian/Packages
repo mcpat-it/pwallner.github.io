@@ -224,6 +224,23 @@ Description: perl-module-test-pod-coverage
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://unkown/
 
+Package: perl-module-pod-pod2html
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: all
+Version: 5.22.1-r1
+Depends: perl-module-pod-simple-search (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-simple (>= 5.22.1), perl-module-pod-simple-methody (>= 5.22.1), perl-module-pod-simple-xhtml (>= 5.22.1)
+Filename: ./perl-module-pod-pod2html_5.22.1-r1_armhf.deb
+Size: 16536
+MD5sum: 8f3c7f14ddc03406292056eddc1979d1
+SHA1: 46abc8e288aabf09f6f6ace7749b60489b3001d1
+SHA256: ccda4a1d030ba6469e0d63b822f382cf7161db66dbde5a66d78f4a0647c87a1e
+SHA512: 4fed5a4fbb39a00b3740ff1759daad5011e1d425c97a17cbecfd7643688ace557934a711e5ff4d0679da7eb3767ab877b233d72e74afd696781d9c38688aa3a4
+Description: pod2html
+ Perl module pod2html
+Homepage: http://www.cpan.org/src/
+
 Package: perl-module-xml-parser
 Priority: optional
 Section: base
@@ -346,23 +363,6 @@ SHA512: d8b4a75f4b749dc66848e906689526dc0e7b92a6aa23ffc0d76e6e7f0f1e796b7073ec8a
 Description: Dejagnu
  Dejagnu
 Homepage: http://xxx/
-
-Package: perl-module-pod-pod2html
-Priority: optional
-Section: utils
-Maintainer: mcpat
-Architecture: all
-Version: 5.22-1
-Depends: perl-module-pod-simple-search (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-simple (>= 5.22.1)
-Filename: ./perl-module-pod-pod2html.deb
-Size: 24620
-MD5sum: 9fd7aef5133c8798951210272ce7f582
-SHA1: 7815e254e6ad399158051e3cb1c0684d39117c86
-SHA256: 08141bbeaa0876ee14edadf433c85cad0f576dc84e93a6e50d92bd8ad85fb98d
-SHA512: a0f9a5a2319088e2e2559b0bb0aeb6a6300f4aad31dad25b3da0e8e661a4e4c4a01f6ab5f4e610564a4a0dde0e005cdd62bc4409a5fa9b46d098e95a6a4807c6
-Description: pod2html
- Perl module pod2html
-Homepage: http://www.cpan.org/src/
 
 Package: upx-ucl
 Priority: optional
