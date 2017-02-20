@@ -34,28 +34,6 @@ Description: intltool
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://xxxx/
 
-Package: libserf1
-Priority: optional
-Section: libs
-Maintainer: mcpat
-Architecture: armhf
-Source: serf
-Version: 1.3.9-r1
-Depends: libapr1 (>= 1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libgssapi-krb5-2 (>= 1.13.6), libssl1.0.0 (>= 1.0.2)
-Filename: ./libserf1_1.3.9-r1_armhf.deb
-Size: 230466
-MD5sum: 34b87007ef18d3233aed9098b17c7556
-SHA1: 4f8f481b45acc737735c12b8a46e5b9293307ebe
-SHA256: f7c8eda36e5ad2a189831cae6401e5accd8780f5554522a538e8e2360f20c8eb
-SHA512: 58dad863370e326e32446d7a53df6de0748b57a4ce7d1eeaa49a73aa78337272b06165059656f28615327477d1e2a152ea39898d329b6f8cac99931bca95cf47
-Description: high-performance asynchronous HTTP client library
- serf library is a C-based HTTP client library built upon the Apache
- Portable Runtime (APR) library.  It multiplexes connections, running the
- read/write communication asynchronously.  Memory copies and
- transformations are kept to a minimum to provide high performance
- operation.
-Homepage: http://code.google.com/p/serf/
-
 Package: perl-module-config-file
 Priority: optional
 Section: base
@@ -126,25 +104,24 @@ Description: Middleware to access a smart card using PC/SC (library)
 Multi-Arch: same
 Homepage: http://pcsclite.alioth.debian.org/
 
-Package: libapr1
+Package: libaprutil1-dev
 Priority: optional
-Section: libs
+Section: base
 Maintainer: mcpat
 Architecture: armhf
-Version: 1.5.2
-Replaces: libapr-1-0
-Provides: apr
-Depends: libuuid1 (>= 2.27.1), libc6 (>= 2.23)
-Conflicts: libapr-1-0
-Filename: ./libapr1_1.5.2_armhf.deb
-Size: 575734
-MD5sum: 093ad0cf4acae44beb15fbee7c5a6c49
-SHA1: bd054793bf86200fc83a71f467da26ffcb3eef78
-SHA256: 15d09b64d194b23ac45028fd1791324bc35262bf3445741b8aade21171fd52ef
-SHA512: 17c477fce680576749acb4d081ee916dc98b4d4d923b25b14393c9c496fc3aa722a23a682bdfaa8455b5281f4ca9d6ba453fc538215ff44942bcf75e84fa8985
-Description: Apache Portable Runtime (APR) library
- Apache Portable Runtime (APR) library.
-OE: apr
+Version: 1.5.4
+Replaces: libaprutil1
+Provides: apr-util
+Depends: libapr1-dev (>= 1.5.2), libaprutil-1-0 (>= 1.5.4), libexpat-dev (>= 2.1.0), libsqlite3-dev (>= 3:3.11.0)
+Conflicts: libaprutil1
+Filename: ./libaprutil1-dev_1.5.4_armhf.deb
+Size: 270760
+MD5sum: 2973223f340151a651f689bd772a5e90
+SHA1: 604d706c5b2b3d8f6004b11b6f7677eaac140b60
+SHA256: f1d76e755f0019dea583ed585ae735699de09a463c6f07fc7163e255c88f4e2a
+SHA512: 3a9e57c05629d9caeb08d8773a96f534c44a948de903f0f4a0b547215d55a20b95ea075d2ca9a158d681b3fbf6e667b5d854eb2fece5f4d56a24fb20ff1424c8
+Description: Apache Portable Runtime (APR) companion library - Debug-Symbole
+ Apache Portable Runtime (APR) companion library - Debug-Symbole.
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
 
@@ -228,6 +205,29 @@ Description: autoconf
  autoconf
 PackageArch: cortexa15hf-neon-vfpv4
 
+Package: libserf-dev
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: serf
+Version: 1.3.9
+Depends: libapr1-dev (>= 1.5.2), libaprutil1-dev (>= 1.5.4), libserf1 (>= 1.3.9)
+Filename: ./libserf-dev_1.3.9_armhf.deb
+Size: 174444
+MD5sum: 6a0dcfa15b3256b06e7daa096fe50dad
+SHA1: e540d0aeccbd1395f9356d112c29adc5d0a7dfd3
+SHA256: 2466c3bd0992e5cf4b47c39e507589212de2a6354cd57978d2fbb23c0bd416bd
+SHA512: ee53ad74c5498cc185ea538386d3f424002c953b31dbdea4a197ea6a9ff1c9833b992126357bc1ffa5c88190460c59896df80394b1d0e67e2b7cac489989677c
+Description: high-performance asynchronous HTTP client library headers
+ serf library is a C-based HTTP client library built upon the
+ Apache Portable Runtime (APR) library. It multiplexes connections,
+ running the read/write communication asynchronously. Memory copies
+ and transformations are kept to a minimum to provide high
+ performance operation.
+ This package contains development headers for serf.
+Homepage: http://code.google.com/p/serf/
+
 Package: enigma2-skin-metrixstylehd
 Priority: optional
 Section: base
@@ -245,6 +245,28 @@ Description: Skin MetrixStyleHD
  HD-Skin for DreamOS with Controler
 PackageArch: mips32el
 Homepage: wwww.nachtfalke.biz
+
+Package: libserf1
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: serf
+Version: 1.3.9-r2
+Depends: libapr-1-0 (>=1.5.2), libaprutil-1-0 (>= 1.5.4), libc6 (>= 2.23), libgssapi-krb5-2 (>= 1.13.6), libssl1.0.0 (>= 1.0.2)
+Filename: ./libserf1_1.3.9-r2_armhf.deb
+Size: 122616
+MD5sum: 6b940a0062892b5e856023828a9b7bfb
+SHA1: ccde46a36dccf23b91d8aeecd624b2bd722bc161
+SHA256: 4da3f17b262daa203a5f886ff59687b6790b2d37389905df766b186f45de8302
+SHA512: 50be0259a5c7cc7fc909ac2a9f21b5238bc2d0404f8ca99221949cfb8678cfa979207cf36ca2637c375f3e95ce387c84fea7ff1bb59ad00476e51e41421f0530
+Description: high-performance asynchronous HTTP client library
+ serf library is a C-based HTTP client library built upon the Apache
+ Portable Runtime (APR) library.  It multiplexes connections, running the
+ read/write communication asynchronously.  Memory copies and
+ transformations are kept to a minimum to provide high performance
+ operation.
+Homepage: http://code.google.com/p/serf/
 
 Package: dejagnu
 Priority: optional
@@ -319,31 +341,6 @@ Description: perl-module-test-pod
  perl-module-test-pod
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://unkown/
-
-Package: subversion
-Priority: optional
-Section: vcs
-Maintainer: mcpat
-Architecture: armhf
-Version: 1.9.5-r1
-Depends: libapr1 (>= 1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libsqlite3-0 (>=3:3.11.0), libexpat1 (>=2.1.0), libserf1 (>=1.3.9)
-Filename: ./subversion_1.9.5-r1_armhf.deb
-Size: 1523498
-MD5sum: b3a68a7767b09d1fd4e8d1169e9302c1
-SHA1: 500b8b14a54176f068bded48f42a5678d4d8b6c1
-SHA256: 07c26803c0955d369d4676cfb5538aed0c4422b89797cfdbf26858626ee49d07
-SHA512: cdc7537534363a186689aab06c95cbda46f5a6357b364fab91caddd1b6b3ec51688b73e60556a55e5b02820f1fbdb74222d7e55836da98061596a2293c2663ec
-Description: Advanced version control system
- Apache Subversion, also known as svn, is a centralised version control
- system.  Version control systems allow many individuals (who may be
- distributed geographically) to collaborate on a set of files (source
- code, websites, etc).  Subversion began with a CVS paradigm and
- supports all the major features of CVS, but has evolved to support
- many features that CVS users often wish they had.
- .
- This package includes the Subversion client (svn), repository
- administration tools (svnadmin, svnlook) and a network server (svnserve).
-Homepage: http://subversion.apache.org/
 
 Package: dialog
 Priority: optional
@@ -521,28 +518,6 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
-Package: libaprutil1
-Priority: optional
-Section: base
-Maintainer: mcpat
-Architecture: armhf
-Version: 1.5.4-r1
-Replaces: libaprutil-1-0
-Provides: apr-util
-Depends: libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libgdbm4 (>= 1.11), libapr1 (>= 1.5.2), libc6 (>= 2.23), libexpat1 (>= 2.1.0), libuuid1 (>= 2.27.1)
-Conflicts: libaprutil-1-0
-Filename: ./libaprutil1_1.5.4-r1_armhf.deb
-Size: 360302
-MD5sum: 5e8b5ee7c8e2b5067ac43f95f0ed1b8f
-SHA1: 820ba91793275b802830ce9eb31b95b68a28c017
-SHA256: a3ce1223440ae69ddb55be63607ced000d4f86b9b299f44e8176d6ee6108878f
-SHA512: 229596a61e44b917b6b5270e71c780d91e7e19d93f7de0a47f1859669150da1b61975f6f3da295ca32fc865048ee7368d2ff22e602988f89d1b9286ac34e8ffc
-Description: Apache Portable Runtime (APR) companion library
- Apache Portable Runtime (APR) companion library.
-OE: apr-util
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://apr.apache.org/
-
 Package: dpkg-sig
 Priority: optional
 Section: devel
@@ -578,6 +553,52 @@ SHA512: 86ae58e828da7a4fe43bee54b3fb2b9878e10cb35755561696e35b2fb128b011f196e832
 Description: podlators
  podlators
 Homepage: http://xxx
+
+Package: libapr1-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.5.2
+Replaces: libapr1
+Provides: apr
+Depends: libapr-1-0 (>= 1.5.2), libuuid1 (>= 2.27.1), libc6 (>= 2.23)
+Conflicts: libapr1
+Filename: ./libapr1-dev_1.5.2_armhf.deb
+Size: 446924
+MD5sum: a6f29659ad723f3ca34c44c1a11557cd
+SHA1: 0b1c9674313c6e1bc6ffa9adee8a5f4012474183
+SHA256: 3488a77eafb52f87ed35bb1e7864f12203e003e62e8da3502022d9a0d53ba1b3
+SHA512: 9c3f9cb1b886db9054897e59059050750183332c1a580576c97b73cbe8f40299c463a759dc2915f38157e5ceddce32c05b28399980c79a35ed230e97e374134c
+Description: Apache Portable Runtime (APR) library - Entwicklungs-Header
+ Apache Portable Runtime (APR) library - Entwicklungs-Header.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://apr.apache.org/
+
+Package: subversion
+Priority: optional
+Section: vcs
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.9.5-r2
+Depends: libapr-1-0 (>= 1.5.2), libaprutil-1-0 (>= 1.5.4), libc6 (>= 2.23), libsqlite3-0 (>=3:3.11.0), libexpat1 (>=2.1.0), libserf1 (>=1.3.9)
+Filename: ./subversion_1.9.5-r2_armhf.deb
+Size: 1270860
+MD5sum: d929a68ab1816a8089d51ef5bac40f40
+SHA1: 09724f536f9d55a6ce841a1580e93681d872eaa8
+SHA256: 81604f8ebdeede935d95d357fd30221fce349de8f33a45bf7b9c4980421ed44b
+SHA512: 019dc100c08dd9a15032fd2443633948585c99a12106f4a771b435dd16ac02b25afe00ad6952ff3c4dc4c25fdbf8679e6ba5201c22eeff7c20173a66b94ce9df
+Description: Advanced version control system
+ Apache Subversion, also known as svn, is a centralised version control
+ system.  Version control systems allow many individuals (who may be
+ distributed geographically) to collaborate on a set of files (source
+ code, websites, etc).  Subversion began with a CVS paradigm and
+ supports all the major features of CVS, but has evolved to support
+ many features that CVS users often wish they had.
+ .
+ This package includes the Subversion client (svn), repository
+ administration tools (svnadmin, svnlook) and a network server (svnserve).
+Homepage: http://subversion.apache.org/
 
 Package: expect
 Priority: optional
