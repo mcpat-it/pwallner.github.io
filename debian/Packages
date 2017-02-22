@@ -1,0 +1,850 @@
+Package: texinfo
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 6.3
+Depends: enigma2 (>=4.3)
+Filename: ./texinfo-6.3_armhf.deb
+Size: 727362
+MD5sum: 51f45c9dea7846b9d470887601724204
+SHA1: dae2aacd4206aae2c56db406993d5701f6bfac7f
+SHA256: 5226c92aebffbf52a8d64bccc78c63d5484df1db098e4a1ef9a9aca896b6c789
+SHA512: 150abfeffc63b06cc40bfcc1a8522e9071f679822b696f7bfd9333e04c56796f6fa076ef92339f676323b94c245b8dda0d701164941b6b50668ef43c2c18ff70
+Description: texinfo
+ texinfo
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
+
+Package: intltool
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 0.51.0
+Depends: perl-module-xml-parser (>= 2.44), automake (>= 1.15), file (>= 5.25), gettext (>= 0.19.6), patch (>= 2.7.5), perl (>= 5.22.1)
+Filename: ./intltool-0.51.0_armhf.deb
+Size: 34278
+MD5sum: 8f46a97ada3f26b861e4fce6e07edac4
+SHA1: 0d72779f4a00301ee5e2f1e08c5b5138e196616c
+SHA256: 0b3779f3454b5289a542e70bd783b98646c8aa26ccc72ce354c93858b79be112
+SHA512: fa4a71cf07b4896ecdde2c053b6aa25f859ff515511010846332084ccf462a4b20677a194f072c2adc0d89a72b88d5231820676cefc8380dc7837bf6361d1f38
+Description: intltool
+ intltool
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://xxxx/
+
+Package: perl-module-config-file
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.50
+Depends: perl (>= 5.22.1)
+Filename: ./perl-module-config-file-1.50_armhf.deb
+Size: 2878
+MD5sum: e2115d5f622c0d4b3770130e8b12cfeb
+SHA1: 415ced02582a11694027fe9bb92e8ed34332be7a
+SHA256: d6b2bc70ec2cd78c9ca6c6982136e771b7c0345e26e340860776461ad834fd82
+SHA512: 1047dac998c67c6a1316c8c03a767f4fc0fb9830301cc375196be988f47b96d78786cb16d37e67daebfb4af56263d482a2251be988badd5ba5d8d771da911a53
+Description: perl-module-config-file
+ perl-module-config-file
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
+
+Package: perl-module-pod-pod2text
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: all
+Version: 5.22.1
+Depends: perl-module-pod-text (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-parselink (>= 5.22.1), perl-module-pod-text-color (>= 5.22.1), perl-module-pod-text-overstrike (>= 5.22.1), perl-module-pod-text-termcap (>= 5.22.1)
+Filename: ./perl-module-pod-pod2text.deb
+Size: 5098
+MD5sum: ea25780182aebaf57c8c5f98cc15b8ef
+SHA1: 5013feab76b26c053ce881019aeb19c61862c76e
+SHA256: 2419860e6720d6e012d3c2a0c4c035cfade8f3a3ff0863ab1b052ab1152b3e22
+SHA512: ffc5cff8ffab02df1758ce92d23bcee7d6022158b6beb9091e778bf2f4cc67d3819d6d332e337abbb95a3805f50d09ba2bd59e358e8cfec23fdf1ce33f8ea349
+Description: pod2text
+ Perl module pod2text
+Homepage: http://unkown/
+
+Package: automake
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.15-r1
+Depends: autoconf (>= 2.69)
+Filename: ./automake-1.15-r1_armhf.deb
+Size: 531302
+MD5sum: c2f7d6f7acb0437808911319f7f7c5f9
+SHA1: 7049de5f14e7bbaf04ecd747dccdcf23785ac848
+SHA256: 0b91ac4476174050039f3718fe9ec98ffa77fa80cd3d2229ea94e8f7c1a1be1a
+SHA512: 054dadef60f344b9d9c47f9fdb532c29ac6719f76880118e45f0bafd1c26626eb54a676912b2871d093254a978dc50efcd65ba6e2b42f586d4fc8994c0d47ff7
+Description: Tool for generating GNU Standards-compliant Makefiles
+ Automake is a tool for automatically generating `Makefile.in's from
+ files called `Makefile.am'.
+ .
+ The goal of Automake is to remove the burden of Makefile maintenance
+ from the back of the individual GNU maintainer (and put it on the back
+ of the Automake maintainer).
+ .
+ The `Makefile.am' is basically a series of `make' macro definitions
+ (with rules being thrown in occasionally).  The generated
+ `Makefile.in's are compliant with the GNU Makefile standards.
+ .
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.gnu.org/software/automake/
+
+Package: libpcsclite1
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: pcsc-lite
+Version: 1.8.20-r1
+Depends: libc6 (>= 2.23), udev (>= 1:230), libudev1 (>= 1:230)
+Filename: ./libpcsclite1_1.8.20-r1_armhf.deb
+Size: 192476
+MD5sum: 13b6d6020e9ab2610ae326c504b2e172
+SHA1: 2180a61be2136367020f6f6b6691fc4bdc349f4a
+SHA256: 0be3b988320316d10d06ed7c7e7c2c56cb5471e844b495070c0a0a4627295622
+SHA512: 863a6052af5045c9099e0f1fedb231c55f2e5516bab2001df0616d53f0c68859a808ab31a11f5c87c832e9db76fe406bbca64c917f3117321882288eb6798f15
+Description: Middleware to access a smart card using PC/SC (library)
+ The purpose of PC/SC Lite is to provide a Windows(R) SCard interface
+ in a very small form factor for communicating to smartcards and
+ readers.
+ .
+ The PC/SC Lite library is used to connect to the PC/SC daemon from
+ a client application and provide access to the desired reader.
+Multi-Arch: same
+Homepage: http://pcsclite.alioth.debian.org/
+
+Package: subversion
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.9.5-r3
+Depends: libapr1 (>= 1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libsqlite3-0 (>=3:3.11.0), libexpat1 (>=2.1.0), libserf1 (>=1.3.9)
+Filename: ./subversion_1.9.5-r3_armhf.deb
+Size: 1298432
+MD5sum: b8dae385cd8efc4e40cccbd7a6c8d053
+SHA1: 92b387847dfcb03f5ac02402a2811ba660910d66
+SHA256: f91d2cab9078b6c2023093d0951dc234d4ceb8c420f46b2f6d6f6277825ebe43
+SHA512: b660e0d01738826678cc3623757cec8c05ebb60735bf12e54cef586f26b1b6bb05ccb3cdc9698cd72d5a6bb111cce03fbcaa8b77dffa5844ba575ae02d82b27b
+Description: Advanced version control system
+ Apache Subversion, also known as svn, is a centralised version control
+ system.  Version control systems allow many individuals (who may be
+ distributed geographically) to collaborate on a set of files (source
+ code, websites, etc).  Subversion began with a CVS paradigm and
+ supports all the major features of CVS, but has evolved to support
+ many features that CVS users often wish they had.
+ .
+ This package includes the Subversion client (svn), repository
+ administration tools (svnadmin, svnlook) and a network server (svnserve).
+Homepage: http://subversion.apache.org/
+
+Package: libaprutil1
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.5.4-r2
+Replaces: libaprutil-1-0
+Provides: apr-util
+Depends: libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libgdbm4 (>= 1.11), libapr1 (>= 1.5.2), libc6 (>= 2.23), libexpat1 (>= 2.1.0), libuuid1 (>= 2.27.1)
+Conflicts: libaprutil-1-0
+Filename: ./libaprutil1_1.5.4-r2_armhf.deb
+Size: 157046
+MD5sum: af0de5152432a854c34704231bbe47e2
+SHA1: f8cc873723ab7b62be0bdfc6def24c086f1c516c
+SHA256: 0e81e5356be9ed7d3468a7ae8a23882338bfc5e79e52964c6a04a38c5a056bf2
+SHA512: 562a2b29138552fce1027c0f0b7fae7872433857b223ec0e160e6df4f078c2966525718354b73501a25bdd96ca8e3becaa643af0533e26427abafb44d9a96380
+Description: Apache Portable Runtime (APR) companion library
+ Apache Portable Runtime (APR) companion library.
+OE: apr-util
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://apr.apache.org/
+
+Package: libaprutil1-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.5.4
+Replaces: libaprutil-1-0
+Provides: apr-util
+Depends: libapr1-dev (>= 1.5.2), libaprutil1 (>= 1.5.4), libexpat-dev (>= 2.1.0), libsqlite3-dev (>= 3:3.11.0)
+Conflicts: libaprutil-1-0
+Filename: ./libaprutil1-dev_1.5.4_armhf.deb
+Size: 270760
+MD5sum: 3be56f0161726796690043d7ad9a31c2
+SHA1: fb0f76c005f71c0b2bb07edd6c40139e9d22c4c6
+SHA256: 76bb1eb78ab671793991fc92e9a4eb6b800273a973207328f17e955359eca8bf
+SHA512: 05a594d1386fe59536ed347bca80176ceba01492ec30688c1c01f364ed3b4cca61dade26f3b86675845738630be8e43c60f5a609ad1a092ad0a4d29eadf481f4
+Description: Apache Portable Runtime (APR) companion library - Debug-Symbole
+ Apache Portable Runtime (APR) companion library - Debug-Symbole.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://apr.apache.org/
+
+Package: gdb
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.12.1
+Depends: libncurses5 (>= 6.0)
+Filename: ./gdb-7.12.1_armhf.deb
+Size: 2863316
+MD5sum: 07c9fef913d4c7a1d7696b6bb4a42fb0
+SHA1: 35837134aa559ff77c0cfb436144939930941ae7
+SHA256: f2999374deb0787ca80e6ae87336336de081a4a322846294046428b167f6609b
+SHA512: 78e6f3ecb69f9e65cf33abc66afbdd44ddec788e1c39b54df98d2d4431d92e1a7b7fceb59eb1cbded59b01759553497cdfaaf7daf53837187055800e59ae3945
+Description: gdb
+ gdb
+PackageArch: cortexa15hf-neon-vfpv4
+
+Package: perl-module-test-pod-coverage
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.10
+Depends: perl (>= 5.22.1)
+Filename: ./perl-module-test-pod-coverage-1.10_armhf.deb
+Size: 4084
+MD5sum: 4ad2cc45cd38c6be139e9d5ee9f15ca5
+SHA1: 0efee121fc0ba1f2cfe590516a947bda5565f473
+SHA256: 707b95515a84b96f10eee6ba48aa68450f5770410be112ca2f7fc652dcd8b817
+SHA512: c0930b7225039cd9a85afc46ec755470ce6fc29c9492c5b822b7a6388b895ad1ab446973aec013464b1d22352dd7f23420dcc5e98f388c89c2423c77fa73dc93
+Description: perl-module-test-pod-coverage
+ perl-module-test-pod-coverage
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
+
+Package: perl-module-pod-pod2html
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: all
+Version: 5.22.1-r1
+Depends: perl-module-pod-simple-search (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-simple (>= 5.22.1), perl-module-pod-simple-methody (>= 5.22.1), perl-module-pod-simple-xhtml (>= 5.22.1)
+Filename: ./perl-module-pod-pod2html_5.22.1-r1_armhf.deb
+Size: 16536
+MD5sum: 8f3c7f14ddc03406292056eddc1979d1
+SHA1: 46abc8e288aabf09f6f6ace7749b60489b3001d1
+SHA256: ccda4a1d030ba6469e0d63b822f382cf7161db66dbde5a66d78f4a0647c87a1e
+SHA512: 4fed5a4fbb39a00b3740ff1759daad5011e1d425c97a17cbecfd7643688ace557934a711e5ff4d0679da7eb3767ab877b233d72e74afd696781d9c38688aa3a4
+Description: pod2html
+ Perl module pod2html
+Homepage: http://www.cpan.org/src/
+
+Package: perl-module-xml-parser
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.44
+Depends: libexpat1 (>= 2.1.0), perl (>= 5.22.1), libc6 (>= 2.23)
+Filename: ./XML-Parser-2.44_armhf.deb
+Size: 165716
+MD5sum: 28ea2be241038ef72967a4670543407c
+SHA1: 96ed09539f54fc4055dc79d3ce6d84e26df4a7e4
+SHA256: c9e4eade02f86bcf1306e3c761ada086b4f62a57b34f3cfa4c23dd084322445b
+SHA512: 1690508aaf01c46c5459b09355ee6c6820fa6cb61e4d9325f5d67bd1b3e6eb5581ed25dac36edfe41c2c37daa9000139a6d542bb264dcef21c81b02b5ae51d2a
+Description: perl-module-xml-parser
+ This module provides ways to parse XML documents. 
+ It is built on top of XML::Parser::Expat, which is 
+ a lower level interface to James Clark's expat library. 
+ Each call to one of the parsing methods creates a new
+ instance of XML::Parser::Expat which is then used to 
+ parse the document. Expat options may be provided 
+ when the XML::Parser object is created. These options
+ are then passed on to the Expat object on each parse
+ call. They can also be given as extra arguments to 
+ the parse methods, in which case they override 
+ options given at XML::Parser creation time.x
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
+
+Package: autoconf
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.69-r1
+Depends: perl (>= 5.22.1), m4 (>= 1.4.17)
+Filename: ./autoconf-2.69-r1_armhf.deb
+Size: 546466
+MD5sum: 54e6c509a475292b10c6f14b85a2adfb
+SHA1: 11db4e77a85fbc022ebebeaa4e2cc28d8866c47e
+SHA256: e199baf7b28be3219bf7cf3bf930e30eef5945ad03584f33c8488876a7092cd4
+SHA512: 9ae3678ab3b0808efa39130e1f734ff4f44293528cfdc0e4945c5cce32835f114aa5fac1bc94eb1d088841e94e6541321296e32211805b59c9511bf1eabb1340
+Description: autoconf
+ autoconf
+PackageArch: cortexa15hf-neon-vfpv4
+
+Package: libserf-dev
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: serf
+Version: 1.3.9
+Depends: libapr1-dev (>= 1.5.2), libaprutil1-dev (>= 1.5.4), libserf1 (>= 1.3.9)
+Filename: ./libserf-dev_1.3.9_armhf.deb
+Size: 174464
+MD5sum: e22a3c6c3f043367844780cdf7a6cd06
+SHA1: 424df41a7e721b908520247c84ff9d464ff7831b
+SHA256: 23897235c2b0c10ca96d46d80d7790720a39626336acbc031bd346ecbc67408f
+SHA512: 0a0a6eee6f342c1af0e5b0daa6af4749a5d3e27c519d78ce568aafa0eb56c7fda080513fe5b0091545e274d6314e73f2c66d097dd914d2e4701804884403c94d
+Description: high-performance asynchronous HTTP client library headers
+ serf library is a C-based HTTP client library built upon the
+ Apache Portable Runtime (APR) library. It multiplexes connections,
+ running the read/write communication asynchronously. Memory copies
+ and transformations are kept to a minimum to provide high
+ performance operation.
+ This package contains development headers for serf.
+Homepage: http://code.google.com/p/serf/
+
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 6.1
+Depends: enigma2 (>= 4.3.0r22), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_6.1_all.deb
+Size: 1301790
+MD5sum: b6f17695a60013b6fcbade04386fb0aa
+SHA1: 174c0f13d5706a7a904284ca44ce7b003f26519c
+SHA256: 35a99d7b21a215a81f48fe226a2a8b504c2e73a69c5bfe3d8dbe65c52a0fdaf5
+SHA512: e189637b1d3c8e07ff522f55cc914f91b2e92fabcbff59fe32134e23622e17c2895480fa506d863e76586aa0911765a07a1ea5129678d5ad885cd2bab742b4e1
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+PackageArch: mips32el
+Homepage: wwww.nachtfalke.biz
+
+Package: libserf1
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: serf
+Version: 1.3.9-r2
+Depends: libapr1 (>=1.5.2), libaprutil1 (>= 1.5.4), libc6 (>= 2.23), libgssapi-krb5-2 (>= 1.13.6), libssl1.0.0 (>= 1.0.2)
+Filename: ./libserf1_1.3.9-r2_armhf.deb
+Size: 122642
+MD5sum: 6174682ed0f50e7d889e3121b3fda944
+SHA1: 53e811e3817a22bd157110cce09c4cc7c993e9e0
+SHA256: c6e90f7a31ae190696cb910e17c3bd3c462b76c8b8067bf9f41d2ea62bc79204
+SHA512: 475a6ac1dc362efb976ac2822b6dbe915d8b6182eaf79d3099c414e51d1df643380c2e43952c94feec4555bf165ddc1dd8e6d1e88256643370864ee0af0e388d
+Description: high-performance asynchronous HTTP client library
+ serf library is a C-based HTTP client library built upon the Apache
+ Portable Runtime (APR) library.  It multiplexes connections, running the
+ read/write communication asynchronously.  Memory copies and
+ transformations are kept to a minimum to provide high performance
+ operation.
+Homepage: http://code.google.com/p/serf/
+
+Package: dejagnu
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.6.1-git
+Depends: expect (>= 5.45), dpkg (>= 1.18.4)
+Filename: ./dejagnu_1.6.1-git_armhf.deb
+Size: 128032
+MD5sum: 230d1b995e66ebaa4ddff26551e0c265
+SHA1: 77d803e03d223f837e866c9c9ca86868567a536a
+SHA256: e7672db6b9cfd2eb9d60113717325cf25b92ea1ff825fdd6ed6838987002cdec
+SHA512: e5d5b3ce304d4f1d0ecce9103cba20b3aab80aa5b2e864b7016acda2340531b50a6232b3ad7e96fa3c66b7340cf313832597c26e4818f328efc3eb120ec8d965
+Description: framework for running test suites on software tools
+ DejaGnu is a framework for testing other programs.  Its purpose is to
+ provide a single front end for all tests.
+ .
+ DejaGnu provides a layer of abstraction which allows you to write
+ tests that are portable to any host or target where a program must
+ be tested.  All tests have the same output format.
+ .
+ DejaGnu is written in `expect', which in turn uses "Tcl"--Tool
+ command language.
+
+Package: upx-ucl
+Priority: optional
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.94-git-483db31acd0a
+Provides: upx
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2)
+Filename: ./upx-3.94-git-483db31acd0a_armhf.deb
+Size: 295612
+MD5sum: 5357a68f16b5b1a98a1d3c811298d0e7
+SHA1: e0ed9c3bb6155178dd67352508f78e57b87e0b95
+SHA256: 5a6533d13b8683c482bb0fccd26c5b8312e5ef7ea56f28b7a5bc608bbc5af55d
+SHA512: f057a9a96bab699ceefe509c0097d66817ab0b60302f4eccb3973f9eb4cf44d6d1ae9392ab030539512d728da8066494409f8476a743499211f9a927a4f65f0a
+Description: efficient live-compressor for executables
+ UPX is an advanced executable file compressor. UPX will typically
+ reduce the file size of programs and DLLs by around 50%-70%, thus
+ reducing disk space, network load times, download times etc. The
+ current version can compress executables for DOS, Linux/ELF (i386,
+ amd64, ppc32) and some other files for different OS.
+ .
+ NOTE: This package is based on the UCL library, which is licensed under GPL.
+Homepage: http://upx.sourceforge.net/
+
+Package: gperf
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.1
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0)
+Filename: ./gperf-3.1_armhf.deb
+Size: 30352
+MD5sum: 5ea4b4af49198d82b8663a62b0acd502
+SHA1: c94690309613168b3775d2d0e6e92fb0d3ff5aa8
+SHA256: 5dfe0994681aabfee58dc62e938df4c162ba136e2f989bf784385e38233c9490
+SHA512: 5d5edeeec0ec8dbe88feaa044fb073ebee7c03c6bcdcd79155bd1f91b2054fc233979acc9d4ae5480bfe9aeb85b38ea184c241ef8734b87606b64cbe942fe47c
+Description: gperf
+ gperf
+Homepage: http://unknown/
+
+Package: perl-module-test-pod
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.51
+Depends: perl (>= 5.22.1)
+Filename: ./perl-module-test-Pod-1.51_armhf.deb
+Size: 3928
+MD5sum: d91aff20b28453556bdfd086e8b82bd8
+SHA1: a556a0d0ca98486b3d2399c2307db61b659c6b33
+SHA256: cd9f5750161431b72776d07e8b8cc59bd286d9edea34c8275ebc6e2d5eb79ebe
+SHA512: f5757910c43691859844ba748a7415d53dd17130c9251a018c35643f358a93c1571c3e050faed01ffea2ddaca26291363bf1fe8b2e70e07abdcb26ed6e4a55da
+Description: perl-module-test-pod
+ perl-module-test-pod
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://unkown/
+
+Package: perl-module-pod-pod2man
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: all
+Version: 5.22.1
+Depends: perl-module-pod-man (>= 5.22.1), perl (>= 5.22.1), perl-module-pod-parselink (>= 5.22.1), perl-module-pod-simple (>= 5.22.1)
+Filename: ./perl-module-pod-pod2man.deb
+Size: 6054
+MD5sum: 43be84ca2d5a7bc9c674b44ece4f5388
+SHA1: cfb2b3af06e128d23c7eeabcb3a197022dc87ec5
+SHA256: 87c8198056b6bcb9abb9e5f79575ea357e2eefab08eddcba5442fdebf4179d93
+SHA512: b6e8a1867a20575d688144b756547939e0d59e5daaf185838659dbf7c0add0e640cc53a6a718a65229c3fdab7fe17f3e6a99d9e20741cce503f50d9235487f60
+Description: pod2man
+ Perl module pod2man
+Homepage: http://unkown/
+
+Package: dialog
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Source: ftp://invisible-island.net/dialog/dialog.tar.gz
+Version: 1.3-20160828-1
+Depends: enigma2 (>=4.3), libc6 (>= 2.23), libncursesw5 (>= 6.0+20160213), libtinfo5 (>= 6.0+20160213), debianutils (>= 4.7)
+Filename: ./dialog-1.3-armhf.deb
+Size: 77582
+MD5sum: a9ddab63dc14c426ef8d95b2d3918bf9
+SHA1: 3649a1e403e36d01c7de659952f18877a233b49d
+SHA256: 80ac547efebd2d8da86194a9a7d9f1b14085bb793c90c75f1f056a658a9cba9d
+SHA512: 24cd92a500cfe5e88d0785596ae72899b0511e3c99e2787b4a0be207f92e52789f82f26ee2af2d05861a5569151e369742bb3e553d4a3cd554f678ce65088de6
+Description: Displays user-friendly dialog boxes from shell scripts
+ This application provides a method of displaying several different types
+ of dialog boxes from shell scripts.  This allows a developer of a script
+ to interact with the user in a much friendlier manner.
+ .
+ The following types of boxes are at your disposal:
+  yes/no           Typical query style box with "Yes" and "No" answer buttons
+  menu             A scrolling list of menu choices with single entry selection
+  input            Query style box with text entry field
+  message          Similar to the yes/no box, but with only an "Ok" button
+  text             A scrollable text box that works like a simple file viewer
+  info             A message display that allows asynchronous script execution
+  checklist        Similar to the menu box, but allowing multiple selections
+  radiolist        Checklist style box allowing single selections
+  gauge            Typical "progress report" style box
+  tail             Allows viewing the end of files (tail) that auto updates
+  background tail  Similar to tail but runs in the background.
+  editbox          Allows editing an existing file
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://invisible-island.net/dialog/dialog.html
+
+Package: sshpass
+Priority: extra
+Section: utils
+Installed-Size: 49
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.06
+Depends: libc6 (>= 2.23)
+Recommends: ssh-client
+Filename: ./sshpass-1.06_arm.deb
+Size: 12690
+MD5sum: 71ab2e17538367af7903a48697609231
+SHA1: d0814ff4eaacf9094153335c9e8249b7058020a3
+SHA256: 4058f75067d0ff5bdeb54a7edf452b2246ed514009250de51d14474d8960c6de
+SHA512: bcd7ecb8455e9aa167572f95168a88aba2d415601a376dc651b1e0efdd1d221f7f790fc919fadd335000395c1f49cb1125c8921af193a025a8cf54cfc69527c9
+Description: Non-interactive ssh password authentication
+ SSH's (secure shell) most common authentication mode is called "interactive
+ keyboard password authentication", so called both because it is typically
+ done via keyboard, and because openssh takes active measures to make sure
+ that the password is, indeed, typed interactively by the keyboard. Sometimes,
+ however, it is necessary to fool ssh into accepting an interactive password
+ non-interactively. This is where sshpass comes in.
+ .
+ SECURITY NOTE: There is a reason openssh insists that passwords be typed
+ interactively. Passwords are harder to store securely and to pass around
+ securely between programs. If you have not looked into solving your needs
+ using SSH's "public key authentication", perhaps in conjunction with the ssh
+ agent (RTFM ssh-add), please do so before being tempted into using this
+ package.
+Homepage: http://sourceforge.net/projects/sshpass
+
+Package: libucl1
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.03
+Depends: enigma2 (>=4.3), libc6 (>= 2.23)
+Filename: ./libucl1-1.03-armhf.deb
+Size: 67778
+MD5sum: e99d012a9d0799326407d2bc16948ef2
+SHA1: 16d1465eaa274be3d4f8aade9544639e0782301c
+SHA256: 554dcb23b750884b3b374dc46ab788892b382e8d145a91478b62d4afe59f87e7
+SHA512: ddcc77eb79f5652d9274689ca23b373dc020c00699ece697c8e432b25114788f89dfafce6ec8240b373829ec3e1fc211538afe40c4e6cde558cfda7f592f05c2
+Description: libucl1
+ libucl1
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.mcpat.com
+
+Package: help2man
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.47.4
+Filename: ./help2man-1.47.4_armhf.deb
+Size: 14146
+MD5sum: cbbda6e7a234772a019b25b71bfa6142
+SHA1: 522daa68384a11e5e5b5cbf7464446956b6c54ca
+SHA256: e5f6ddc06f3d0c28f2bfe2647c73288c190f1b5cccdda58ed94544721a41d57b
+SHA512: 7dd509cb45380bf817b81868b7e2d3807b2d767bdf7764eae260033b6f738edbbbbfd728c942e38b5b90d114d339c63b15a04af45c29ba45a879730a55d9f0ee
+Description: help2man
+ help2man
+PackageArch: cortexa15hf-neon-vfpv4
+
+Package: libccid
+Priority: extra
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Source: ccid
+Version: 1.4.26-r1
+Depends: libc6 (>= 2.23), libusb-1.0-0 (>= 1.0.20), udev (>= 1:230), libudev1 (>= 1:230)
+Filename: ./libccid_1.4.26-r1_armhf.deb
+Size: 153368
+MD5sum: fd353b07f08cc909ca6593bf047ece01
+SHA1: 13825c25efe0afa27799cf1a4ced11d82247050f
+SHA256: fa95e67633b0351f4453f86894b8c94585045538cf96440266ec6188c5d2b6cd
+SHA512: 06ff2c96d7b8fdddfaedb81dc30794285f99347260e60f85c8fbde569b956da863cd508aef7db562aa9a4c63866ecf347fe702a35891044d501aa3b6524a7ed0
+Description: PC/SC driver for USB CCID smart card readers
+ This library provides a PC/SC IFD handler implementation for the USB smart
+ card drivers compliant to the CCID protocol.
+ .
+ This package is needed to communicate with the CCID smartcard readers through
+ the PC/SC Lite resource manager (pcscd).
+ .
+ For an exhaustive list of supported reader see
+ http://pcsclite.alioth.debian.org/section.html
+ .
+ This driver also supports the GemPC Twin connected to a serial port and
+ the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
+ Gemplus GemPC Express (Express54 card).
+Homepage: http://pcsclite.alioth.debian.org/ccid.html
+
+Package: enigma2-plugin-systemplugins-mcpat-build-essentials
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 0.9-r0
+Depends: enigma2 (>=4.3), coreutils (>=8.25), ncurses (>=6.0), grep (>=2.23), wget (>=1.17), libz-dev (>=1.2.8), libgmp10 (>=6.1.0), libgmp-dev (>=6.1.0), gcc-runtime-dbg (>=5.3.0), libstdc++6 (>=5.3.0), libgomp (>=5.3.0)
+Filename: ./enigma2-plugin-systemplugins-mcpat-build-essentials_0.9-r0_armhf.deb
+Size: 18618848
+MD5sum: 636f58b54bb891c86f1012cb03fec490
+SHA1: 5e0834eb06745576bfff71dca2d7069f416c8c06
+SHA256: b4faa9c5cb400006837828ae966e4286112687065d7f5e3e275a865db68bb9d3
+SHA512: 918aa15619e8651ebcf8807582f4867dfc3f3fb671e375bc67084ac4821409cb3ca64930bd91a01802cec404e9581bd44ac2d72dcb868149940937186d84fbe2
+Description: Build essentials ~ 95,0MB
+ Build essentials (based on GCC 5.3.0)
+PackageArch: cortexa15hf-neon-vfpv4
+HomePage: http://www.mcpat.com
+
+Package: lzma-dev
+Priority: optional
+Section: utils
+Maintainer: mcpat
+Architecture: all
+Source: lzma
+Version: 16.04
+Filename: ./lzma-dev-16.04-armhf.deb
+Size: 48592
+MD5sum: 76b3c6641f37a6e197aa0f21b565a89b
+SHA1: 0921f40a6233af069c9bbc30f41ced18f0b2d3a9
+SHA256: 271c889d5bfb086975c1f47cbc76a12c1b44e9fb8a33b2d1252dec83a1d636db
+SHA512: c833ae92f61d04ecb89168081593237eb58be40d02b4c92900dbe5e85ab2d04ad9c4c8cd0cf793706cf4413a142372ae67ec8f87c557e565a3396f5f7761e1b6
+Description: Compression and decompression in the LZMA format - development files
+ The Lempel-Ziv Markov-chain Algorithm is a compression method based on
+ the famous LZ77 algorithm, and was first introduced by 7-Zip for use in
+ 7z archives.
+ .
+ Its main characteristics are a very high compression ratio, with high RAM
+ usage, and fast decompression, with low RAM usage. These properties make
+ it well suited to embedded uses, such as for ROM (firmware) compression.
+ .
+ This package contains the headers and libraries of lzma. It is
+ experimental and will be replaced by the library as soon as it is
+ available.
+ Note: Depends: zlib1g-dev?
+Homepage: http://www.7-zip.org/sdk.html
+
+Package: dpkg-sig
+Priority: optional
+Section: devel
+Maintainer: mcpat
+Architecture: all
+Version: 0.13.1+nmu2
+Depends: perl (>= 5.22.1), gnupg (>= 1.4.7), perl-module-digest-md5 (>= 5.22.1), perl-module-config-file (>= 1.50)
+Filename: ./dpkg-sig-0.13.1+nmu2_armhf.deb
+Size: 14626
+MD5sum: eb618ff46b25e3eae5fdfcbd8bbd903c
+SHA1: 0d7e08306d9ab1dd554401738b3d0ae3b23698a0
+SHA256: a4242c7547fc269e22f7e565e17acc2d40af63d7c246f1d13238f8432da7a781
+SHA512: 477d6b1059e7468069aed6466d79df7f0b3dcc90eb6d6a06b7157435cceb4d95e29f7237979b12c7ff7d2868d3f7f8b1bbdd214e9b3d96842ae4981d05406853
+Description: create and verify signatures on .deb-files
+ dpkg-sig is a low-level tool for creation and verification of
+ signature on Debian binary packages (.deb-files).
+ .
+ The created signed packages are strict compatible with dpkg and the
+ apt-utils.
+
+Package: podlators
+Priority: extra
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 4.09
+Filename: ./podlators-release-4.09.deb
+Size: 38610
+MD5sum: 6560a099d101448624dd2274b3476127
+SHA1: 344eac8771d09aeb08f78b21d1673a45fbfa346e
+SHA256: 6efb7d5edf4640b765b8cb5aa94e42feb40c20e6fe3f3c23c1f6670a36a53417
+SHA512: 86ae58e828da7a4fe43bee54b3fb2b9878e10cb35755561696e35b2fb128b011f196e832aeb05a2932ef5f43aa9a89e4160f7358ccf7470c9f76ae820fef6896
+Description: podlators
+ podlators
+Homepage: http://xxx
+
+Package: libapr1-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.5.2
+Replaces: libapr-1-0
+Provides: apr
+Depends: libapr1 (>= 1.5.2), libuuid1 (>= 2.27.1), libc6 (>= 2.23)
+Conflicts: libapr-1-0
+Filename: ./libapr1-dev_1.5.2_armhf.deb
+Size: 446924
+MD5sum: 7a7219ffc1c15a237dfa02f41e680c93
+SHA1: eb9d84a598fbccbffef16b7452e57651ee1f0dbc
+SHA256: 47f7717cd840016ee9954ede0843832f22a9dd6739c1a221033da27fcfef969e
+SHA512: a2bb44b9e6742f7318dcb65155a9d76dc65e7606778bc88486e7ff663b9ac8318e6601a7cf256ebee0c19c9500a005c55c129a284f8176bd0e40d5ab1db18bff
+Description: Apache Portable Runtime (APR) library - Entwicklungs-Header
+ Apache Portable Runtime (APR) library - Entwicklungs-Header.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://apr.apache.org/
+
+Package: gc
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.6.0
+Depends: libc6 (>= 2.23)
+Filename: ./gc-7.6.0_armhf.deb
+Size: 137910
+MD5sum: 3829274d7c6ea5e02d4082ab623fcdbf
+SHA1: 687ea71e5b014b35b0b025f1b2c955ec4cadf260
+SHA256: 72a76946c89d5c949bcaf0347d21a6fa460618d97899ce9853e804e5ce0b067a
+SHA512: 20c1f914e04b273f02446cbc4793f09cf6cd2508b051b55fc5a3c214973b83297e338b87175a4dd49fea2df6cf16a4704c27a02ba1543e7a618b997673ba7ccd
+Description: gc
+ gc
+Homepage: http://unknown/
+
+Package: libapr1
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.5.2-r1
+Replaces: libapr-1-0
+Provides: apr
+Depends: libuuid1 (>= 2.27.1), libc6 (>= 2.23)
+Conflicts: libapr-1-0
+Filename: ./libapr1_1.5.2-r1_armhf.deb
+Size: 228270
+MD5sum: 769613017095751ba242ee2d12677973
+SHA1: 03e61cec5c2a8839af64335c9deda9a3350593fc
+SHA256: 37b3e5942ef4d27b8e026b75dbdbf18beb8d9233dedf34cb8fc6a5bb16aa3049
+SHA512: 32d787eed68d1a71545143ac8fd120aba5e23fee32f241c25d077f685526fd63a85dc302dd01252f0564dc9a8b7f5ce86247c11c68ff12d483e31fc388010cb2
+Description: Apache Portable Runtime (APR) library
+ Apache Portable Runtime (APR) library.
+OE: apr
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://apr.apache.org/
+
+Package: expect
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 5.45
+Depends: libc6 (>= 2.4), tcl (>= 8.6.6)
+Filename: ./expect-5.45-armhf.deb
+Size: 149314
+MD5sum: fa1c078ccce1a5c5b2c849021c6faf51
+SHA1: c821bf9f98a057fd1b5849f734354886cc2e4ef7
+SHA256: ddd5f4c34cd480eee29903ca883f054184c246ddd5af14d5e8003b288b93f4ee
+SHA512: ec03c1dc0f177db3289a74594119bf7a14c74aa33204cf9634e933f0ae7509ee6fab351bcb83d9f884f3622cf3fc8f884487b8e23fa93ab017e51036c33db2d7
+Description: Automates interactive applications
+ Expect is a tool for automating interactive applications according to a script.
+ Following the script, Expect knows what can be expected from a program and what
+ the correct response should be. Expect is also useful for testing these same
+ applications. And by adding Tk, you can also wrap interactive applications in
+ X11 GUIs. An interpreted language provides branching and high-level control
+ structures to direct the dialogue. In addition, the user can take control and
+ interact directly when desired, afterward returning control to the script.
+ .
+ This package contains the expect binary and several Expect based scripts.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://sourceforge.net/projects/expect/
+
+Package: mailutils
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.1.1
+Filename: ./mailutils-3.1.1_armhf.deb
+Size: 1123664
+MD5sum: e888a133ab3a675b65b2199f2f242ba2
+SHA1: f39c08be432450f4b4a8a2393c0c7ab5e492a540
+SHA256: 13b9e80bba882f430ab1f459db5e970f502c2b6da09e9ef5a9b866ae0abcbc41
+SHA512: 50a5f7d1c3dea43d20137352fb893d97c754c9c1853189ae8100ea3672f17270d251a6c1e6d03f2d67d0d0eb8c69990082b1beaeee6abf6a59683af9850d3a96
+Description: mailutils
+ mailutils
+PackageArch: cortexa15hf-neon-vfpv4
+
+Package: cmake
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.7.2
+Depends: openssl (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libstdc++6 (>= 5.3.0), libncurses5, enigma2-plugin-systemplugins-mcpat-build-essentials
+Filename: ./cmake-3.7.2_armhf.deb
+Size: 8762024
+MD5sum: f5864c213ce3cabe1455a6eb9945db43
+SHA1: 5959e6c2270f920ca15b32608e82b56f249b69d1
+SHA256: c680d7394e7943c710b19df93584f5823230c2c6b672fe58b3de793c801090f9
+SHA512: 2d62b72ad422ed4139da109413bad824e664203c6727ea96cea923288a9de7c2aec4013e4cc96ff6df701335d2a3448b1bd150dae197ddd912a15255fd408993
+Description: cmake
+ cmake
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://xxxx/
+
+Package: ssmtp
+Priority: extra
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.64-r2
+Depends: libc6 (>= 2.23), mailutils (>= 3.0), openssl (>=1.0.2h), libcrypto1.0.0 (>=1.0.2h)
+Filename: ./ssmtp-2.64-r2_armhf.deb
+Size: 43440
+MD5sum: c92dbaa832daf4798ada70723a1f617f
+SHA1: b72c8249fc24163fa02fe19ecf756996ffacb195
+SHA256: b6891bbf9790810ae9849a2719173e91f3f2151010e034474879d2adebed325b
+SHA512: 530cd170ca20b885c6c7d0eda21bebad1048f92e0e7eebd8a82cb2dd444d58dfd5a4d565e79fa31b852abf23d0f074233195336077542bccb21091683a874a86
+Description: ssmtp with patches
+ with DEBIAN patches and mcpat patches
+ *TLS patch (made by mcpat)
+ *Libcrypto patch (made by mcpat)
+ *557741-remote-addr.patch
+ *508759-garbage.patch
+ *LDFLAGS.patch
+ *bug584162-fix.patch
+Homepage: http://sourceforge.net/projects/sshpass
+
+Package: tcl
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 8.6.6
+Depends: libc6 (>= 2.23)
+Filename: ./tcl-8.6.6_armhf.deb
+Size: 1460812
+MD5sum: a9d2e71ab4252bd9786b8e7c8fb5791a
+SHA1: 39a96f9d6779d1ab1cbd5dc1c507d892e2d1e64c
+SHA256: 41e6892226a7b6050f6f4f49748b00bcd4bbbfb6bc87ad22f4e2b86b8778b68f
+SHA512: dfff9c46e63943c5f65f909512f02f4a101651175de1a528db2b8d9f6dea786655ca29c2a39cb81adba0e01c7795f04ec9094216364ba0e886e3b8962efe611f
+Description: Tcl (the Tool Command Language) v8.6 - shell and run-time library files
+ Tcl is a powerful, easy to use, embeddable, cross-platform interpreted
+ scripting language. This package contains the Tcl shell which you need
+ to run Tcl scripts.
+ .
+ This package contains the Tcl library and auxiliary
+ code which allows one to run Tcl-enabled applications.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.tcl.tk/
+
+Package: pkg-config
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 0.29.1
+Depends: libglib-2.0-0 (>= 1:2.46.2), libpcre1 (>= 8.38), libc6 (>= 2.23)
+Filename: ./pkg-config-0.29.1_armhf.deb
+Size: 59118
+MD5sum: 768bea6dec0572d633125eceeb03a2cc
+SHA1: 22cb9e5568fc6e0fa0c028d058baee0516f056ed
+SHA256: 79ca563778e48381e322faab3ecfe3218ede4aaa765238cec7322d27ef58b5e1
+SHA512: 6cb3e711649a72aa98c0fe88ba6974978431f8427a0f5e8577833e95d474cfde346a35a90ea5912fa68d90e649d2820d8fed81fecd6beb71fb43a83ae0569e82
+Description: manage compile and link flags for libraries
+ pkg-config is a system for managing library compile and link flags that
+ works with automake and autoconf.
+ .
+ Increasingly libraries ship with ".pc" files that allow querying of the
+ compiler and linker flags needed to use them through the pkg-config(1)
+ program.
+Homepage: http://pkg-config.freedesktop.org
+
