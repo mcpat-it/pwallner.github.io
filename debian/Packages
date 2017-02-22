@@ -6,11 +6,11 @@ Architecture: armhf
 Version: 6.3
 Depends: enigma2 (>=4.3)
 Filename: ./texinfo-6.3_armhf.deb
-Size: 1204014
-MD5sum: 7b3bad9ff90b665266ae48d8309c0c86
-SHA1: 5b2878ed60f3adf966195c07b11a11014de7e9c2
-SHA256: b6fecfe893c0e269616de32e811eba8da8f40a6f9fc6ca56fc285ed7c4a52e70
-SHA512: 02225d4a9b3bfc565c296600898a32e3551b304c0891b2130476640cac71d3d8f2c48b00907e6c435b9ae92fdf5bfb9fc29919370c9a8e560e59e33445cf332d
+Size: 727362
+MD5sum: 51f45c9dea7846b9d470887601724204
+SHA1: dae2aacd4206aae2c56db406993d5701f6bfac7f
+SHA256: 5226c92aebffbf52a8d64bccc78c63d5484df1db098e4a1ef9a9aca896b6c789
+SHA512: 150abfeffc63b06cc40bfcc1a8522e9071f679822b696f7bfd9333e04c56796f6fa076ef92339f676323b94c245b8dda0d701164941b6b50668ef43c2c18ff70
 Description: texinfo
  texinfo
 PackageArch: cortexa15hf-neon-vfpv4
@@ -351,18 +351,27 @@ Homepage: http://code.google.com/p/serf/
 
 Package: dejagnu
 Priority: optional
+Section: base
 Maintainer: mcpat
 Architecture: armhf
 Version: 1.6.1-git
+Depends: expect (>= 5.45), dpkg (>= 1.18.4)
 Filename: ./dejagnu_1.6.1-git_armhf.deb
-Size: 127752
-MD5sum: 97d190e650f4655b608620da6996597a
-SHA1: 6db99f46c8bd9891d1ae7915bf81d743e6b16f2e
-SHA256: d72fb27e85786e513e590199066cf9894199a6a23489f6a33d1f4cc8684f8b26
-SHA512: d8b4a75f4b749dc66848e906689526dc0e7b92a6aa23ffc0d76e6e7f0f1e796b7073ec8aa4ec81dd5b41064628aff4f55771487ac210f23e13dd920dfcd4f841
-Description: Dejagnu
- Dejagnu
-Homepage: http://xxx/
+Size: 128032
+MD5sum: 230d1b995e66ebaa4ddff26551e0c265
+SHA1: 77d803e03d223f837e866c9c9ca86868567a536a
+SHA256: e7672db6b9cfd2eb9d60113717325cf25b92ea1ff825fdd6ed6838987002cdec
+SHA512: e5d5b3ce304d4f1d0ecce9103cba20b3aab80aa5b2e864b7016acda2340531b50a6232b3ad7e96fa3c66b7340cf313832597c26e4818f328efc3eb120ec8d965
+Description: framework for running test suites on software tools
+ DejaGnu is a framework for testing other programs.  Its purpose is to
+ provide a single front end for all tests.
+ .
+ DejaGnu provides a layer of abstraction which allows you to write
+ tests that are portable to any host or target where a program must
+ be tested.  All tests have the same output format.
+ .
+ DejaGnu is written in `expect', which in turn uses "Tcl"--Tool
+ command language.
 
 Package: upx-ucl
 Priority: optional
@@ -387,6 +396,23 @@ Description: efficient live-compressor for executables
  .
  NOTE: This package is based on the UCL library, which is licensed under GPL.
 Homepage: http://upx.sourceforge.net/
+
+Package: gperf
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.1
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0)
+Filename: ./gperf-3.1_armhf.deb
+Size: 30352
+MD5sum: 5ea4b4af49198d82b8663a62b0acd502
+SHA1: c94690309613168b3775d2d0e6e92fb0d3ff5aa8
+SHA256: 5dfe0994681aabfee58dc62e938df4c162ba136e2f989bf784385e38233c9490
+SHA512: 5d5edeeec0ec8dbe88feaa044fb073ebee7c03c6bcdcd79155bd1f91b2054fc233979acc9d4ae5480bfe9aeb85b38ea184c241ef8734b87606b64cbe942fe47c
+Description: gperf
+ gperf
+Homepage: http://unknown/
 
 Package: perl-module-test-pod
 Priority: optional
@@ -655,6 +681,23 @@ Description: Apache Portable Runtime (APR) library - Entwicklungs-Header
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
 
+Package: gc
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.6.0
+Depends: libc6 (>= 2.23)
+Filename: ./gc-7.6.0_armhf.deb
+Size: 137910
+MD5sum: 3829274d7c6ea5e02d4082ab623fcdbf
+SHA1: 687ea71e5b014b35b0b025f1b2c955ec4cadf260
+SHA256: 72a76946c89d5c949bcaf0347d21a6fa460618d97899ce9853e804e5ce0b067a
+SHA512: 20c1f914e04b273f02446cbc4793f09cf6cd2508b051b55fc5a3c214973b83297e338b87175a4dd49fea2df6cf16a4704c27a02ba1543e7a618b997673ba7ccd
+Description: gc
+ gc
+Homepage: http://unknown/
+
 Package: libapr1
 Priority: optional
 Section: base
@@ -683,16 +726,25 @@ Section: base
 Maintainer: mcpat
 Architecture: armhf
 Version: 5.45
+Depends: libc6 (>= 2.4), tcl (>= 8.6.6)
 Filename: ./expect-5.45-armhf.deb
-Size: 148952
-MD5sum: 85ed538f31bd243a3c693d25cffb3a8f
-SHA1: 8e1e4f61302902b97022b47fd2c5be8455de3d66
-SHA256: ff35f047ae9d4a1402e4b33f52ad773a721ccfcdc0cdc80bdfef1ff12f4ac860
-SHA512: c23bd37b8ac56c8e5d56b59566abaf689ff3479f93455385e186393f087209a8fafce24be574a8b1cd3a2f58269cef95e3cb59e1ecfec7956db65299d35b08dd
-Description: expect
- expect for testing gcc
+Size: 149314
+MD5sum: fa1c078ccce1a5c5b2c849021c6faf51
+SHA1: c821bf9f98a057fd1b5849f734354886cc2e4ef7
+SHA256: ddd5f4c34cd480eee29903ca883f054184c246ddd5af14d5e8003b288b93f4ee
+SHA512: ec03c1dc0f177db3289a74594119bf7a14c74aa33204cf9634e933f0ae7509ee6fab351bcb83d9f884f3622cf3fc8f884487b8e23fa93ab017e51036c33db2d7
+Description: Automates interactive applications
+ Expect is a tool for automating interactive applications according to a script.
+ Following the script, Expect knows what can be expected from a program and what
+ the correct response should be. Expect is also useful for testing these same
+ applications. And by adding Tk, you can also wrap interactive applications in
+ X11 GUIs. An interpreted language provides branching and high-level control
+ structures to direct the dialogue. In addition, the user can take control and
+ interact directly when desired, afterward returning control to the script.
+ .
+ This package contains the expect binary and several Expect based scripts.
 PackageArch: cortexa15hf-neon-vfpv4
-HomePage: http://www.mcpat.com
+Homepage: http://sourceforge.net/projects/expect/
 
 Package: mailutils
 Priority: optional
@@ -757,16 +809,22 @@ Section: base
 Maintainer: mcpat
 Architecture: armhf
 Version: 8.6.6
+Depends: libc6 (>= 2.23)
 Filename: ./tcl-8.6.6_armhf.deb
-Size: 1954616
-MD5sum: b29d60d896485b547a4ca1cddda051b4
-SHA1: 59fe3f1c66c3237daa019f03d2ecc8bc572c3ff3
-SHA256: a0a5171c40ee9ee2029212f01f1c41fb5bae81870d192118835f2a65c8cee5e3
-SHA512: e28ab4682930a560c7628b07b272fe78a666924b447e91610fd38c6c9f4751a7a5899191f28373ccf07becca2be80732d1b665443e1967c7c54ec0bbe7288bca
-Description: tcl
- tcl for testing gcc
+Size: 1460812
+MD5sum: a9d2e71ab4252bd9786b8e7c8fb5791a
+SHA1: 39a96f9d6779d1ab1cbd5dc1c507d892e2d1e64c
+SHA256: 41e6892226a7b6050f6f4f49748b00bcd4bbbfb6bc87ad22f4e2b86b8778b68f
+SHA512: dfff9c46e63943c5f65f909512f02f4a101651175de1a528db2b8d9f6dea786655ca29c2a39cb81adba0e01c7795f04ec9094216364ba0e886e3b8962efe611f
+Description: Tcl (the Tool Command Language) v8.6 - shell and run-time library files
+ Tcl is a powerful, easy to use, embeddable, cross-platform interpreted
+ scripting language. This package contains the Tcl shell which you need
+ to run Tcl scripts.
+ .
+ This package contains the Tcl library and auxiliary
+ code which allows one to run Tcl-enabled applications.
 PackageArch: cortexa15hf-neon-vfpv4
-HomePage: http://www.mcpat.com
+Homepage: http://www.tcl.tk/
 
 Package: pkg-config
 Priority: optional
