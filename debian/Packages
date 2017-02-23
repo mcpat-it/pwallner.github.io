@@ -304,15 +304,26 @@ Maintainer: mcpat
 Architecture: armhf
 Version: 2.69-r1
 Depends: perl (>= 5.22.1), m4 (>= 1.4.17)
+Recommends: automake
+Suggests: libtool, gettext
 Filename: ./autoconf-2.69-r1_armhf.deb
-Size: 546466
-MD5sum: 54e6c509a475292b10c6f14b85a2adfb
-SHA1: 11db4e77a85fbc022ebebeaa4e2cc28d8866c47e
-SHA256: e199baf7b28be3219bf7cf3bf930e30eef5945ad03584f33c8488876a7092cd4
-SHA512: 9ae3678ab3b0808efa39130e1f734ff4f44293528cfdc0e4945c5cce32835f114aa5fac1bc94eb1d088841e94e6541321296e32211805b59c9511bf1eabb1340
-Description: autoconf
- autoconf
+Size: 546734
+MD5sum: 9f9fb2f24ab9bc2738949473538ce931
+SHA1: 8e6fc3be2d1305724870496f20b99e5f9fa79178
+SHA256: 8fc844926e0cdbf18191ca280f32faec2ac9abc40e042bae4e233b99c730a484
+SHA512: 072e8be3e3f6a27af3fa02cc5b7a42ec825b18eb562b1dc76ae517864e41230578b2b2759d3b6d0a71d58a5e49ee5f9431a3e0e20d6835edebb16952fdb69e64
+Description: automatic configure script builder
+ The standard for FSF source packages.  This is only useful if you
+ write your own programs or if you extensively modify other people's
+ programs.
+ .
+ For an extensive library of additional Autoconf macros, install the
+ `autoconf-archive' package.
+ .
+ This version of autoconf is not compatible with scripts meant for
+ Autoconf 2.13 or earlier.
 PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.gnu.org/software/autoconf/
 
 Package: libserf-dev
 Priority: optional
