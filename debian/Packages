@@ -97,6 +97,27 @@ Description: pod2text
  Perl module pod2text
 Homepage: http://unkown/
 
+Package: guile
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.1.7
+Depends: libc6 (>= 2.23), libiconv (>= 1.15), libunistring0 (>= 0.9.7), libffi6 (>= 3.2.1), libgmp10 (>= 6.1.0), libltdl7 (>= 2.4.6), gc (>= 7.6.0)
+Filename: ./guile-2.1.7_armhf.deb
+Size: 4825602
+MD5sum: 76112d2f442a468b22a5cfce568e3f83
+SHA1: a4226c81b63333041cbd461c46b6d94d7e1f7dd7
+SHA256: f92bd53ddef30410d03672a82fa5e4699d11520e915de10116e2a3894e377338
+SHA512: f58d2e22b7e6478be885086ae3207c76f26c44be28c29f18c2c1c7017b54050c0915704576fdf79af30f3c4d09c49aab509b6091cc2deccd912d07d1279253c1
+Description: GNU extension language and Scheme interpreter
+ Guile is a Scheme implementation designed for real world programming,
+ providing a rich Unix interface, a module system, an interpreter, and
+ many extension languages.  Guile can be used as a standard #! style
+ interpreter, via #!/usr/bin/guile, or as an extension language for
+ other applications via libguile.
+Homepage: http://www.gnu.org/software/guile/
+
 Package: automake
 Priority: optional
 Section: base
@@ -234,6 +255,59 @@ Description: gdb
  gdb
 PackageArch: cortexa15hf-neon-vfpv4
 
+Package: libunistring0-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Source: libunistring (0.9.7)
+Version: 0.9.7
+Depends: libc6 (>= 2.23), libunistring0 (>= 0.9.7)
+Filename: ./libunistring-dev-0.9.7_armhf.deb
+Size: 345438
+MD5sum: a81e8b3006d1c5aa17bce58a8065d358
+SHA1: 1d3fcae8f91712c9ed3962cc39d52f221ce69b2e
+SHA256: f919168eb1dddcffa51d4cd72d46bed51931f65488cde490ccc4070225771ac7
+SHA512: 722b12f37d98f907e3e8973a0140c6015cb52c5593064e0acfd2cf74788c0356ef96062b67893936898532fb3819e3924e29b80eee666bc7ba78bdd81f382f15
+Description: Unicode string library for C - header files
+ The 'libunistring' library implements Unicode strings (in the UTF-8,
+ UTF-16, and UTF-32 encodings), together with functions for Unicode
+ characters (character names, classifications, properties) and
+ functions for string processing (formatted output, width, word
+ breaks, line breaks, normalization, case folding, regular
+ expressions).
+Homepage: http://www.gnu.org/software/libunistring/
+
+Package: autogen
+Priority: optional
+Section: base
+Installed-Size: 1107
+Maintainer: mcpat
+Architecture: armhf
+Version: 5.18.12
+Depends: guile (>=2.1.7), libc6 (>= 2.23), libxml2 (>= 2.9.4)
+Filename: ./autogen-5.18.12_armhf.deb
+Size: 419742
+MD5sum: e2d6efd1bc9de424bf30235f8dea4418
+SHA1: e4beb5e02491d9c20f472207fc7370682b271771
+SHA256: c228540fda99a0023d9fb61ae96efad11c2de9ce661de87f16e01b5149f67981
+SHA512: c6ded01b11dd107f74c5335c54d72f1a2aa1d86c880fe2d97418a1ad83504e12a38584374b6404aab8b8c3f74bc9ee0de5816b9288bf5f26ecfae558f8611a4d
+Description: automated text file generator
+ AutoGen is a tool designed for generating program files that contain
+ repetitive text with varied substitutions. This is especially valuable if
+ there are several blocks of such text that must be kept synchronized.
+ .
+ Included with AutoGen is a tool that virtually eliminates the hassle of
+ processing options, keeping usage text up to date and so on. This tool
+ allows you to specify several program attributes, innumerable options and
+ option attributes, then it produces all the code necessary to parse and
+ handle the command line and initialization file options.
+ .
+ This package contains the development tools. libopts25-dev contains the
+ static libraries and header files. libopts25 contains the shared libraries.
+ autogen-doc contains the PostScript and HTML documentation.
+Homepage: http://www.gnu.org/software/autogen/
+
 Package: perl-module-test-pod-coverage
 Priority: optional
 Section: base
@@ -251,6 +325,46 @@ Description: perl-module-test-pod-coverage
  perl-module-test-pod-coverage
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://unkown/
+
+Package: libunistring0
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Source: libunistring (0.9.7)
+Version: 0.9.7
+Depends: libc6 (>= 2.23), libiconv (>= 1.15)
+Filename: ./libunistring-0.9.7_armhf.deb
+Size: 326486
+MD5sum: 87c617c17c1da03a0f0d976ce8991b66
+SHA1: 3033d2b51727f771d971f5815f8cb8fa45f543bc
+SHA256: f694bc3613218a7aece42894e36ec54524d9225b4d59facaadf4e93883622555
+SHA512: ee2cb4af957a04f860f6931ae702978165c5083e7536cc57edeeeedc05b4dd979393fe96d671b4ee19cd1e2a377b6518543d794b8b5609fd029d23a6f0e9e68d
+Description: Unicode string library for C
+ The 'libunistring' library implements Unicode strings (in the UTF-8,
+ UTF-16, and UTF-32 encodings), together with functions for Unicode
+ characters (character names, classifications, properties) and
+ functions for string processing (formatted output, width, word
+ breaks, line breaks, normalization, case folding, regular
+ expressions).
+Homepage: http://www.gnu.org/software/libunistring/
+
+Package: guile-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.1.7
+Depends: guile (>= 2.1.7), libiconv-dev (>= 1.15), libunistring0-dev (>= 0.9.7), libffi-dev (>= 3.2.1), libgmp-dev (>= 6.1.0), libltdl7 (>= 2.4.6), gc (>= 7.6.0), ncurses-dev (>= 6.0), libreadline-dev (>= 6.3), pkg-config (>= 0.29.1)
+Filename: ./guile-dev-2.1.7_armhf.deb
+Size: 933844
+MD5sum: 62c724e044ffd2345ec3535bc8daf362
+SHA1: 7ba161a28e840f6fc30fd45bb3aa69daab438c60
+SHA256: 183691000aef2274ba8b91f46bfc7b7909f746a5c8399a988de0a92bfb473cd7
+SHA512: 323a2f93843c8c5eb9f4ebd42029004466288c12cce7b471bdda5f28e21a2aa4cd3883dff287aa5d4b7a5f7d287dee8455550e25b54fe660be140f5cd239ad53
+Description: GNU extension language and Scheme interpreter - Development files
+ This package contains files needed for development using Guile 2.0.
+Homepage: http://www.gnu.org/software/guile/
 
 Package: perl-module-pod-pod2html
 Priority: optional
@@ -347,6 +461,23 @@ Description: high-performance asynchronous HTTP client library headers
  performance operation.
  This package contains development headers for serf.
 Homepage: http://code.google.com/p/serf/
+
+Package: libiconv-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.15
+Depends: libc6 (>= 2.23), libiconv (>= 1.15)
+Filename: ./libiconv-dev-1.15_armhf.deb
+Size: 489342
+MD5sum: 1d57c3609ed9078dd998d996fa975571
+SHA1: f3418a77e66367bcb02a920a05295ab007ddd539
+SHA256: 6d72ef2723586726cc44296cca0cbf4d48ec1f9d1a1b72c3d8adfd12c80f24ef
+SHA512: 0cf544c04e584de9f35ce13986df1517887bf541289786a8ec045836161b423a0765ca94f431b1b5f24a8bdeb70da36f772eac8d56a598d272f712938422d7c6
+Description: libiconv header files
+ libiconv header files
+Homepage: http://unknown/
 
 Package: enigma2-skin-metrixstylehd
 Priority: optional
@@ -616,6 +747,23 @@ Description: PC/SC driver for USB CCID smart card readers
  the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
  Gemplus GemPC Express (Express54 card).
 Homepage: http://pcsclite.alioth.debian.org/ccid.html
+
+Package: libiconv
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.15
+Depends: libc6 (>= 2.23)
+Filename: ./libiconv-1.15_armhf.deb
+Size: 498138
+MD5sum: 38d16ef85cb3c1c414ce07e2ea45c966
+SHA1: 281bb9a18bed78f7eea0210e39700cc688dc4019
+SHA256: 5d0c132210636d5c258d11cd1d7b9dd65477e5e0fbb8c4f2d53b8d3d37c3c436
+SHA512: 77ca50cc1399e7dbccd92463a2e97a08d5003d7cd12159f955ba80ac6417c7d2153483a6340680c1c96a459a8ea8e7590990ae57fcbe7246d2fe3538bc6eb877
+Description: libiconv
+ libiconv
+Homepage: http://unknown/
 
 Package: enigma2-plugin-systemplugins-mcpat-build-essentials
 Priority: optional
