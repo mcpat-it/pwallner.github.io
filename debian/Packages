@@ -97,6 +97,27 @@ Description: pod2text
  Perl module pod2text
 Homepage: http://unkown/
 
+Package: openssl1
+Priority: optional
+Section: libs/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.1.0e
+Replaces: openssl
+Depends: libssl1.1 (>= 1.1.0e), libc6 (>= 2.23), libcrypto1.1 (>= 1.1.0e)
+Conflicts: openssl
+Filename: ./openssl1-1.1.0e_armhf.deb
+Size: 203904
+MD5sum: 33c6d606b9314f926326e14e79ebf4f6
+SHA1: 227e4f3ded90a8de251245e819afc64430ad4ee2
+SHA256: ee12dd4aab1db9c3e4a9f1ec4859d91c1056424df39ba4ce0248c687ae843e7a
+SHA512: 4cf606ff629d4ac65815c123f3df08178f867c7d4acfb0b4ecaf2320412fc366ac45f7968b65b16b6caf9f6da83f1b7a5d1fa9a9f08e7e12e30835c2d527f1c8
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+OE: openssl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.openssl.org/
+
 Package: guile
 Priority: optional
 Section: base
@@ -254,6 +275,25 @@ SHA512: 78e6f3ecb69f9e65cf33abc66afbdd44ddec788e1c39b54df98d2d4431d92e1a7b7fceb5
 Description: gdb
  gdb
 PackageArch: cortexa15hf-neon-vfpv4
+
+Package: openssl1-engines
+Priority: optional
+Section: libs/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.1.0e
+Depends: libcrypto1.1 (>= 1.1.0e), libc6 (>= 2.23)
+Filename: ./openssl1-engines_1.1.0e_armhf.deb
+Size: 2888
+MD5sum: 3febdee78c654715e98fd415bd113e1d
+SHA1: 38dc033a24013ac9b4e456c77f4511eced847ee0
+SHA256: ad10f4f7c481cb15cfaebaf75e4c5a7857b2b1831890f9ea9dc2257db61dadd2
+SHA512: 29d914c3ac866ad00bd5836a314e07d527b48ad70086646db15744c7356fb6bdff9a3cdb1b7d6b6c7a42b801c69a52aae2540ae988c393721637ad71278ae54e
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+OE: openssl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.openssl.org/
 
 Package: libunistring0-dev
 Priority: optional
@@ -542,6 +582,26 @@ Description: framework for running test suites on software tools
  .
  DejaGnu is written in `expect', which in turn uses "Tcl"--Tool
  command language.
+
+Package: libssl1.1
+Priority: optional
+Section: libs/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.1.0e
+Provides: libssl
+Depends: libcrypto1.1 (>= 1.1.0e), libc6 (>= 2.23)
+Filename: ./libssl1.1_1.1.0e_armhf.deb
+Size: 116792
+MD5sum: ca620144cebf0311aa619118c69b4df2
+SHA1: af21e2d8fda2cedae864ef540c4ee24584571258
+SHA256: 07123e080072fde05ff85c1cdde339ea223348133451299771a90588e363d6f3
+SHA512: f3956a1eca31b5a9d03ae17f743371b385a45aab8acca3de27eb9606519360e3afb117a0db502378163e8ded1947c080c2c49702dbd6399953794b99ab0f5d46
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+OE: openssl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.openssl.org/
 
 Package: upx-ucl
 Priority: optional
@@ -833,6 +893,26 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
+Package: libcrypto1.1
+Priority: optional
+Section: libs/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.1.0e
+Provides: libcrypto
+Depends: libc6 (>= 2.23)
+Filename: ./libcrypto1.1_1.1.0e_armhf.deb
+Size: 755142
+MD5sum: 46461a17dc9aefa649565831963984ad
+SHA1: a8b2190e57af881dee45a8d10c7c12ca8eeb405b
+SHA256: e0606f173f76608b7a10811a5d5ac4204c83b8502ba7dff3b1d2d184f7e50d5b
+SHA512: ab94fc14f4352fb16ad77e87303d1e3be184caa39e74e2eaff981718b62295b41b6a2a6417b46cff3da256db2d2536de986e548dc5d3b2c4bb97a054c47894b6
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+OE: openssl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.openssl.org/
+
 Package: dpkg-sig
 Priority: optional
 Section: devel
@@ -971,6 +1051,29 @@ SHA512: dfea660dc10fa3e8e643c623cea4304246f6154a3a665b9d518e0110ce51a004b27e0224
 Description: mailutils
  mailutils
 PackageArch: cortexa15hf-neon-vfpv4
+
+Package: openssl1-dev
+Priority: optional
+Section: devel
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.1.0e
+Depends: libcrypto1.1, openssl1 (>= 1.1.0e), libssl1.1
+Recommends: libc6-dev, cryptodev-linux-dev
+Conflicts: openssl-dev, openssl
+Filename: ./openssl1-dev-1.1.0e_armhf.deb
+Size: 932362
+MD5sum: bf8b303aa6443ad8442553974eecfc62
+SHA1: 7b315df39155c0b54c05cf867bf41f576c9d901c
+SHA256: 332b73a5000be1b03c77318cf87ef0358dfd0cacde2ab12f2127db1e3f9fd34b
+SHA512: cda9850eaa1d088a071d8dea29eaa80f0ff27610c55969e3bef1fbad78bb9cd4866346006a382870c203823f74e785f17bc6b456b1c0fb598484bcde06b41335
+Description: Secure Socket Layer - Development files
+ Secure Socket Layer (SSL) binary and related cryptographic tools.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+OE: openssl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.openssl.org/
 
 Package: cmake
 Priority: optional
