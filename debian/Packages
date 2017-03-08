@@ -619,6 +619,28 @@ Description: pod2man
  Perl module pod2man
 Homepage: http://unkown/
 
+Package: nginx
+Priority: optional
+Section: net
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.11.10
+Depends: libssl1.0.0 (>= 1.0.2h), libc6 (>= 2.23), libz1 (>= 1.2.8), libpcre1 (>= 8.38), libcrypto1.0.0 (>= 1.0.2h), base-files, shadow, base-passwd
+Recommends: update-rc.d
+Filename: ./nginx-1.11.10_armhf.deb
+Size: 228944
+MD5sum: d22bb8221e25cd32183a47787f608111
+SHA1: 44fc703a2755a07283fa4a7325bb07ca45a895c3
+SHA256: 22d16ff856d6c343b42917d86648a648516f7fda00720fb15a96a3ce681b5ddc
+SHA512: e9179ee74419a1431c1c591eb06d88e4db8c6bf0690d04421cf641fc5541b155b4b07683f31cc0c741b4a229d56d32ad8afa4572201dcd11081b472c15ed8dbb
+Description: HTTP and reverse proxy server
+ Nginx is a web server and a reverse proxy server for HTTP, SMTP, POP3 and
+ IMAP protocols, with a strong focus on high  concurrency, performance and
+ low memory usage.
+OE: nginx
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://nginx.org/
+
 Package: dialog
 Priority: optional
 Section: base
@@ -939,12 +961,13 @@ Section: base
 Maintainer: mcpat
 Architecture: armhf
 Version: 3.1.1
+Depends: libreadline6 (>= 6.3)
 Filename: ./mailutils-3.1.1_armhf.deb
-Size: 1123664
-MD5sum: e888a133ab3a675b65b2199f2f242ba2
-SHA1: f39c08be432450f4b4a8a2393c0c7ab5e492a540
-SHA256: 13b9e80bba882f430ab1f459db5e970f502c2b6da09e9ef5a9b866ae0abcbc41
-SHA512: 50a5f7d1c3dea43d20137352fb893d97c754c9c1853189ae8100ea3672f17270d251a6c1e6d03f2d67d0d0eb8c69990082b1beaeee6abf6a59683af9850d3a96
+Size: 1123550
+MD5sum: 8b8fe4a871a38ab7f9531eb96138319f
+SHA1: 7b42733b45fd580bc346aeff3666e31359de127d
+SHA256: 7df66d7ea53a3d2ecb2aad621c12441bcafa577aa8709d52a83fdc1846aeb71d
+SHA512: dfea660dc10fa3e8e643c623cea4304246f6154a3a665b9d518e0110ce51a004b27e022413cb0f49a173d4d09bcb3f7169427b972786dcc721de16631a21dc5c
 Description: mailutils
  mailutils
 PackageArch: cortexa15hf-neon-vfpv4
@@ -955,13 +978,13 @@ Section: base
 Maintainer: mcpat
 Architecture: armhf
 Version: 3.7.2
-Depends: openssl (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libstdc++6 (>= 5.3.0), libncurses5, enigma2-plugin-systemplugins-mcpat-build-essentials
+Depends: libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libstdc++6 (>= 5.3.0), libncurses5, enigma2-plugin-systemplugins-mcpat-build-essentials
 Filename: ./cmake-3.7.2_armhf.deb
-Size: 8762024
-MD5sum: f5864c213ce3cabe1455a6eb9945db43
-SHA1: 5959e6c2270f920ca15b32608e82b56f249b69d1
-SHA256: c680d7394e7943c710b19df93584f5823230c2c6b672fe58b3de793c801090f9
-SHA512: 2d62b72ad422ed4139da109413bad824e664203c6727ea96cea923288a9de7c2aec4013e4cc96ff6df701335d2a3448b1bd150dae197ddd912a15255fd408993
+Size: 7978172
+MD5sum: 2e8ab18a8e9f2379ee17ce8f5c80b5c5
+SHA1: 58faed4b05322264c72be1d1edc12997349353c4
+SHA256: e7df2db2dad4305a48db65890bd9753b81f561e6a5f550093fd6310a392a0208
+SHA512: e0ec8ca9fd716f1e8f4357d690699009e06236aa7471bddf022a0d63e0396bdffa1fd4e5dc8eac5a99835706dd073331b78a190fc089b094ac3faa56854edf2c
 Description: cmake
  cmake
 PackageArch: cortexa15hf-neon-vfpv4
@@ -973,13 +996,13 @@ Section: utils
 Maintainer: mcpat
 Architecture: armhf
 Version: 2.64-r2
-Depends: libc6 (>= 2.23), mailutils (>= 3.0), openssl (>=1.0.2h), libcrypto1.0.0 (>=1.0.2h)
+Depends: libc6 (>= 2.23), mailutils (>= 3.0), libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>=1.0.2h)
 Filename: ./ssmtp-2.64-r2_armhf.deb
 Size: 43440
-MD5sum: c92dbaa832daf4798ada70723a1f617f
-SHA1: b72c8249fc24163fa02fe19ecf756996ffacb195
-SHA256: b6891bbf9790810ae9849a2719173e91f3f2151010e034474879d2adebed325b
-SHA512: 530cd170ca20b885c6c7d0eda21bebad1048f92e0e7eebd8a82cb2dd444d58dfd5a4d565e79fa31b852abf23d0f074233195336077542bccb21091683a874a86
+MD5sum: 1317b11e9aba007048e87d54214a7471
+SHA1: d392204106cb046b3ca299602dc726f8376562f7
+SHA256: f60e6d0099cd89da6766544f0c9090340ff54e1fbb113695fd9b0debd15ef657
+SHA512: 15a2dcccfe2bc8bbf4c03d4acc9f88ca4f9ffdd0289144a030e25a01bf6f006114aa568809c4bbac7ed76878da0f25d2cada9fb768fef2a3cef7a5391d79d466
 Description: ssmtp with patches
  with DEBIAN patches and mcpat patches
  *TLS patch (made by mcpat)
