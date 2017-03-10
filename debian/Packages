@@ -500,6 +500,31 @@ Description: high-performance asynchronous HTTP client library headers
  This package contains development headers for serf.
 Homepage: http://code.google.com/p/serf/
 
+Package: apache2-1
+Priority: optional
+Section: net
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.4.26-dev
+Replaces: apache2
+Depends: libgcc1, libssl1.1 (>= 1.1.0e), libaprutil1 (>= 1.5.4), libz1 (>= 1.2.8), openssl1 (>= 1.1.0e), libpcre1 (>= 8.38), libcrypto1.1 (>= 1.1.0e), libapr1 (>= 1.5.2), libc6 (>= 2.23), libuuid1 (>= 2.27.1)
+Recommends: update-rc.d
+Conflicts: apache2
+Filename: ./apache2-1_2.4.26-dev_armhf.deb
+Size: 1009242
+MD5sum: 48b36ec046bd09964aff43bd88b11e4b
+SHA1: 3c89080b6406f5c00173716fd2d2142af3ed8b6f
+SHA256: cf6821e0f6cb0a93b3bb2c9e471ac152a387621ec3844864b7338699371dbb7d
+SHA512: dbc535e72d26d19cabe01b7a6722c4694b24c129b6356945ff30382deb3101b7367dbe8deb3287599d4bffb853a1c7fd78e202974faa59aed2aa7a94cf1b9ac8
+Description: Apache HTTP Server - openssl 1.1.0e support
+ The Apache HTTP Server is a powerful, efficient, and extensible web
+ server.
+ .
+ Build by mcpat with openssl 1.1.0e support!
+OE: apache2
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://httpd.apache.org/
+
 Package: libiconv-dev
 Priority: optional
 Section: base
@@ -827,31 +852,6 @@ Description: PC/SC driver for USB CCID smart card readers
  the GemPC Card (PCMCIA, through the suggested pcmciautils package) and
  Gemplus GemPC Express (Express54 card).
 Homepage: http://pcsclite.alioth.debian.org/ccid.html
-
-Package: apache2-1
-Priority: optional
-Section: net
-Maintainer: mcpat
-Architecture: armhf
-Version: 2.4.26-dev
-Replaces: apache2
-Depends: libgcc1, libssl1.0.0 (>= 1.0.2h), libaprutil1 (>= 1.5.4), libz1 (>= 1.2.8), openssl1 (>= 1.1.0e), libpcre1 (>= 8.38), libcrypto1.1 (>= 1.1.0e), libapr1 (>= 1.5.2), libc6 (>= 2.23), libuuid1 (>= 2.27.1)
-Recommends: update-rc.d
-Conflicts: apache2
-Filename: ./apache2-1_2.4.x_armhf.deb
-Size: 1009250
-MD5sum: d44303bc26eb43982dd65fa5de01af60
-SHA1: 591bbc07d4dd180bff2e6794cc52b788c3d98077
-SHA256: d9ecb179357f4baab61ddb8e1fafcfb877503ad4eec0ab86b945e2a2ed751ef8
-SHA512: ab8a27522e317eb2c02158b0e4b630f448449cb1fa8e9c836180004349267ee88309accb9c7c937052bfd8363916713daf6e95dffbb7b76f9713309ecb10ea2e
-Description: Apache HTTP Server - openssl 1.0.2h support
- The Apache HTTP Server is a powerful, efficient, and extensible web
- server.
- .
- Build by mcpat with openssl 1.0.2h support!
-OE: apache2
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://httpd.apache.org/
 
 Package: libiconv
 Priority: optional
