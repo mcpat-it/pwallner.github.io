@@ -103,15 +103,13 @@ Section: libs/network
 Maintainer: mcpat
 Architecture: armhf
 Version: 1.1.0e
-Replaces: openssl
-Depends: libssl1.1 (>= 1.1.0e), libc6 (>= 2.23), libcrypto1.1 (>= 1.1.0e)
-Conflicts: openssl
+Depends: libssl1.1 (>= 1.1.0e), libc6 (>= 2.23), libcrypto1.1 (>= 1.1.0e), openssl-conf (>= 1.0.2h)
 Filename: ./openssl1-1.1.0e_armhf.deb
-Size: 203904
-MD5sum: 33c6d606b9314f926326e14e79ebf4f6
-SHA1: 227e4f3ded90a8de251245e819afc64430ad4ee2
-SHA256: ee12dd4aab1db9c3e4a9f1ec4859d91c1056424df39ba4ce0248c687ae843e7a
-SHA512: 4cf606ff629d4ac65815c123f3df08178f867c7d4acfb0b4ecaf2320412fc366ac45f7968b65b16b6caf9f6da83f1b7a5d1fa9a9f08e7e12e30835c2d527f1c8
+Size: 186750
+MD5sum: 0c0bdf4e0d5b07e997198dce7831d020
+SHA1: aa1ccd6fe750f3a62227d98751db146adda20dec
+SHA256: c7495be8d5cc1bb0228c73fade935f399dee82aabb3f055faee9aec37878d8cc
+SHA512: 0e51eff90a36ddbdb7bd4f02d9be4b8523f96a616df620232c0e7f464cf369d9431a8e95c6aad5f9bd82f61947f5333bbc05125b8ec67783b7855bfbcf183a79
 Description: Secure Socket Layer
  Secure Socket Layer (SSL) binary and related cryptographic tools.
 OE: openssl
@@ -284,11 +282,11 @@ Architecture: armhf
 Version: 1.1.0e
 Depends: libcrypto1.1 (>= 1.1.0e), libc6 (>= 2.23)
 Filename: ./openssl1-engines_1.1.0e_armhf.deb
-Size: 2888
-MD5sum: 3febdee78c654715e98fd415bd113e1d
-SHA1: 38dc033a24013ac9b4e456c77f4511eced847ee0
-SHA256: ad10f4f7c481cb15cfaebaf75e4c5a7857b2b1831890f9ea9dc2257db61dadd2
-SHA512: 29d914c3ac866ad00bd5836a314e07d527b48ad70086646db15744c7356fb6bdff9a3cdb1b7d6b6c7a42b801c69a52aae2540ae988c393721637ad71278ae54e
+Size: 2900
+MD5sum: d2fdcc437c99cfee1986273d7adcc75d
+SHA1: 7d33b0149fe20ec88b81082e7a8d3b083899d905
+SHA256: 413287629367b7b20441b26ae035de037699331908821392a452a4c8cce5d2b6
+SHA512: 1918edb7eb7d49f8f5d430e69cabe5f29c72ac37fdbff9c8b22b8cd3b6d469a96488e97f96f2fc4ddb93093833cef914742c80f012d36febda6a3b2e2185fc5e
 Description: Secure Socket Layer
  Secure Socket Layer (SSL) binary and related cryptographic tools.
 OE: openssl
@@ -592,11 +590,11 @@ Version: 1.1.0e
 Provides: libssl
 Depends: libcrypto1.1 (>= 1.1.0e), libc6 (>= 2.23)
 Filename: ./libssl1.1_1.1.0e_armhf.deb
-Size: 116792
-MD5sum: ca620144cebf0311aa619118c69b4df2
-SHA1: af21e2d8fda2cedae864ef540c4ee24584571258
-SHA256: 07123e080072fde05ff85c1cdde339ea223348133451299771a90588e363d6f3
-SHA512: f3956a1eca31b5a9d03ae17f743371b385a45aab8acca3de27eb9606519360e3afb117a0db502378163e8ded1947c080c2c49702dbd6399953794b99ab0f5d46
+Size: 116816
+MD5sum: b3dd242ef4da2c8e1589385db9aacc23
+SHA1: fb5d6dce6641627d84a0a276e4a019383a0e63c1
+SHA256: 17f6c04c8e14168682c3eced613105e12a1ba54bb99af522cc739b1be14179cf
+SHA512: 08356e7707a44997f8f5c29bf35b43b837f85a26c68a9557b32a11694a0027fe1c4a0269d57e315882d00aaaf32ebb2e498fd09704996c07c0db6415a027e5d2
 Description: Secure Socket Layer
  Secure Socket Layer (SSL) binary and related cryptographic tools.
 OE: openssl
@@ -902,11 +900,11 @@ Version: 1.1.0e
 Provides: libcrypto
 Depends: libc6 (>= 2.23)
 Filename: ./libcrypto1.1_1.1.0e_armhf.deb
-Size: 755142
-MD5sum: 46461a17dc9aefa649565831963984ad
-SHA1: a8b2190e57af881dee45a8d10c7c12ca8eeb405b
-SHA256: e0606f173f76608b7a10811a5d5ac4204c83b8502ba7dff3b1d2d184f7e50d5b
-SHA512: ab94fc14f4352fb16ad77e87303d1e3be184caa39e74e2eaff981718b62295b41b6a2a6417b46cff3da256db2d2536de986e548dc5d3b2c4bb97a054c47894b6
+Size: 755034
+MD5sum: eb4e8e245cc14242193dec44a7253c48
+SHA1: df5b8dd7633c18cb066780cf7b5d582c8438df7b
+SHA256: d3bfa597107af8dff6f1a798855934daa403e79814d0425c21df0f29709d245d
+SHA512: 5f56e141e6f9aa30b68669bf7a74c275871135b92fb327c892539bb612e51ec8df476c117c232cd9e56dbf385da288e46a692cbcc4a46438afa483d35aa7affd
 Description: Secure Socket Layer
  Secure Socket Layer (SSL) binary and related cryptographic tools.
 OE: openssl
@@ -1060,13 +1058,12 @@ Architecture: armhf
 Version: 1.1.0e
 Depends: libcrypto1.1, openssl1 (>= 1.1.0e), libssl1.1
 Recommends: libc6-dev, cryptodev-linux-dev
-Conflicts: openssl-dev, openssl
 Filename: ./openssl1-dev-1.1.0e_armhf.deb
-Size: 932362
-MD5sum: bf8b303aa6443ad8442553974eecfc62
-SHA1: 7b315df39155c0b54c05cf867bf41f576c9d901c
-SHA256: 332b73a5000be1b03c77318cf87ef0358dfd0cacde2ab12f2127db1e3f9fd34b
-SHA512: cda9850eaa1d088a071d8dea29eaa80f0ff27610c55969e3bef1fbad78bb9cd4866346006a382870c203823f74e785f17bc6b456b1c0fb598484bcde06b41335
+Size: 931850
+MD5sum: cbc22fc3fea048456c8b0033303a4bd6
+SHA1: 851ef24cd41f6ab8a63d69756d9d1b4bbc1efccc
+SHA256: 069aa7fee581fcdcfd0b24665473d49c94d94fd98880073349452379ca5ba966
+SHA512: c212b968ee5165769a36f8654d7381c69568649a951eb44bc7f331eb2631aa662099bcc7c4787ce7e61c0a5d9c5109a58eb81eb927517ed74aad2360802ee3b8
 Description: Secure Socket Layer - Development files
  Secure Socket Layer (SSL) binary and related cryptographic tools.  This
  package contains symbolic links, header files, and related items
