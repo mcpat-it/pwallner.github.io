@@ -606,6 +606,27 @@ Description: framework for running test suites on software tools
  DejaGnu is written in `expect', which in turn uses "Tcl"--Tool
  command language.
 
+Package: curl1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.53.1
+Depends: libcurl41 (>= 7.53.1), libz1 (>= 1.2.8), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libcrypto1.1 (>= 1.1.0e)
+Filename: ./curl1_7.53.1_armhf.deb
+Size: 39512
+MD5sum: 66389477f7446aedd2f4c1326f58cef1
+SHA1: f3f302b829f25c5cd16f6868864385f1b3ea466f
+SHA256: 1755f756a9980181bd7c4a8e2bc763d1fe195bde7d7a74b70b8c26db2ce36e54
+SHA512: f9f83125e7dbba994003b56fbb32690594eabc69f74d3638efe4c25ef1c994ddae38201e94f52f0547322da3f17b643f3bb0b831b241d345be6e2f129e7767b9
+Description: Command line tool and library for client-side URL transfers - with openssl 1.1
+ Command line tool and library for client-side URL transfers.
+ .
+ Build with openssl1
+OE: curl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://curl.haxx.se/
+
 Package: libssl1.1
 Priority: optional
 Section: libs/network
@@ -916,6 +937,28 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
+Package: curl1-dev
+Priority: optional
+Section: devel
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.53.1
+Depends: libcurl41, curl1 (= 7.53.1)
+Recommends: libz-dev, openssl1-dev, libc6-dev
+Filename: ./curl1-dev_7.53.1_armhf.deb
+Size: 202604
+MD5sum: 1cb9a1c345446092238de4a6208fd21b
+SHA1: 796e729d18bb9e0bfbf74e302fd44f5508bf69e5
+SHA256: 6f6858e5f51ba1348990c04f2173b9c9f92136203fe6aea7f317fd62cdd26d97
+SHA512: 60b0c9247d344c45e6b7fad22131e1ce1e65b914856d2804fde7e1b183e7ac1388bee2bb76ea70bff5430e2d14883863c499fb46a05e61a8f826e4d097be9707
+Description: Command line tool and library for client-side URL transfers - Development files
+ Command line tool and library for client-side URL transfers.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+OE: curl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://curl.haxx.se/
+
 Package: libcrypto1.1
 Priority: optional
 Section: libs/network
@@ -1010,6 +1053,28 @@ Description: gc
  gc
 Homepage: http://unknown/
 
+Package: libcurl41
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.53.1
+Depends: libssl1.1 (>= 1.1.0e), libz1 (>= 1.2.8), libc6 (>= 2.23), libcrypto1.1 (>= 1.1.0e)
+Recommends: ca-certificates
+Filename: ./libcurl41_7.53.1_armhf.deb
+Size: 141436
+MD5sum: 36a7528434c39f3cfa21322e1e0972cd
+SHA1: eb89f3674ee35a62a8f04df05f0486f8b57b6e2f
+SHA256: 40796f8515ba551a6348485cdc801770c7c4058d9364f28ec164a212a6a26ed4
+SHA512: 58f50d5d1b0eedaf7d08b643ed5deee3b870e20fdffe786bdc2059d403889e9a4da616febd1d92b3b6d31cf02ceddc419a2896b2b35dbad857a826428482f838
+Description: Command line tool and library for client-side URL transfers - with openssl 1.1
+ Command line tool and library for client-side URL transfers.
+ .
+ Build with openssl 1.1
+OE: curl
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://curl.haxx.se/
+
 Package: libapr1
 Priority: optional
 Section: base
@@ -1074,6 +1139,28 @@ SHA512: dfea660dc10fa3e8e643c623cea4304246f6154a3a665b9d518e0110ce51a004b27e0224
 Description: mailutils
  mailutils
 PackageArch: cortexa15hf-neon-vfpv4
+
+Package: re2c
+Priority: optional
+Section: devel
+Maintainer: mcpat
+Architecture: armhf
+Version: 0.16
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0)
+Filename: ./re2c-0.16_armhf.deb
+Size: 89576
+MD5sum: e960f34b294a842f5f1011246fff269c
+SHA1: f208163344391f485f68dce6f94ae0a476a63601
+SHA256: 067c9af6583e800be0809e6544137d5a19e765dd5ec262ec33e13c79355af01c
+SHA512: 0b898d453dc368215f625d84076a821be39562d8b40a5028c0c9a27dca2a10da02a6b41c167b94a8a1b62eac97dc407f99f2c3f041389f9a47f8f861acac82a4
+Description: tool for generating fast C-based recognizers
+ re2c is a great tool for writing fast and flexible lexers. Unlike
+ other such tools, re2c concentrates solely on generating efficient
+ code for matching regular expressions. Not only does this singleness
+ make re2c more suitable for a wider variety of applications, it
+ allows one to generate scanners which approach hand-crafted ones in
+ terms of size and speed.
+Homepage: http://re2c.org
 
 Package: openssl1-dev
 Priority: optional
