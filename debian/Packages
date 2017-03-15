@@ -97,6 +97,28 @@ Description: pod2text
  Perl module pod2text
 Homepage: http://unkown/
 
+Package: php-fpm1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-fpm
+Depends: libsqlite3-0 (>= 3.11.0), libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
+Recommends: update-rc.d
+Conflicts: php-fpm
+Filename: ./php-fpm1_7.1.3RC1_armhf.deb
+Size: 2363696
+MD5sum: f86fe7a5dc9a47bc0379b0ee21ede566
+SHA1: 1a4ddb7358a7504315808775f72bb0a445628bc6
+SHA256: b5d53ed5c0587e1b38c2f2b433f7f84bfe497f71b281baaf6b8cc3aa797667e3
+SHA512: b74d5c5bbabd0463e933f05caca31e0fdad692d286095b6b005a7471e07dc30b386eb9921e66c15bff711522b8506d6f9b84346ad3af36f9877cc88a30cb47b6
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: openssl1
 Priority: optional
 Section: libs/network
@@ -542,6 +564,27 @@ Description: libiconv header files
  libiconv header files
 Homepage: http://unknown/
 
+Package: libmysqlclient20
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Version: 5.7.17
+Replaces: libmysqlclient18
+Provides: libmysqlclient
+Depends: libgcc1 (>= 5.3.0), libz1 (>= 1.2.8), libc6 (>= 2.23), libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h)
+Conflicts: libmysqlclient18
+Filename: ./libmysqlclient20_5.7.17_armhf.deb
+Size: 621438
+MD5sum: 22da8eb20a9bca4312bfa567077b1711
+SHA1: 4aa51ce8ab3d9d2f2cfe8020ea537ed1c4d1d658
+SHA256: 96c29e23a9d5ec666c860e62a3d2e11f36f412690a164fb84f7f4c2f7da1b14e
+SHA512: 45c9e640ad73545c107c7fad3dbd2e4d8a55461cee0d8d3da5f39ccbf4626067b3d3d455315755c659cbe566622afc4c859c0640a77d4bb5529fe493f1df032a
+Description: A robust, scalable, and reliable SQL server
+ A robust, scalable, and reliable SQL server.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: https://dev.mysql.com/downloads/mysql/5.7.html
+
 Package: enigma2-skin-metrixstylehd
 Priority: optional
 Section: base
@@ -937,6 +980,27 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
+Package: mysql
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Source: https://dev.mysql.com/get/Downloads/
+Version: 5.7.17
+Depends: libc6 (>= 2.23), ncurses, libevent, libstdc++6, libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libmysqlclient20 (>=5.7.17)
+Filename: ./mysql-5.7.17_armhf.deb
+Size: 25837178
+MD5sum: b187b48e3c8ef8a922583867a3ee4653
+SHA1: 2ab3de194bda2de8153c7e213a65908a7a561f37
+SHA256: f42be801f041e243e647af181d312ba8430bbc8473de35635a0d3f5559f4d635
+SHA512: 103bc4fbc38e86e2a24ea1c005bdde7ae89463247ec22ced27bacb275f2cc466fdb2f9367ae6206767acfb636a66b7f720170a5616f8fb8231bb8f10bbf797ed
+Description: MySQL database server binaries and system database setup - ~15MB (flash) and ~252MB (USB)
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+Homepage: http://dev.mysql.com/
+
 Package: curl1-dev
 Priority: optional
 Section: devel
@@ -1014,6 +1078,29 @@ SHA512: 86ae58e828da7a4fe43bee54b3fb2b9878e10cb35755561696e35b2fb128b011f196e832
 Description: podlators
  podlators
 Homepage: http://xxx
+
+Package: mysql-dev
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Source: https://dev.mysql.com/get/Downloads/
+Version: 5.7.17
+Depends: mysql (>= 5.7.17)
+Filename: ./mysql-dev-5.7.17_armhf.deb
+Size: 5085788
+MD5sum: 62a5675f384a91e38d01b20bf07e086f
+SHA1: 5ea2695f2fcba74e786bd33f0c7c5abbc6d7e575
+SHA256: 07742f55eb7a9835e526505ba272b4671279bd2ea127c6cbdeea2cb2bd42ed68
+SHA512: 36d98662f5980f6a88d201d84ac8b8336f0494b708de8374b7d4306d0477a275d613f2fed17a0c6a1370760e1127d81845dda94b7aeb06b9a5a6a5cffd47cc00
+Description: MySQL database server binaries and system database setup - header files
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package contains the header files
+Homepage: http://dev.mysql.com/
 
 Package: libapr1-dev
 Priority: optional
