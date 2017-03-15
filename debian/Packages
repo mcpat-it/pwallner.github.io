@@ -108,11 +108,11 @@ Depends: libsqlite3-0 (>= 3.11.0), libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libcr
 Recommends: update-rc.d
 Conflicts: php-fpm
 Filename: ./php-fpm1_7.1.3RC1_armhf.deb
-Size: 2363696
-MD5sum: f86fe7a5dc9a47bc0379b0ee21ede566
-SHA1: 1a4ddb7358a7504315808775f72bb0a445628bc6
-SHA256: b5d53ed5c0587e1b38c2f2b433f7f84bfe497f71b281baaf6b8cc3aa797667e3
-SHA512: b74d5c5bbabd0463e933f05caca31e0fdad692d286095b6b005a7471e07dc30b386eb9921e66c15bff711522b8506d6f9b84346ad3af36f9877cc88a30cb47b6
+Size: 2363708
+MD5sum: 481659cac913853cf271d4772fef505b
+SHA1: 855e1235325750e869444a1101c40c785c7c8f28
+SHA256: 528218dcfd33ba3c7b699240b22bccb897d87a52563756f45e2cef5c0e5b854a
+SHA512: 30a982be81ede833c0cda2defe4f8b1b45626039d28b2e280ba4d5a8ed90b06117a24d19755466e68882e612b634efa2fef55c621a59d0ba870061581a46c003
 Description: A server-side, HTML-embedded scripting language
  A server-side, HTML-embedded scripting language.
 OE: php
