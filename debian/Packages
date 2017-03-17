@@ -570,16 +570,14 @@ Section: libs
 Maintainer: mcpat
 Architecture: armhf
 Version: 5.7.17
-Replaces: libmysqlclient18
 Provides: libmysqlclient
 Depends: libgcc1 (>= 5.3.0), libz1 (>= 1.2.8), libc6 (>= 2.23), libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h)
-Conflicts: libmysqlclient18
 Filename: ./libmysqlclient20_5.7.17_armhf.deb
-Size: 621438
-MD5sum: 22da8eb20a9bca4312bfa567077b1711
-SHA1: 4aa51ce8ab3d9d2f2cfe8020ea537ed1c4d1d658
-SHA256: 96c29e23a9d5ec666c860e62a3d2e11f36f412690a164fb84f7f4c2f7da1b14e
-SHA512: 45c9e640ad73545c107c7fad3dbd2e4d8a55461cee0d8d3da5f39ccbf4626067b3d3d455315755c659cbe566622afc4c859c0640a77d4bb5529fe493f1df032a
+Size: 621418
+MD5sum: fb5c4aebe72d910d2f86a5550727fe3c
+SHA1: 0a4ef9081370bf84d940f40941a9670f2532ebf3
+SHA256: ce6134b0614af3dec8b082e2c3819a34088534cb451f5af1812146ee6e9746ba
+SHA512: ea9fa78bd8e4ac52c777e25d0b8bc76c32f9b498f30d7d69026853f16e136d07a329df8d771b745e97f9b553e9fd42536046721dc34d53927553d01231d5088d
 Description: A robust, scalable, and reliable SQL server
  A robust, scalable, and reliable SQL server.
 PackageArch: cortexa15hf-neon-vfpv4
@@ -1311,6 +1309,29 @@ Description: ssmtp with patches
  *LDFLAGS.patch
  *bug584162-fix.patch
 Homepage: http://sourceforge.net/projects/sshpass
+
+Package: logrotate
+Priority: important
+Section: admin
+Maintainer: mcpat
+Architecture: armhf
+Source: logrotate (3.11.0)
+Version: 3.11.0
+Depends: libc6 (>= 2.23), libpopt0 (>= 1.16)
+Filename: ./logrotate-3.11.0_armhf.deb
+Size: 23522
+MD5sum: 5f0b15411d8893ebf5f3d67cba730ad2
+SHA1: 392a65952cbe8da63ee1aa2c6b6afe7e77ab78a0
+SHA256: b12cddafd2de48eebf604a694f126bef5b1ee1759983bab213573635e31c2ffd
+SHA512: 25f7d07b5700c70557a73ccca9202a0fa3425d94db7cd6fc1c7e338154f578944fe8f061eb70aebb49562c95b492de003693ead1c5e2ae8f382ca50e513d6c1f
+Description: Log rotation utility
+ The logrotate utility is designed to simplify the administration of
+ log files on a system which generates a lot of log files.  Logrotate
+ allows for the automatic rotation compression, removal and mailing of
+ log files.  Logrotate can be set to handle a log file daily, weekly,
+ monthly or when the log file gets to a certain size.  Normally, logrotate
+ runs as a daily cron job.
+Homepage: https://github.com/logrotate/logrotate/
 
 Package: tcl
 Priority: optional
