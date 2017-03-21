@@ -129,11 +129,11 @@ Depends: libsqlite3-0 (>= 3.11.0), libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libcr
 Recommends: update-rc.d
 Conflicts: php-fpm
 Filename: ./php-fpm1_7.1.3RC1_armhf.deb
-Size: 2363672
-MD5sum: a37b9b10bf022e2a656b33fdf8b81a32
-SHA1: 43a2cd20ffc87161292f7ef5d61697d7ba5c802a
-SHA256: 9dd517fe9384845633bee44513013dbda1f5001464231719c0048d604ea908ff
-SHA512: 4702b9f5c5e11f584904287343dee8b29e94893c020c3b0b150270311300d7ed5c8896e66989e24cb45f2b6301a74c0ebec65bf37eaca83343e812d43b9e3f51
+Size: 2363756
+MD5sum: bba841026126cb43ec721ced0e25f37d
+SHA1: cecc3b7b6ffa9c7af042d02dec6e6eb39c248f69
+SHA256: 174697b0b64d21e0d68fe4e7cdc48fed79ca9ae27d5d6adfe664bfe2a15cb1c4
+SHA512: 132d2873f38e5e1cd3b074ef2730c0b27818627d03878f546737a694bc37fc29147a7e31c94abb54c0fe37600276615a24d50213c1e1aa7d8a223df82cb0e94d
 Description: A server-side, HTML-embedded scripting language
  A server-side, HTML-embedded scripting language.
 OE: php
@@ -1108,11 +1108,11 @@ Source: https://dev.mysql.com/get/Downloads/
 Version: 5.7.17
 Depends: libc6 (>= 2.23), ncurses, libevent, libstdc++6, libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libmysqlclient20 (>=5.7.17)
 Filename: ./mysql-5.7.17_armhf.deb
-Size: 38193404
-MD5sum: 4d06794a2fbf1ea80db752ad479febbc
-SHA1: 8162877ba32101032f612e4b1d80ab34afa92b75
-SHA256: 444c92d71c9548c9de75087c7b601a075662246194e2aa68ba6dd5fedb29eb58
-SHA512: 0f72d4e4a7eadb493d29a8e8233eb6ef0936444823f2ba4d9fa603054878cd29a570474d6ba283e1424c3db92eba756bc1d58215be782f76267020d59e752f22
+Size: 38192790
+MD5sum: 52292a627f208ad1fda038dbbd903de4
+SHA1: ea654d0dec1312ffaad8893a7a4ba72decdc01e5
+SHA256: b99f463607173835a6570cc968db5623bbbc223933751a3ecd66e9d2a83b38b0
+SHA512: 897a31d672b1c913b1c7904c46c5b2fb7d427655c21bd0643e5ef8ca89545a1b0574ccbcec2f00c0e0ebdd30ef85a87c075764b494f5867cffcdb14270c1c886
 Description: MySQL database server binaries and system database setup - ~15MB (flash) and ~252MB (USB)
  MySQL is a fast, stable and true multi-user, multi-threaded SQL database
  server. SQL (Structured Query Language) is the most popular database query
