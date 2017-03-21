@@ -533,11 +533,11 @@ Depends: libgcc1, libssl1.1 (>= 1.1.0e), libaprutil1 (>= 1.5.4), libz1 (>= 1.2.8
 Recommends: update-rc.d
 Conflicts: apache2
 Filename: ./apache2-1_2.4.26-dev_armhf.deb
-Size: 1009242
-MD5sum: 48b36ec046bd09964aff43bd88b11e4b
-SHA1: 3c89080b6406f5c00173716fd2d2142af3ed8b6f
-SHA256: cf6821e0f6cb0a93b3bb2c9e471ac152a387621ec3844864b7338699371dbb7d
-SHA512: dbc535e72d26d19cabe01b7a6722c4694b24c129b6356945ff30382deb3101b7367dbe8deb3287599d4bffb853a1c7fd78e202974faa59aed2aa7a94cf1b9ac8
+Size: 1008666
+MD5sum: bd18e739d85fbb4f60e073b633d9223c
+SHA1: c3f1188ee3001b5ee521f6c19f8d89d48ea70c8e
+SHA256: a2a8898ae084950cdfdc0e3fff42a90c4c0a18ab397f8d7305e83d59ea6c1b5d
+SHA512: b9deca8d7d1c56266c12276120a7a667a6c73cb5031caaccf1835018b854aabf22a1f2ea546285d9128889bc7b4614b724e76f19932ddf8aa281c68ca3940c07
 Description: Apache HTTP Server - openssl 1.1.0e support
  The Apache HTTP Server is a powerful, efficient, and extensible web
  server.
@@ -987,11 +987,11 @@ Source: https://dev.mysql.com/get/Downloads/
 Version: 5.7.17
 Depends: libc6 (>= 2.23), ncurses, libevent, libstdc++6, libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libmysqlclient20 (>=5.7.17)
 Filename: ./mysql-5.7.17_armhf.deb
-Size: 25837146
-MD5sum: 40717d848486c2bd31537f23db585ba7
-SHA1: a00e00ac752ad25c5da7095a61f5e5d94fb9e178
-SHA256: 907f8bfe02ae6e48578af465fb7560a3eaa0c1e97395bff03bc6f5227cf92d6d
-SHA512: f388018e45fb9a76514a24379e45796169bd0e05206637275229a3d4eba0e593f4ab8b7d11dad6a62430e1626b0b0d21c9f2eb9b23bc4525aaf3176ea6def0e5
+Size: 38193404
+MD5sum: 4d06794a2fbf1ea80db752ad479febbc
+SHA1: 8162877ba32101032f612e4b1d80ab34afa92b75
+SHA256: 444c92d71c9548c9de75087c7b601a075662246194e2aa68ba6dd5fedb29eb58
+SHA512: 0f72d4e4a7eadb493d29a8e8233eb6ef0936444823f2ba4d9fa603054878cd29a570474d6ba283e1424c3db92eba756bc1d58215be782f76267020d59e752f22
 Description: MySQL database server binaries and system database setup - ~15MB (flash) and ~252MB (USB)
  MySQL is a fast, stable and true multi-user, multi-threaded SQL database
  server. SQL (Structured Query Language) is the most popular database query
