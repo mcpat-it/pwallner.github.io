@@ -1,3 +1,24 @@
+Package: php-cli1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-cli
+Depends: libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), php1, libbz2-1 (>= 1.0.6)
+Conflicts: php-cli
+Filename: ./php-cli1_7.1.3RC1_armhf.deb
+Size: 2334268
+MD5sum: e2d38a416f3b2176dd88f0c7bce336ca
+SHA1: fd7d117550842c04e187106ab1f00efb1e9488cf
+SHA256: 754003c691a5d764842f267a081e93363612b2d3af31751c58a014e00322494e
+SHA512: bd4b0f963f1643fca4272fc946e73603d20906a20ba9635c13150a0dd87259441b42127b5cfdf5c56c1c43008c598da8d32d6c0fbcc8489f0abbf1de2efff467
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: texinfo
 Priority: optional
 Section: base
@@ -257,6 +278,22 @@ Description: Apache Portable Runtime (APR) companion library
 OE: apr-util
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
+
+Package: lynx-cur
+Priority: optional
+Section: base
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.8.8dev.12
+Filename: ./lynx-cur_2.8.8dev.12_armhf.deb
+Size: 455882
+MD5sum: ffc08bbf16deebcc48d96bff2a68ef88
+SHA1: 86261110fc0e3420c15974c5fbbc1031adcb1ef6
+SHA256: 51f71891d1732b4f01ed1b305acf314711e2dd8beee8d8eb3c7796ea2496b812
+SHA512: 34556e61b33c2038b3b15988d7bd0263248bebe676b89c3227b1a168fe8ad1984999eb0c65f3715fb2246a31b612f3676a3a42f981ce38457cc5fe115f127423
+Description: lynx-cur
+ lynx-cur
+PackageArch: cortexa15hf-neon-vfpv4
 
 Package: libaprutil1-dev
 Priority: optional
@@ -533,11 +570,11 @@ Depends: libgcc1, libssl1.1 (>= 1.1.0e), libaprutil1 (>= 1.5.4), libz1 (>= 1.2.8
 Recommends: update-rc.d
 Conflicts: apache2
 Filename: ./apache2-1_2.4.26-dev_armhf.deb
-Size: 1008666
-MD5sum: bd18e739d85fbb4f60e073b633d9223c
-SHA1: c3f1188ee3001b5ee521f6c19f8d89d48ea70c8e
-SHA256: a2a8898ae084950cdfdc0e3fff42a90c4c0a18ab397f8d7305e83d59ea6c1b5d
-SHA512: b9deca8d7d1c56266c12276120a7a667a6c73cb5031caaccf1835018b854aabf22a1f2ea546285d9128889bc7b4614b724e76f19932ddf8aa281c68ca3940c07
+Size: 1009730
+MD5sum: f3d9d69408e9c199d4081bd1a3d19912
+SHA1: 1200cce22316f3dac298b524d9f196424272ec03
+SHA256: 03bdc46a731ea61506ac78595e8d5b728db287d889d091c12901048cd41b474e
+SHA512: 7439bbd9c01d25223d9689c1923813cdb2e057eaabf2b1e82eadaaf9253a37c40b86f6bf257e806f16f04120cc0fc011f09246383d23bdea2078f98aa67e1a0a
 Description: Apache HTTP Server - openssl 1.1.0e support
  The Apache HTTP Server is a powerful, efficient, and extensible web
  server.
@@ -728,6 +765,27 @@ SHA512: 5d5edeeec0ec8dbe88feaa044fb073ebee7c03c6bcdcd79155bd1f91b2054fc233979acc
 Description: gperf
  gperf
 Homepage: http://unknown/
+
+Package: php-phar1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-phar
+Depends: php-cli1
+Conflicts: php-phar
+Filename: ./php-phar1_7.1.3RC1_armhf.deb
+Size: 14952
+MD5sum: ca16fd1708f6a7c09d3c25ceb94f9885
+SHA1: edad8378afd7e3187b76e03b90868d3cdcf196af
+SHA256: 119b78fc1c95c6df0dbad0dfe35481c0815d4d0eef14991965f32462934b746d
+SHA512: ce13ac153ff507b36e5c9ca6bf5b5b6704cb8edb9c9a75ffbbb86f99ae0bd9b95ac7a9c343cef2f2baf27555c701f6ffb73dbff804c864e2f77949c5cb1332ba
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: php1-dev
 Priority: optional
@@ -999,6 +1057,27 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
+Package: php-pear1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-pear
+Depends: php1
+Conflicts: php-pear
+Filename: ./php-pear1_7.1.3RC1_armhf.deb
+Size: 238812
+MD5sum: 88799e501d29eba88320d777d4a19724
+SHA1: bab1da09bfa304c88ea259aebb71ac8dcab53f8d
+SHA256: ff70f2d11a0e09508ded0c5370c46ac203bccd2a6549cd5c71acb7f4c05de1e3
+SHA512: 7b3d9acd6b7347d90949e2010767e96199a5295aed74b394014f21f1c446d363c66c53b8de21bc66a7fd7c4303e15b0d92c193e022aa35c7f03c3d8c8828cfe4
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: php1
 Priority: optional
 Section: console/network
@@ -1041,6 +1120,25 @@ Description: MySQL database server binaries and system database setup - ~15MB (f
  ease of use.
 Homepage: http://dev.mysql.com/
 
+Package: php-fpm-apache21
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-fpm-apache2
+Conflicts: php-fpm-apache2
+Filename: ./php-fpm-apache21_7.1.3RC1_armhf.deb
+Size: 1042
+MD5sum: e3da552cec498108c64245c7032ddf5e
+SHA1: 32beff0e616c6fc41611bcc27829ed5d86b1dd47
+SHA256: 99dd023c9ab5f8edc05c0f4e5738dde8bd9b00053917e7eca51ee90ac5e717ec
+SHA512: d32ac0b6e06c135acd175557ba69cd7ecf93dcddc0e12e693331cb5c2c360c7dc38c4ecde2190805b29584bae5472bd88e6e687e04f845c47a0c19e8c518e549
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: curl1-dev
 Priority: optional
 Section: devel
@@ -1082,6 +1180,28 @@ Description: Secure Socket Layer
 OE: openssl
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.openssl.org/
+
+Package: php-modphp1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-modphp
+Provides: modphp
+Depends: libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libpng16-16 (>= 1.6.21), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libjpeg62 (>= 8d+1.4.2), libz1 (>= 1.2.8), libfreetype6 (>= 2.6.3), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libncurses5 (>= 6.0+20160213), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libtiff5 (>= 4.0.6), apache2-1, liblzma5 (>= 5.2.2), php1, libbz2-1 (>= 1.0.6)
+Conflicts: php-modphp
+Filename: ./php-modphp1_7.1.3RC1_armhf.deb
+Size: 2433282
+MD5sum: a3589ab7440604dde5f11d2f6bea0dd9
+SHA1: ce7bcbdd6224c0c4f02bcbfd5a01c38c9219a976
+SHA256: ec54c7128f71296af908f2501570d98b1bed6bfdcf66cb561113d75977fce7a0
+SHA512: c8c9b60319153fcad743cfd50415e31848f3748d7ea7288504cb8eac8c6c84b68b0a74dc0c5dde8fb86557b743d3d68df504e33c322d3d317ad16dac21100aed
+Description: PHP module for the Apache HTTP server
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: dpkg-sig
 Priority: optional
@@ -1223,6 +1343,27 @@ Description: Apache Portable Runtime (APR) library
 OE: apr
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
+
+Package: php-cgi1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php-cgi
+Depends: libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
+Conflicts: php-cgi
+Filename: ./php-cgi1_7.1.3RC1_armhf.deb
+Size: 2323664
+MD5sum: 6e0f8d67cd13189eef8489e9f0b7e9de
+SHA1: 6040b52259503cbea1ca5c02a33a2c2549b9c821
+SHA256: aee5a4920fcad5040a827616fe89a20f23a422d30be9d3b8447437c78409c74e
+SHA512: 2fc635ece2392cfd0b1acf56d86d9b4412b665322e264c3fe636b6c27d464e79322851a219e6c6cbd2498c61bdec42d4743d4fdd165bc6fef4bf1e05e1f80459
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: expect
 Priority: optional
