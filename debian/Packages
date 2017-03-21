@@ -1108,11 +1108,11 @@ Source: https://dev.mysql.com/get/Downloads/
 Version: 5.7.17
 Depends: libc6 (>= 2.23), ncurses, libevent, libstdc++6, libssl1.0.0 (>= 1.0.2h), libcrypto1.0.0 (>= 1.0.2h), libmysqlclient20 (>=5.7.17)
 Filename: ./mysql-5.7.17_armhf.deb
-Size: 38192790
-MD5sum: 52292a627f208ad1fda038dbbd903de4
-SHA1: ea654d0dec1312ffaad8893a7a4ba72decdc01e5
-SHA256: b99f463607173835a6570cc968db5623bbbc223933751a3ecd66e9d2a83b38b0
-SHA512: 897a31d672b1c913b1c7904c46c5b2fb7d427655c21bd0643e5ef8ca89545a1b0574ccbcec2f00c0e0ebdd30ef85a87c075764b494f5867cffcdb14270c1c886
+Size: 38193132
+MD5sum: f2e6e2b73ea24889f9b5693b6284f575
+SHA1: 7abce2dbddd2f114c43eb8f4a9d056610b37cec3
+SHA256: 14266715540df776ef2fd728e034274cda03083c92210025a1e44e44f243e32e
+SHA512: 5b09f3a43ad2745839fe8afce4f188bb7c43099a79ab074f408b57bd9a297c4264a4a295302d755ed5daf5cba543f50d93e147245adba86204310604fb151f5f
 Description: MySQL database server binaries and system database setup - ~15MB (flash) and ~252MB (USB)
  MySQL is a fast, stable and true multi-user, multi-threaded SQL database
  server. SQL (Structured Query Language) is the most popular database query
