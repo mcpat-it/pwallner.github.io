@@ -108,11 +108,11 @@ Depends: libsqlite3-0 (>= 3.11.0), libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libcr
 Recommends: update-rc.d
 Conflicts: php-fpm
 Filename: ./php-fpm1_7.1.3RC1_armhf.deb
-Size: 2363726
-MD5sum: 8826d43371c570f11e82827fe7e465e2
-SHA1: 78f97bc911deb2b79ae5bc044144953ccd9cb3a6
-SHA256: 975370a7bf629123528b26379dae19aaf9ffdee0f7cbf290e8bd4ada702eacd2
-SHA512: 5745bf2475ad254612083b3f2b88551262bb63656c9f98fe277f7c2fdb34454703788183da5ec5ba0c672a3457691e4d0c74ec55a34cf3246509cd5d9ae39575
+Size: 2363672
+MD5sum: a37b9b10bf022e2a656b33fdf8b81a32
+SHA1: 43a2cd20ffc87161292f7ef5d61697d7ba5c802a
+SHA256: 9dd517fe9384845633bee44513013dbda1f5001464231719c0048d604ea908ff
+SHA512: 4702b9f5c5e11f584904287343dee8b29e94893c020c3b0b150270311300d7ed5c8896e66989e24cb45f2b6301a74c0ebec65bf37eaca83343e812d43b9e3f51
 Description: A server-side, HTML-embedded scripting language
  A server-side, HTML-embedded scripting language.
 OE: php
@@ -729,6 +729,27 @@ Description: gperf
  gperf
 Homepage: http://unknown/
 
+Package: php1-dev
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Depends: php1 (= 7.1.3RC1)
+Filename: ./php1-dev_7.1.3RC1_armhf.deb
+Size: 525248
+MD5sum: 35aed2e465f34aa58c0a752b2ae82007
+SHA1: 029bafac02cd11a95f16f0692c280e588244a3b9
+SHA256: ba6b22a0e5bf0a14a76ee015f9d91c4bcb32def1e2e9526148f59a2de7c368cc
+SHA512: 357b8e36ff70aff66d62c375b8525ec035c11d3604227f96465022d7d4d99b6a61868d8c88809649feb1f495cf3298e233beb55d34a8421ec295b4438cb96b57
+Description: A server-side, HTML-embedded scripting language - header files
+ A server-side, HTML-embedded scripting language.
+ .
+ This package contains the header files
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: perl-module-test-pod
 Priority: optional
 Section: base
@@ -977,6 +998,27 @@ Description: Compression and decompression in the LZMA format - development file
  available.
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
+
+Package: php1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3RC1
+Replaces: php
+Depends: libgd3 (>= 2.1.1), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
+Conflicts: php
+Filename: ./php1_7.1.3RC1_armhf.deb
+Size: 2396938
+MD5sum: e9d45f863d6c6c97b701bde82141d884
+SHA1: f6008f63fcb1f466a87311b81956eccf05272afd
+SHA256: 87b585824c56bc7d92c1a6a63e32f0759a92744755f5ff3e271d066eb403e304
+SHA512: 5b2fd7ecac0f17cad3163259e98df8e249a92b3d1e024c75d052550fd3e089ef89ddcbb900b6fdbd0707e700bc776830f0397fffd9f933c113698f41612adcc6
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: mysql
 Priority: optional
