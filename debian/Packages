@@ -118,28 +118,6 @@ Description: pod2text
  Perl module pod2text
 Homepage: http://unkown/
 
-Package: php-fpm1
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-fpm
-Depends: libsqlite3-0 (>= 3.11.0), libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
-Recommends: update-rc.d
-Conflicts: php-fpm
-Filename: ./php-fpm1_7.1.3RC1_armhf.deb
-Size: 2363756
-MD5sum: bba841026126cb43ec721ced0e25f37d
-SHA1: cecc3b7b6ffa9c7af042d02dec6e6eb39c248f69
-SHA256: 174697b0b64d21e0d68fe4e7cdc48fed79ca9ae27d5d6adfe664bfe2a15cb1c4
-SHA512: 132d2873f38e5e1cd3b074ef2730c0b27818627d03878f546737a694bc37fc29147a7e31c94abb54c0fe37600276615a24d50213c1e1aa7d8a223df82cb0e94d
-Description: A server-side, HTML-embedded scripting language
- A server-side, HTML-embedded scripting language.
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
 Package: openssl1
 Priority: optional
 Section: libs/network
@@ -743,6 +721,28 @@ OE: openssl
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.openssl.org/
 
+Package: php-fpm1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php-fpm
+Depends: libsqlite3-0 (>= 3.11.0), libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
+Recommends: update-rc.d
+Conflicts: php-fpm
+Filename: ./php-fpm1_7.1.3_armhf.deb
+Size: 2361884
+MD5sum: 7fde3477985ca962990f9951c7fa81cf
+SHA1: 3a3b71762e496acd8db30cd040a36331242e7483
+SHA256: 3e1414ebf9f1f9288073b5369d30615882b5fab60002cf27ab5497dbf2ec150a
+SHA512: 49d311a209806d4f78361cd9af043ec463263858bd8a1eae80cf427e83e0234c45078a2f636cf97f2f170b2cc337ecce96aac20e85ec148c6e08128b053440bd
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: upx-ucl
 Priority: optional
 Section: utils
@@ -860,28 +860,6 @@ SHA512: b6e8a1867a20575d688144b756547939e0d59e5daaf185838659dbf7c0add0e640cc53a6
 Description: pod2man
  Perl module pod2man
 Homepage: http://unkown/
-
-Package: nginx
-Priority: optional
-Section: net
-Maintainer: mcpat
-Architecture: armhf
-Version: 1.11.10
-Depends: libssl1.0.0 (>= 1.0.2h), libc6 (>= 2.23), libz1 (>= 1.2.8), libpcre1 (>= 8.38), libcrypto1.0.0 (>= 1.0.2h), base-files, shadow, base-passwd
-Recommends: update-rc.d
-Filename: ./nginx-1.11.10_armhf.deb
-Size: 228944
-MD5sum: d22bb8221e25cd32183a47787f608111
-SHA1: 44fc703a2755a07283fa4a7325bb07ca45a895c3
-SHA256: 22d16ff856d6c343b42917d86648a648516f7fda00720fb15a96a3ce681b5ddc
-SHA512: e9179ee74419a1431c1c591eb06d88e4db8c6bf0690d04421cf641fc5541b155b4b07683f31cc0c741b4a229d56d32ad8afa4572201dcd11081b472c15ed8dbb
-Description: HTTP and reverse proxy server
- Nginx is a web server and a reverse proxy server for HTTP, SMTP, POP3 and
- IMAP protocols, with a strong focus on high  concurrency, performance and
- low memory usage.
-OE: nginx
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://nginx.org/
 
 Package: dialog
 Priority: optional
