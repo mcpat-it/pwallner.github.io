@@ -1366,6 +1366,30 @@ Description: gc
  gc
 Homepage: http://unknown/
 
+Package: nginx
+Priority: optional
+Section: net
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.11.12
+Depends: libssl1.1 (>= 1.1.0e), libc6 (>= 2.23), libz1 (>= 1.2.8), libpcre1 (>= 8.38), libcrypto1.1 (>= 1.1.0e), base-files, shadow, base-passwd
+Recommends: update-rc.d
+Filename: ./nginx-1.11.12_armhf.deb
+Size: 223514
+MD5sum: 326bb921f60d4a1b75036374d8de964f
+SHA1: 1ff89591ae8d1e41e1dfd050dcbcac8827dd2f0c
+SHA256: b98282369f7af10bee5572edd3553fea5cdd4d8baa62d6de801b72c858c84728
+SHA512: 6ac8368f03757550d3ab8dc7ad91ab96c79ddda5b0263d6d2267b32d6639c94a3b399d078c5f1018f847b302bf77340e4266b9200e6dc29144644bf1fdb9ab46
+Description: HTTP and reverse proxy server
+ Nginx is a web server and a reverse proxy server for HTTP, SMTP, POP3 and
+ IMAP protocols, with a strong focus on high  concurrency, performance and
+ low memory usage.
+ .
+ Uses openssl 1.1.0
+OE: nginx
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://nginx.org/
+
 Package: libcurl41
 Priority: optional
 Section: console/network
