@@ -352,6 +352,24 @@ OE: openssl
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.openssl.org/
 
+Package: libmcrypt4-dev
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.5.8
+Depends: libmcrypt4 (>= 2.5.8)
+Filename: ./libmcrypt4-dev-2.5.8_armhf.deb
+Size: 5912
+MD5sum: 73a46bebcbed96f4de9adaa0e509420c
+SHA1: 09b43e2666f07e86f62015fa10b82d54e5a3f41e
+SHA256: 39bbb5d43397d71ed9973c931d4d63632cf2ee98aeea464ca6f2249260c053d9
+SHA512: 059eff66310624358b2bb14afe35525a503b2f971ca3f8deb77cb85ea66642e19671c70663990545e97f3ff8819d940b014dc66aba560d47869aae97670bf24d
+Description: libmcrypt4 - Header files
+ This package includes the header files for libmcrypt4
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://libgd.bitbucket.org/
+
 Package: libunistring0-dev
 Priority: optional
 Section: base
@@ -1120,6 +1138,32 @@ Description: A server-side, HTML-embedded scripting language
 OE: php
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.php.net
+
+Package: libgd3-dev
+Priority: optional
+Section: libs
+Maintainer: mcpat
+Architecture: armhf
+Version: 2.1.1
+Depends: libgd3 (>= 2.1.1)
+Filename: ./libgd3-dev-2.1.1_armhf.deb
+Size: 121040
+MD5sum: d389f4e87044a84fbec63cc4e7962d96
+SHA1: e3d773317073b6eaed140e826cc66841f86c4609
+SHA256: 03b55a2dbe7fe4a5267f75e5e8c596bb9407b3c13f393c8daf7d9753907e4936
+SHA512: 2c7ca552305ed2cd749ab1ba453ab34c6450cf2c01ed62f4c16a0d7d3f0e5d403e2ba4b94cb0a32115b3b944791f04299ad067aa51afd1608f3b7d4b2f14f80b
+Description: gd is a library used to create PNG, JPEG, or WBMP images - Header files
+ The gd graphics library allows your code to quickly draw images complete
+ with lines, arcs, text, multiple colors, cut and paste from other images,
+ and flood fills, and to write out the result as a PNG or JPEG file. This
+ is particularly useful in Web applications, where PNG and JPEG are two of
+ the formats accepted for inline images by most browsers. Note that gd is
+ not a paint program.
+ .
+ This package includes the header files
+OE: gd
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://libgd.bitbucket.org/
 
 Package: mysql
 Priority: optional
