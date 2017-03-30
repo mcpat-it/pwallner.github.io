@@ -1,24 +1,3 @@
-Package: php-cli1
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-cli
-Depends: libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), php1, libbz2-1 (>= 1.0.6)
-Conflicts: php-cli
-Filename: ./php-cli1_7.1.3RC1_armhf.deb
-Size: 2334268
-MD5sum: e2d38a416f3b2176dd88f0c7bce336ca
-SHA1: fd7d117550842c04e187106ab1f00efb1e9488cf
-SHA256: 754003c691a5d764842f267a081e93363612b2d3af31751c58a014e00322494e
-SHA512: bd4b0f963f1643fca4272fc946e73603d20906a20ba9635c13150a0dd87259441b42127b5cfdf5c56c1c43008c598da8d32d6c0fbcc8489f0abbf1de2efff467
-Description: A server-side, HTML-embedded scripting language
- A server-side, HTML-embedded scripting language.
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
 Package: texinfo
 Priority: optional
 Section: base
@@ -419,6 +398,25 @@ Description: perl-module-test-pod-coverage
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://unkown/
 
+Package: php-fpm-apache21
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php-fpm-apache2
+Conflicts: php-fpm-apache2
+Filename: ./php-fpm-apache21_7.1.3_armhf.deb
+Size: 1036
+MD5sum: f9cbfe4be9f26be37baba1525f73e95b
+SHA1: 85a8ecb8ae4054574b46aab3523f8ffba5580883
+SHA256: f7f3ac42c9058e573c5d0c2cb41ec93ea70e893d004be97ba06513f33abc24fe
+SHA512: 8f3803458c43ea5683ad946ba26ebb051d27eef46a77ec4e7149c5214f6afea1b55974a93352b9a615208f6c483f470e38b617ec93e54b3548e7079423d7b5ab
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: libunistring0
 Priority: optional
 Section: base
@@ -441,6 +439,27 @@ Description: Unicode string library for C
  breaks, line breaks, normalization, case folding, regular
  expressions).
 Homepage: http://www.gnu.org/software/libunistring/
+
+Package: php1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php
+Depends: libgd3 (>= 2.1.1), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
+Conflicts: php
+Filename: ./php1_7.1.3_armhf.deb
+Size: 2397812
+MD5sum: bb75ee2249b2c0343cd7298bb6367a63
+SHA1: 54ead493db8245f00e5de92da3b0a8de3dfff09c
+SHA256: 3f4a2fd4f9006fe18bd9a85be844cfdbfa557d0101d76b2242c497e62459be4e
+SHA512: 4eeea9e89e1fbab9da45ed045647399cec67d0eff496b0b9212e381e1991b53f2cb81bd2a6998cd936a4aee4d6837d4afcdc721b74562f98232c86de32caf161
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: guile-dev
 Priority: optional
@@ -531,6 +550,27 @@ Description: automatic configure script builder
  Autoconf 2.13 or earlier.
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.gnu.org/software/autoconf/
+
+Package: php-pear1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php-pear
+Depends: php1
+Conflicts: php-pear
+Filename: ./php-pear1_7.1.3_armhf.deb
+Size: 238520
+MD5sum: 9ab038dbb3687dec0991d84e61bc1990
+SHA1: 3cfb564ae6903b3803b2cf8d8e2b5b24f23ba6da
+SHA256: a42105c3bf489186a8ae165bc0c73a4b70e6f3f6e77f17395c6470e4f31464dd
+SHA512: 29b487f8c500f0af116f55bcb82c399d2ce57b874787aca1bc450cc15d019497416d311a22d99e9664dc012286ff7a53afc7991136ba67a4b95b364cc2b692f0
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: libserf-dev
 Priority: optional
@@ -721,6 +761,27 @@ OE: openssl
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.openssl.org/
 
+Package: php-cgi1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php-cgi
+Depends: libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
+Conflicts: php-cgi
+Filename: ./php-cgi1_7.1.3_armhf.deb
+Size: 2322658
+MD5sum: 72fc9af77a34580ffc7cfe19aaece079
+SHA1: 31f78076f9cc91a03c54a71c6695549eb8ea4104
+SHA256: 8883ffbc387d466b82f432844cd741c8b09359b0ba09dbda38a8ee09765bede6
+SHA512: e5e18fd4a71a881289a91184c3de92e6a9ce4c27ccc6b40e6578204900d4661cf3c9793e71d79fbea0bc176ea489de8ceda75ba7e7121b7bb1e82632094ff770
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: php-fpm1
 Priority: optional
 Section: console/network
@@ -784,48 +845,6 @@ Description: gperf
  gperf
 Homepage: http://unknown/
 
-Package: php-phar1
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-phar
-Depends: php-cli1
-Conflicts: php-phar
-Filename: ./php-phar1_7.1.3RC1_armhf.deb
-Size: 14952
-MD5sum: ca16fd1708f6a7c09d3c25ceb94f9885
-SHA1: edad8378afd7e3187b76e03b90868d3cdcf196af
-SHA256: 119b78fc1c95c6df0dbad0dfe35481c0815d4d0eef14991965f32462934b746d
-SHA512: ce13ac153ff507b36e5c9ca6bf5b5b6704cb8edb9c9a75ffbbb86f99ae0bd9b95ac7a9c343cef2f2baf27555c701f6ffb73dbff804c864e2f77949c5cb1332ba
-Description: A server-side, HTML-embedded scripting language
- A server-side, HTML-embedded scripting language.
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
-Package: php1-dev
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Depends: php1 (= 7.1.3RC1)
-Filename: ./php1-dev_7.1.3RC1_armhf.deb
-Size: 525248
-MD5sum: 35aed2e465f34aa58c0a752b2ae82007
-SHA1: 029bafac02cd11a95f16f0692c280e588244a3b9
-SHA256: ba6b22a0e5bf0a14a76ee015f9d91c4bcb32def1e2e9526148f59a2de7c368cc
-SHA512: 357b8e36ff70aff66d62c375b8525ec035c11d3604227f96465022d7d4d99b6a61868d8c88809649feb1f495cf3298e233beb55d34a8421ec295b4438cb96b57
-Description: A server-side, HTML-embedded scripting language - header files
- A server-side, HTML-embedded scripting language.
- .
- This package contains the header files
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
 Package: nginx1
 Priority: optional
 Section: net
@@ -851,6 +870,27 @@ Description: HTTP and reverse proxy server
 OE: nginx
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://nginx.org/
+
+Package: php-phar1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php-phar
+Depends: php-cli1
+Conflicts: php-phar
+Filename: ./php-phar1_7.1.3_armhf.deb
+Size: 14954
+MD5sum: a403a52034795be9a383c7155cd6986d
+SHA1: 0621979981d445135d2c1fedb2eb7cec8a24a9e0
+SHA256: 7efd43c3a47d9cf5f528c9833df6a6d0c035af4b7330b55462c080e2d336ce58
+SHA512: 643289e2af184987dbfc9e5b7aba89424b07529f0b9a837f571b5f35bd4eaf1bb55402db9d3fbdf05eed22d6b642f4317ee5ca31e62143e4ac2cdc243b50c1fa
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: perl-module-test-pod
 Priority: optional
@@ -987,6 +1027,27 @@ Description: help2man
  help2man
 PackageArch: cortexa15hf-neon-vfpv4
 
+Package: php1-dev
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Depends: php1 (= 7.1.3RC1)
+Filename: ./php1-dev_7.1.3_armhf.deb
+Size: 524862
+MD5sum: f8684a43849ad64ba5f6b3c1b7f45fda
+SHA1: 1840c11ae0b36baf1fca639f0f2c86c693921c22
+SHA256: 28d2b25ff74deb9948317be07d5e087ccaa154e48bc9c0988d84f79f84db15e5
+SHA512: 9c18874e8b92c0a8aa4750b2d5ab78a149883c4114fb20093c378435c57482b288d9ef133406fb94f8118488ed50627495520723c316039279deaf425dbb4288
+Description: A server-side, HTML-embedded scripting language - header files
+ A server-side, HTML-embedded scripting language.
+ .
+ This package contains the header files
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
+
 Package: libccid
 Priority: extra
 Section: libs
@@ -1101,48 +1162,6 @@ Description: Compression and decompression in the LZMA format - development file
  Note: Depends: zlib1g-dev?
 Homepage: http://www.7-zip.org/sdk.html
 
-Package: php-pear1
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-pear
-Depends: php1
-Conflicts: php-pear
-Filename: ./php-pear1_7.1.3RC1_armhf.deb
-Size: 238812
-MD5sum: 88799e501d29eba88320d777d4a19724
-SHA1: bab1da09bfa304c88ea259aebb71ac8dcab53f8d
-SHA256: ff70f2d11a0e09508ded0c5370c46ac203bccd2a6549cd5c71acb7f4c05de1e3
-SHA512: 7b3d9acd6b7347d90949e2010767e96199a5295aed74b394014f21f1c446d363c66c53b8de21bc66a7fd7c4303e15b0d92c193e022aa35c7f03c3d8c8828cfe4
-Description: A server-side, HTML-embedded scripting language
- A server-side, HTML-embedded scripting language.
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
-Package: php1
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php
-Depends: libgd3 (>= 2.1.1), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
-Conflicts: php
-Filename: ./php1_7.1.3RC1_armhf.deb
-Size: 2396938
-MD5sum: e9d45f863d6c6c97b701bde82141d884
-SHA1: f6008f63fcb1f466a87311b81956eccf05272afd
-SHA256: 87b585824c56bc7d92c1a6a63e32f0759a92744755f5ff3e271d066eb403e304
-SHA512: 5b2fd7ecac0f17cad3163259e98df8e249a92b3d1e024c75d052550fd3e089ef89ddcbb900b6fdbd0707e700bc776830f0397fffd9f933c113698f41612adcc6
-Description: A server-side, HTML-embedded scripting language
- A server-side, HTML-embedded scripting language.
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
 Package: libgd3-dev
 Priority: optional
 Section: libs
@@ -1190,25 +1209,6 @@ Description: MySQL database server binaries and system database setup - ~15MB (f
  ease of use.
 Homepage: http://dev.mysql.com/
 
-Package: php-fpm-apache21
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-fpm-apache2
-Conflicts: php-fpm-apache2
-Filename: ./php-fpm-apache21_7.1.3RC1_armhf.deb
-Size: 1042
-MD5sum: e3da552cec498108c64245c7032ddf5e
-SHA1: 32beff0e616c6fc41611bcc27829ed5d86b1dd47
-SHA256: 99dd023c9ab5f8edc05c0f4e5738dde8bd9b00053917e7eca51ee90ac5e717ec
-SHA512: d32ac0b6e06c135acd175557ba69cd7ecf93dcddc0e12e693331cb5c2c360c7dc38c4ecde2190805b29584bae5472bd88e6e687e04f845c47a0c19e8c518e549
-Description: A server-side, HTML-embedded scripting language
- A server-side, HTML-embedded scripting language.
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
 Package: curl1-dev
 Priority: optional
 Section: devel
@@ -1251,28 +1251,6 @@ OE: openssl
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.openssl.org/
 
-Package: php-modphp1
-Priority: optional
-Section: console/network
-Maintainer: mcpat
-Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-modphp
-Provides: modphp
-Depends: libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libpng16-16 (>= 1.6.21), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libjpeg62 (>= 8d+1.4.2), libz1 (>= 1.2.8), libfreetype6 (>= 2.6.3), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libncurses5 (>= 6.0+20160213), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libtiff5 (>= 4.0.6), apache2-1, liblzma5 (>= 5.2.2), php1, libbz2-1 (>= 1.0.6)
-Conflicts: php-modphp
-Filename: ./php-modphp1_7.1.3RC1_armhf.deb
-Size: 2433282
-MD5sum: a3589ab7440604dde5f11d2f6bea0dd9
-SHA1: ce7bcbdd6224c0c4f02bcbfd5a01c38c9219a976
-SHA256: ec54c7128f71296af908f2501570d98b1bed6bfdcf66cb561113d75977fce7a0
-SHA512: c8c9b60319153fcad743cfd50415e31848f3748d7ea7288504cb8eac8c6c84b68b0a74dc0c5dde8fb86557b743d3d68df504e33c322d3d317ad16dac21100aed
-Description: PHP module for the Apache HTTP server
- A server-side, HTML-embedded scripting language.
-OE: php
-PackageArch: cortexa15hf-neon-vfpv4
-Homepage: http://www.php.net
-
 Package: dpkg-sig
 Priority: optional
 Section: devel
@@ -1308,6 +1286,27 @@ SHA512: 86ae58e828da7a4fe43bee54b3fb2b9878e10cb35755561696e35b2fb128b011f196e832
 Description: podlators
  podlators
 Homepage: http://xxx
+
+Package: php-cli1
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 7.1.3
+Replaces: php-cli
+Depends: libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), php1, libbz2-1 (>= 1.0.6)
+Conflicts: php-cli
+Filename: ./php-cli1_7.1.3_armhf.deb
+Size: 2333190
+MD5sum: 602a037ffd6811994d69adee7d9487e7
+SHA1: bb5e79808be56375df8be88519ddee235f586798
+SHA256: e0d66ae81fcd3405da0877fbc87ba5f6241278d8e90c99acc53fde0a12a06cd7
+SHA512: 229252344d16cd8b1883dd040fefefefc626f094f6be6c8a4389428d57b84b0a39e95d847dcf327924bc2297ff94ab1957ab7eb379eba93cddaaacfd31f18da1
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+OE: php
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://www.php.net
 
 Package: mysql-dev
 Priority: optional
@@ -1414,22 +1413,23 @@ OE: apr
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://apr.apache.org/
 
-Package: php-cgi1
+Package: php-modphp1
 Priority: optional
 Section: console/network
 Maintainer: mcpat
 Architecture: armhf
-Version: 7.1.3RC1
-Replaces: php-cgi
-Depends: libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libbz2-1 (>= 1.0.6)
-Conflicts: php-cgi
-Filename: ./php-cgi1_7.1.3RC1_armhf.deb
-Size: 2323664
-MD5sum: 6e0f8d67cd13189eef8489e9f0b7e9de
-SHA1: 6040b52259503cbea1ca5c02a33a2c2549b9c821
-SHA256: aee5a4920fcad5040a827616fe89a20f23a422d30be9d3b8447437c78409c74e
-SHA512: 2fc635ece2392cfd0b1acf56d86d9b4412b665322e264c3fe636b6c27d464e79322851a219e6c6cbd2498c61bdec42d4743d4fdd165bc6fef4bf1e05e1f80459
-Description: A server-side, HTML-embedded scripting language
+Version: 7.1.3
+Replaces: php-modphp
+Provides: modphp
+Depends: libltdl7 (>= 2.4.6), libgd3 (>= 2.1.1), libmysqlclient20 (>= 5.7.17), libpng16-16 (>= 1.6.21), libcrypto1.1 (>= 1.1.0e), libxml2 (>= 2.9.4), libjpeg62 (>= 8d+1.4.2), libz1 (>= 1.2.8), libfreetype6 (>= 2.6.3), libmcrypt4 (>= 2.5.8), libcurl41 (>= 7.53.1), libreadline6 (>= 6.3), libsqlite3-0 (>= 3.11.0), libncurses5 (>= 6.0+20160213), libc6 (>= 2.23), libssl1.1 (>= 1.1.0e), libtiff5 (>= 4.0.6), apache2-1, liblzma5 (>= 5.2.2), php1, libbz2-1 (>= 1.0.6)
+Conflicts: php-modphp
+Filename: ./php-modphp1_7.1.3_armhf.deb
+Size: 2440092
+MD5sum: 6b4abda6da30399ea90696c8c6c5b01d
+SHA1: 02d6110b830f88995fe43a82aff81dadc80ff12f
+SHA256: aa5d3f5ada8884debac2b487755cc7afe4e4b9723d6476249dc37113237945a8
+SHA512: 8625d108d2141fea47e7a72dbe203b77a99c453c11c249537469c7b8b7d57dc938f8ecfbc8e490c1a6577e00a72625a0029d34d5203b625c70f3795ef87e8ae6
+Description: PHP module for the Apache HTTP server
  A server-side, HTML-embedded scripting language.
 OE: php
 PackageArch: cortexa15hf-neon-vfpv4
