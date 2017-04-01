@@ -656,24 +656,6 @@ Description: A robust, scalable, and reliable SQL server
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: https://dev.mysql.com/downloads/mysql/5.7.html
 
-Package: enigma2-skin-metrixstylehd
-Priority: optional
-Section: base
-Maintainer: arki
-Architecture: all
-Version: 6.1
-Depends: enigma2 (>= 4.3.0r22), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_6.1_all.deb
-Size: 1301790
-MD5sum: b6f17695a60013b6fcbade04386fb0aa
-SHA1: 174c0f13d5706a7a904284ca44ce7b003f26519c
-SHA256: 35a99d7b21a215a81f48fe226a2a8b504c2e73a69c5bfe3d8dbe65c52a0fdaf5
-SHA512: e189637b1d3c8e07ff522f55cc914f91b2e92fabcbff59fe32134e23622e17c2895480fa506d863e76586aa0911765a07a1ea5129678d5ad885cd2bab742b4e1
-Description: Skin MetrixStyleHD
- HD-Skin for DreamOS with Controler
-PackageArch: mips32el
-Homepage: wwww.nachtfalke.biz
-
 Package: libserf1
 Priority: optional
 Section: libs
@@ -1499,6 +1481,24 @@ Description: tool for generating fast C-based recognizers
  allows one to generate scanners which approach hand-crafted ones in
  terms of size and speed.
 Homepage: http://re2c.org
+
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 6.3
+Depends: enigma2 (>= 4.3.1r1), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_6.3_all.deb
+Size: 1206932
+MD5sum: 504489d110ef223fac4aa17c7110650e
+SHA1: 69095c99cecf41c615ce89052af3a4432da79e2a
+SHA256: de765aa4fbfc0fe9feab779c3500b706c81c7a28bdbc680e84b4c85225a2fcc6
+SHA512: d7fec3d205563c6526e297eb55bc670ab292e78c67c31601306b0824f434253258e17e0a63397e131d62be7aa9476d29973d927c17f0cbf5558fbf226b94b5d1
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+PackageArch: mips32el
+Homepage: wwww.nachtfalke.biz
 
 Package: openssl1-dev
 Priority: optional
