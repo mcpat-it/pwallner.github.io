@@ -1083,13 +1083,13 @@ Section: base
 Maintainer: mcpat
 Architecture: armhf
 Version: 0.4.0
-Depends: openssl (>= 1.0.2h), openssl-conf (>= 1.0.2h)
+Depends: openssl (>= 1.0.2h), openssl-conf (>= 1.0.2h), curl (>= 7.47.1)
 Filename: ./dehydrated_0.4.0_armhf.deb
-Size: 15198
-MD5sum: bf2210f16e69cc6af0684ff51d23ca74
-SHA1: cc825599d2585437477078a972f0d7a18766740f
-SHA256: b0b2456c963ef9d33e55b980ebc9a9e5bea5c23a5b6fb678c65ff4f073fa9f38
-SHA512: 3ed739ece0b3c242f2c00b07a438bb49d0b730cfab22c67d7930660c9c8c3f67ea71e02d92cea49b2e8035b32c0a40aced94a95d9337e9289baf5562a797aff0
+Size: 15222
+MD5sum: e344f7562b0e67c7481fea771ff02046
+SHA1: f34bf2fe3080df95cd34d0ff98c65c428122c090
+SHA256: 05c04c80ec38708a7f271042300408ec0f48d91e1cde4c2d6799e8360aefe4dc
+SHA512: b343f25232e9e79b6f5ec24156f38680c740a51ce4d45bd3a6f16ed41bb9705f5bd66b9cdbcba5efabce11a07c68b6b02e1e7dc13bc501222bd5dd643db5e695
 Description: letsencrypt/acme client
  This is a client for signing certificates with an
  ACME-server (currently only provided by Let's 
