@@ -327,6 +327,37 @@ OE: openssl
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.openssl.org/
 
+Package: pure-ftpd-implicittls
+Priority: optional
+Section: console/network
+Maintainer: mcpat
+Architecture: armhf
+Version: 1.0.46
+Depends: libssl1.1 (>= 1.1.0e), libc6 (>= 2.23), libcrypto1.1 (>= 1.1.0e), base-files, shadow, base-passwd
+Recommends: xinetd
+Filename: ./pure-ftpd-implicittls-1.0.46_armhf.deb
+Size: 71740
+MD5sum: 9137d11bdecd87f713fb9eb01b11682a
+SHA1: ceeb47738e7cb6e24ba429c8e5aaaca933add97f
+SHA256: 0fa85744be385800927328a5edc03da72af60b5d254b47c6ced8020bffbea9b7
+SHA512: 77a05b574c2d51ce6acdfbff988ee473baf43327964eae7f8eecc16f8d9f9992a35015e722c2a68f339c4ad69587154143f42add6621394893e7eb593296a683
+Description: Ftp server - implicit tls
+ Pure-FTPd is a free (BSD), secure,
+ production-quality and standard-conformant
+ FTP server. It doesn't provide useless
+ bells and whistles, but focuses on
+ efficiency and ease of use. It provides
+ simple answers to common needs, plus
+ unique useful features for personal
+ users as well as hosting providers.
+ .
+ Only implicit tls (standard port 990)
+ .
+ Uses openssl 1.1.0
+OE: pure-ftpd
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: https://www.pureftpd.org/
+
 Package: libmcrypt4-dev
 Priority: optional
 Section: libs
