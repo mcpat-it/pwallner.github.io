@@ -376,6 +376,30 @@ Description: libmcrypt4 - Header files
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://libgd.bitbucket.org/
 
+Package: upx-ucl
+Priority: optional
+Section: utils
+Maintainer: mcpat
+Architecture: armhf
+Version: 3.94
+Provides: upx
+Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2)
+Filename: ./upx-3.94_armhf.deb
+Size: 313512
+MD5sum: 039f4571a1f8ab6860da78f7abda0f60
+SHA1: fe4fd5ffa0a515bfc0b6901327103f488534f469
+SHA256: 84139cd11e1b5ab0b394a9153902bee1a816f89fe9fee522a4b12ae5988679ff
+SHA512: 7725174592e27e0ef13af9981eda2008239865779080c6aa5caf3b0a9817cd218e68a58d6bbc4ac620102c1b118f49e6943f92ebe65cf8671a0ab1b3e6766d1d
+Description: efficient live-compressor for executables
+ UPX is an advanced executable file compressor. UPX will typically
+ reduce the file size of programs and DLLs by around 50%-70%, thus
+ reducing disk space, network load times, download times etc. The
+ current version can compress executables for DOS, Linux/ELF (i386,
+ amd64, ppc32) and some other files for different OS.
+ .
+ NOTE: This package is based on the UCL library, which is licensed under GPL.
+Homepage: http://upx.sourceforge.net/
+
 Package: libunistring0-dev
 Priority: optional
 Section: base
@@ -834,30 +858,6 @@ Description: A server-side, HTML-embedded scripting language
 OE: php
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.php.net
-
-Package: upx-ucl
-Priority: optional
-Section: utils
-Maintainer: mcpat
-Architecture: armhf
-Version: 3.94-git-483db31acd0a
-Provides: upx
-Depends: libc6 (>= 2.23), libgcc1 (>= 5.3.0), libstdc++6 (>= 5.3.0), libucl1 (>= 1.03), liblzma5 (>=5.2.2)
-Filename: ./upx-3.94-git-483db31acd0a_armhf.deb
-Size: 295612
-MD5sum: 5357a68f16b5b1a98a1d3c811298d0e7
-SHA1: e0ed9c3bb6155178dd67352508f78e57b87e0b95
-SHA256: 5a6533d13b8683c482bb0fccd26c5b8312e5ef7ea56f28b7a5bc608bbc5af55d
-SHA512: f057a9a96bab699ceefe509c0097d66817ab0b60302f4eccb3973f9eb4cf44d6d1ae9392ab030539512d728da8066494409f8476a743499211f9a927a4f65f0a
-Description: efficient live-compressor for executables
- UPX is an advanced executable file compressor. UPX will typically
- reduce the file size of programs and DLLs by around 50%-70%, thus
- reducing disk space, network load times, download times etc. The
- current version can compress executables for DOS, Linux/ELF (i386,
- amd64, ppc32) and some other files for different OS.
- .
- NOTE: This package is based on the UCL library, which is licensed under GPL.
-Homepage: http://upx.sourceforge.net/
 
 Package: gperf
 Priority: optional
