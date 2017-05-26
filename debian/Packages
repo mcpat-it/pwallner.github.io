@@ -189,24 +189,6 @@ Description: Middleware to access a smart card using PC/SC (library)
 Multi-Arch: same
 Homepage: http://pcsclite.alioth.debian.org/
 
-Package: enigma2-skin-metrixstylehd
-Priority: optional
-Section: base
-Maintainer: arki
-Architecture: all
-Version: 6.9
-Depends: enigma2 (>= 4.3.1r1), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_6.9_all.deb
-Size: 1209424
-MD5sum: 3b3df998a439e49bcd10a88979660ad8
-SHA1: e32cda86e742938997a171575b13d2df8b9636b2
-SHA256: 32cc21a1d1e9bb8486d8fc2c843881f25506bf58baec19fd65d9f67d7835e0a7
-SHA512: ac795a501f8ac407fc0920e89627c591d0a83b24ec341260a0c3dcc276f5396a83ef2215cc1bafeb9e5c4c5a405565a256622f53cbf35ae110e0cd3464661b37
-Description: Skin MetrixStyleHD
- HD-Skin for DreamOS with Controler
-PackageArch: mips32el
-Homepage: wwww.nachtfalke.biz
-
 Package: subversion
 Priority: optional
 Section: base
@@ -728,6 +710,23 @@ Description: A robust, scalable, and reliable SQL server
  A robust, scalable, and reliable SQL server.
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: https://dev.mysql.com/downloads/mysql/5.7.html
+
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 7.2
+Depends: enigma2 (>= 4.3.1r1), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_7.2_all.deb
+Size: 1225396
+MD5sum: 60f97091b05902c3d254a389cf5f5fff
+SHA1: 21f7febb5070ab69ddcdee347666e45a1f848dd0
+SHA256: 67d0b62abf53ac85b9a93a026d352117bf5291831bdf783b27e91a5eee7bf4bb
+SHA512: edf40aad70734d798a71512a80bd7dc92eaaaf148cd814ebf8c52be477114d173c81d1dd21276af94de0cc89b2cca479bc53e523a15b18c054f5ca2f3bad2e52
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+Homepage: wwww.nachtfalke.biz
 
 Package: libserf1
 Priority: optional
