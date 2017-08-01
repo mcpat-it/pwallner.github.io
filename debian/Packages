@@ -340,6 +340,25 @@ OE: pure-ftpd
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: https://www.pureftpd.org/
 
+Package: enigma2-plugin-extensions-secondinfobarme
+Priority: optional
+Section: base
+Maintainer: Dre
+Architecture: armhf
+Version: 1.0-r7
+Conflicts: enigma2-plugin-extensions-secondinfobar2, enigma2-plugin-extensions-secondinfobar
+Filename: ./enigma2-plugin-extensions-secondinfobarme_1.0-r7_armhf.deb
+Size: 5208
+MD5sum: 9739a436501ec7324b0d03a5b62d7d6b
+SHA1: 3c4118596b3f84a188bcdf807649124749fda0ad
+SHA256: d8b4cfdde7f3d6d5b4c8735570b90ea15edc5244f7b1b9a049a330084c0444a8
+SHA512: 7ed5f893bfab6c6a7828d16eaf35207a3702db7117503c69aaa063cd1960494f6b7b9bd82a9f4db8f1325c5ce1c94e15966f1a128b85d0f5050e567729804be4
+Description: enigma2-plugin-extensions-secondinfobarme version 1.0-r7
+ SecondInfoBar.me
+OE: enigma2-plugin-extensions-secondinfobarme
+PackageArch: cortexa15hf-neon-vfpv4
+Homepage: http://board.dreambox-tools.info
+
 Package: libmcrypt4-dev
 Priority: optional
 Section: libs
@@ -711,23 +730,6 @@ Description: A robust, scalable, and reliable SQL server
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: https://dev.mysql.com/downloads/mysql/5.7.html
 
-Package: enigma2-skin-metrixstylehd
-Priority: optional
-Section: base
-Maintainer: arki
-Architecture: all
-Version: 7.2
-Depends: enigma2 (>= 4.3.1r1), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_7.2_all.deb
-Size: 1225396
-MD5sum: 60f97091b05902c3d254a389cf5f5fff
-SHA1: 21f7febb5070ab69ddcdee347666e45a1f848dd0
-SHA256: 67d0b62abf53ac85b9a93a026d352117bf5291831bdf783b27e91a5eee7bf4bb
-SHA512: edf40aad70734d798a71512a80bd7dc92eaaaf148cd814ebf8c52be477114d173c81d1dd21276af94de0cc89b2cca479bc53e523a15b18c054f5ca2f3bad2e52
-Description: Skin MetrixStyleHD
- HD-Skin for DreamOS with Controler
-Homepage: wwww.nachtfalke.biz
-
 Package: libserf1
 Priority: optional
 Section: libs
@@ -857,6 +859,23 @@ Description: A server-side, HTML-embedded scripting language
 OE: php
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.php.net
+
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 7.4
+Depends: enigma2 (>= 4.3.1r1), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_7.4_all.deb
+Size: 1294540
+MD5sum: a39a3d3e124e98a46b47403483dd12f9
+SHA1: 6d16a20e571971ca12f889ccd057782103cdb993
+SHA256: d16e49f11ebc72621c2045d5d897088377a582c90ac075d63ec67fca2aca763e
+SHA512: 476e6ed6104bb5241588284ddf450fa0b1b6087918df8f41586ba4bcf3fa7b61cf8e75decc2369d6b7811d79ea66a7803a556a924ee8b88ce124550f39c7dd58
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+Homepage: wwww.nachtfalke.biz
 
 Package: gperf
 Priority: optional
