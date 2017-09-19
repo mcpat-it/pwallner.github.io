@@ -860,23 +860,6 @@ OE: php
 PackageArch: cortexa15hf-neon-vfpv4
 Homepage: http://www.php.net
 
-Package: enigma2-skin-metrixstylehd
-Priority: optional
-Section: base
-Maintainer: arki
-Architecture: all
-Version: 7.4
-Depends: enigma2 (>= 4.3.1r1), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_7.4_all.deb
-Size: 1294540
-MD5sum: a39a3d3e124e98a46b47403483dd12f9
-SHA1: 6d16a20e571971ca12f889ccd057782103cdb993
-SHA256: d16e49f11ebc72621c2045d5d897088377a582c90ac075d63ec67fca2aca763e
-SHA512: 476e6ed6104bb5241588284ddf450fa0b1b6087918df8f41586ba4bcf3fa7b61cf8e75decc2369d6b7811d79ea66a7803a556a924ee8b88ce124550f39c7dd58
-Description: Skin MetrixStyleHD
- HD-Skin for DreamOS with Controler
-Homepage: wwww.nachtfalke.biz
-
 Package: gperf
 Priority: optional
 Section: base
@@ -1379,6 +1362,23 @@ Description: MySQL database server binaries and system database setup - header f
  .
  This package contains the header files
 Homepage: http://dev.mysql.com/
+
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 7.8
+Depends: enigma2 (>= 4.3.1r10), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_7.8_all.deb
+Size: 1419306
+MD5sum: b0fe083b1d9a338bf01c632df970c0f3
+SHA1: 7a8fd7f82efb45835965cc3466a12c1011a663f9
+SHA256: a175dd459ec615f7f5b81041190bd706eb10c2d79ccbc9b19dcb604fdd1160d9
+SHA512: 58d9bea51330f225fb019153255b1969632035ca7cfd03ac3933cd30c246996583a5f450c843aec8f7be8976d2328d747e8599a3b48ef91463d3913f7fc84817
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+Homepage: wwww.nachtfalke.biz
 
 Package: libapr1-dev
 Priority: optional
