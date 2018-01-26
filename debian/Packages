@@ -959,6 +959,23 @@ Description: pod2man
  Perl module pod2man
 Homepage: http://unkown/
 
+Package: enigma2-skin-metrixstylehd
+Priority: optional
+Section: base
+Maintainer: arki
+Architecture: all
+Version: 8.6
+Depends: enigma2 (>= 4.3.1r19), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
+Filename: ./enigma2-skin-metrixstylehd_8.6_all.deb
+Size: 1531548
+MD5sum: b269a652fdb7897591f7439551feefc1
+SHA1: f05d5a8b5517b1fd1e7c049b168a5d15c4652105
+SHA256: 35ef5c7c94226996256f9f17660826f76ee06854371946bb700d9bbc8222f564
+SHA512: 54e2de9934e49fc3f60a8d3d294ef2c7faa39170d5a53d3f563c4f601f295ca56c468728503d901db97002cc6d8e76819405eafdd5ac6fcfecf2f92c33b51529
+Description: Skin MetrixStyleHD
+ HD-Skin for DreamOS with Controler
+Homepage: wwww.nachtfalke.biz
+
 Package: dialog
 Priority: optional
 Section: base
@@ -1362,23 +1379,6 @@ Description: MySQL database server binaries and system database setup - header f
  .
  This package contains the header files
 Homepage: http://dev.mysql.com/
-
-Package: enigma2-skin-metrixstylehd
-Priority: optional
-Section: base
-Maintainer: arki
-Architecture: all
-Version: 7.8
-Depends: enigma2 (>= 4.3.1r10), enigma2-plugin-skincomponents-eventlist, enigma2-plugin-skincomponents-reftopiconname, enigma2-plugin-systemplugins-weathercomponenthandler 
-Filename: ./enigma2-skin-metrixstylehd_7.8_all.deb
-Size: 1419306
-MD5sum: b0fe083b1d9a338bf01c632df970c0f3
-SHA1: 7a8fd7f82efb45835965cc3466a12c1011a663f9
-SHA256: a175dd459ec615f7f5b81041190bd706eb10c2d79ccbc9b19dcb604fdd1160d9
-SHA512: 58d9bea51330f225fb019153255b1969632035ca7cfd03ac3933cd30c246996583a5f450c843aec8f7be8976d2328d747e8599a3b48ef91463d3913f7fc84817
-Description: Skin MetrixStyleHD
- HD-Skin for DreamOS with Controler
-Homepage: wwww.nachtfalke.biz
 
 Package: libapr1-dev
 Priority: optional
