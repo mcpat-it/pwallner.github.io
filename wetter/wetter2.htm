@@ -171,7 +171,7 @@ $(function(){
 
     var query = "SELECT item.condition, location, item.forecast, astronomy FROM weather.forecast WHERE location='" + loc + "' AND u='" + u + "'";
     var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
-    var url = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json' //&_nocache=' + cacheBuster;
+    var url = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json' //&_nocache=' + cacheBuster;
 
     window['wxCallback'] = function(data) {
     	//console.log(data);
