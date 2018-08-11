@@ -33,7 +33,7 @@
     height: 34px;
     margin: 2px 0 -1px 1px;
     overflow: hidden;
-    background: url('http://l.yimg.com/a/lib/ywc/img/wicons.png') no-repeat 61px 0;
+    background: url('https://github.mcpat.com/wetter/wicons.png') no-repeat 61px 0;
 }
 #wxIcon2 {
     display: inline-block;
@@ -155,7 +155,7 @@ var query = encodeURIComponent('select item.condition, location, item.forecast, 
         $(platzhalter).children('#current').children('#fore').html(vorschau.low + '&deg;C - ' + vorschau.high + '&deg;C');
         var imageUrl = 'icon' + ampm + '.png';
         $(platzhalter).css({backgroundSize: '152px auto', backgroundImage: 'url(' + imageUrl + ')',backgroundRepeat: 'no-repeat',backgroundPosition: '32px 38px'}); 
-        $(platzhalter).children('#current').css({backgroundSize: '100% auto', backgroundImage: 'url(http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px 0px'}); //http://l.yimg.com/a/i/us/nws/weather/gr/29d.png
+        $(platzhalter).children('#current').css({backgroundSize: '100% auto', backgroundImage: 'url(https://github.mcpat.com/wetter/icons/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px 0px'}); //http://l.yimg.com/a/i/us/nws/weather/gr/29d.png
         $(platzhalter).children('#current').attr('title',info.text);   
 });
 }
@@ -221,7 +221,7 @@ $(function(){
         $('#weather').children('#current').children('#fore').html(vorschau[0].low + '°C - ' + vorschau[0].high + '°C');
         var imageUrl = 'icon' + ampm + '.png';
         $('#weather').css({backgroundImage: 'url(' + imageUrl + ')',backgroundRepeat: 'no-repeat',backgroundPosition: '40px 40px'});
-        $('#weather').children('#current').css({backgroundImage: 'url(http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px -10px'});
+        $('#weather').children('#current').css({backgroundImage: 'url(https://github.mcpat.com/wetter/icons/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px -10px'});
         $('#weather').children('#current').attr('title',info.text);
     };
     $.ajax({
