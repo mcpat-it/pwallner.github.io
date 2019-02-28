@@ -33,7 +33,7 @@
     height: 34px;
     margin: 2px 0 -1px 1px;
     overflow: hidden;
-    background: url('http://l.yimg.com/a/lib/ywc/img/wicons.png') no-repeat 61px 0;
+    background: url('https://github.mcpat.com/wetter/wicons.png') no-repeat 61px 0;
 }
 #wxIcon2 {
     display: inline-block;
@@ -88,7 +88,7 @@
     }
     </style>
     
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
     function k(time) {
     	//var datetime = Date.parse('01 Jul 2012 ' + time);
@@ -99,7 +99,7 @@
     }
 function wetter(location, platzhalter) {
 var query = encodeURIComponent('select item.condition, location, item.forecast, astronomy, item.pubDate from weather.forecast where woeid="' + location + '" AND u="c"'), 
-    url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";  //item
+    url = "https://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";  //item
  //https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%2C%20location%2C%20item.forecast%2C%20astronomy%2C%20item.pubDate%20from%20weather.forecast%20where%20woeid%3D548536%20%20AND%20u%3D%22c%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
     $.getJSON(url, function(data) { 
     	//console.log(data);
@@ -155,7 +155,7 @@ var query = encodeURIComponent('select item.condition, location, item.forecast, 
         $(platzhalter).children('#current').children('#fore').html(vorschau.low + '&deg;C - ' + vorschau.high + '&deg;C');
         var imageUrl = 'icon' + ampm + '.png';
         $(platzhalter).css({backgroundSize: '152px auto', backgroundImage: 'url(' + imageUrl + ')',backgroundRepeat: 'no-repeat',backgroundPosition: '32px 38px'}); 
-        $(platzhalter).children('#current').css({backgroundSize: '100% auto', backgroundImage: 'url(http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px 0px'}); //http://l.yimg.com/a/i/us/nws/weather/gr/29d.png
+        $(platzhalter).children('#current').css({backgroundSize: '100% auto', backgroundImage: 'url(https://github.mcpat.com/wetter/icons/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px 0px'}); //http://l.yimg.com/a/i/us/nws/weather/gr/29d.png
         $(platzhalter).children('#current').attr('title',info.text);   
 });
 }
@@ -171,7 +171,7 @@ $(function(){
 
     var query = "SELECT item.condition, location, item.forecast, astronomy FROM weather.forecast WHERE location='" + loc + "' AND u='" + u + "'";
     var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
-    var url = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json' //&_nocache=' + cacheBuster;
+    var url = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json' //&_nocache=' + cacheBuster;
 
     window['wxCallback'] = function(data) {
     	//console.log(data);
@@ -221,7 +221,7 @@ $(function(){
         $('#weather').children('#current').children('#fore').html(vorschau[0].low + '°C - ' + vorschau[0].high + '°C');
         var imageUrl = 'icon' + ampm + '.png';
         $('#weather').css({backgroundImage: 'url(' + imageUrl + ')',backgroundRepeat: 'no-repeat',backgroundPosition: '40px 40px'});
-        $('#weather').children('#current').css({backgroundImage: 'url(http://l.yimg.com/us.yimg.com/i/us/nws/weather/gr/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px -10px'});
+        $('#weather').children('#current').css({backgroundImage: 'url(https://github.mcpat.com/wetter/icons/' + info.code + ampm + '.png)',backgroundRepeat: 'no-repeat',backgroundPosition: '0px -10px'});
         $('#weather').children('#current').attr('title',info.text);
     };
     $.ajax({
