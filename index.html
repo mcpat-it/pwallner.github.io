@@ -1,0 +1,1533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><title>Reisekarte</title>
+<link rel="stylesheet" href="map.css" />
+<link href='austria.ico' rel='icon' type='image/x-icon'/>
+<meta charset="UTF-8">
+<style type="text/css">
+	html, body, #mapDiv {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+	html {
+		overflow:'';
+	}
+ 
+	textarea { overflow: auto }
+	
+	/* img.einbild {background-image: url(schluessel_grau.png);
+		width:26px;height:13px; }
+	img.einbild:hover {background-image: url(schluessel.png);
+		width:26px;height:13px; }*/
+		
+	span.imgswap {background-image:url("schluessel.png"); 
+		background-repeat: no-repeat;} /*; display:block;}*/
+	span.imgswap:hover img {visibility:hidden;}
+	
+	/*span.admin {display:none; }*/
+	.gm-style-iw {
+		width: 300px; 
+		min-height: 150px;
+	}
+</style>
+    <!--login-->
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad&display=inline"></script> <!--onload=handleClientLoad& inline-->
+    <script type="text/javascript">
+      // Enter a client ID for a web application from the Google Developer Console.
+      var clientId = '769393418900.apps.googleusercontent.com';
+      // Enter the API key from the Google Develoepr Console - to handle any unauthenticated requests in the code.
+      var apiKey = 'AIzaSyArrSN9y0e89qoiJWLaqDu0wPYzag2D3Zw';
+      // To enter one or more authentication scopes, refer to the documentation for the API.
+      var scopes = 'https://www.googleapis.com/auth/userinfo.email'; 
+      // Use a button to handle authentication the first time.
+      var zugriff = 0;
+      var refresh;
+      function handleClientLoad() {
+      
+        gapi.client.setApiKey(apiKey);
+        window.setTimeout(checkAuth,1);
+      }
+
+      function checkAuth() {
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+      }
+
+      function handleAuthResult(authResult) {
+	//console.log("auth:");
+        //console.log(authResult);
+        if (authResult) {
+          //makeApiCall();
+          //var retObj = gapi.auth.getToken();
+          //console.log(retObj);
+          refresh = new Date();
+          zugriff = 2;
+        } else {
+          //authorizeButton.onclick = handleAuthClick;
+          zugriff = 1;
+        }
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        	$("#btn_authorize-button").css('display', '');
+        } else {
+        	$("#authorize-button").css('display', '');
+        }
+        //$("#authorize-button").css('visibility', '');
+      }
+      
+      /*function handleAuthResult2(authResult) {
+        if (authResult) {
+          //makeApiCall();
+          zugriff = 2;
+          login();
+        } else {
+          //authorizeButton.style.visibility = '';
+          //authorizeButton.onclick = handleAuthClick;
+          zugriff = 1;
+        }
+      }*/
+      
+      function handleAuthClick(event) {
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, function() {refresh = new Date(); zugriff = 2; event(true);});//handleAuthResult2);//function() {zugriff = 2; event(2);}
+        return false;
+      }
+
+      // Load the API and make an API call.  Display the results on the screen.
+      //function makeApiCall() {
+	//console.log(gapi.auth.getToken());
+	//var retObj = gapi.auth.getToken();
+        //console.log(retObj.access_token + " expires in " + retObj.expires_in);
+	//document.write(retObj.access_token + " expires in " + retObj.expires_in);
+	//gapi.client.load('oauth2', 'v2', function() {
+        //  var request = gapi.client.oauth2.userinfo.get();
+          //var request = gapi.client.oauth2.userinfo.v2.me.get();
+        //  request.execute(function(resp) {
+		 //console.log(resp);
+	//	 $.fancybox.hideLoading()
+	//	 if (resp.email == "xx") {
+	//	 	zugriff = 3;
+	//	 	$("img.einbild").css('background-image', 'url(schluessel_login.png)');
+	//	 	$.fancybox($(".various"));
+	//	 } else {
+	//	 	zugriff = 2;
+	//	 	$("img.einbild").css('background-image', 'url(schluessel_rot.png)');
+	//	 }
+        //  });
+        //});
+      
+        //gapi.client.load('plus', 'v1', function() {
+        //  var request = gapi.client.plus.people.get({
+        //    'userId': 'me'
+        //  });
+        //  request.execute(function(resp) {
+        //    var heading = document.createElement('h4');
+        //    var image = document.createElement('img');
+	//	 console.log(resp);
+        //    image.src = resp.image.url;
+        //    heading.appendChild(image);
+        //    heading.appendChild(document.createTextNode(resp.displayName));
+        //    document.getElementById('content').appendChild(heading);
+        //  });
+        //});
+      //}
+     
+    </script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    <!--<link href="https://developers.google.com/fusiontables/docs/samples/style/default.css" rel="stylesheet" type="text/css">-->
+    <!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPDHbfLXcCNMrsh0pxfeYuVGjnD0dj9Uo"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+    <!-- Load jQuery -->
+    <!--<script type="text/javascript">
+	google.load("jquery", "1");
+    </script>-->
+    <!--<script type="text/javascript" src="mcpat.js"></script>-->
+    <script type="text/javascript" src="markerclusterer.js"></script>
+    <!--<script type="text/javascript" src="data.json" type="text/javascript"></script>-->
+    <!--fancybox-->
+    <!--<script type="text/javascript" src="fancyapps-fancyBox-3a66a9b/source/jquery.fancybox.js?v=2.0.6"></script>
+    <link rel="stylesheet" type="text/css" href="fancyapps-fancyBox-3a66a9b/source/jquery.fancybox.css?v=2.0.6" media="screen" />-->
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.0.6" media="screen" />
+    <!--<link rel="stylesheet" href="web.css?v=2" type="text/css" media="screen" />-->
+    <!--tinymce-->
+    <!--<script type="text/javascript" src="tiny_mce/jquery.tinymce.js"></script>
+    <script type="text/javascript">
+        $(function() {
+                $('textarea.tinymce').tinymce({
+                        // Location of TinyMCE script
+                        script_url : 'tiny_mce/tiny_mce.js',
+						theme : "advanced",
+      					plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+      					theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,formatselect,fontselect,fontsizeselect,preview",
+      					theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,image,cleanup,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+      					theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,nonbreaking",
+      					theme_advanced_toolbar_location : "top",
+      					theme_advanced_toolbar_align : "left",
+      					theme_advanced_statusbar_location : "bottom",
+      					theme_advanced_resizing : true
+                });
+        });
+	</script>-->
+    <script language="javascript" type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
+    <script language="javascript" type="text/javascript">
+	var config = {
+    apiKey: "AIzaSyB0ZXVwkaITq3CUabtb9GndZtKObYc2fbM",
+    authDomain: "firebase.mcpat.com",
+    projectId: "pucketlist-411df",
+    storageBucket: "pucketlist-411df.appspot.com",
+    messagingSenderId: "638249510609",
+    appId: "1:638249510609:web:437b13665b2d87b23947f0",
+    measurementId: "G-0BF0Y9VWH4"
+  };
+  //authDomain: 'auth.firebase.mcpat.com',
+  //authDomain: "pucketlist-411df.firebaseapp.com",
+  //	databaseURL: "https://pucketlist-411df-default-rtdb.firebaseio.com/",
+
+firebase.initializeApp(config);
+
+var db = firebase.firestore();
+
+
+    	//var init=0;
+    	tinyMCE.init({
+      		//script_url : 'tiny_mce/tiny_mce.js',
+      		theme : "advanced",
+      		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+      		theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,formatselect,fontselect,fontsizeselect,preview",
+      		theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,image,cleanup,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+      		theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,nonbreaking",
+      		theme_advanced_toolbar_location : "top",
+      		theme_advanced_toolbar_align : "left",
+      		theme_advanced_statusbar_location : "bottom",
+      		theme_advanced_resizing : true,
+
+      		setup : function(){
+      				//init=1;
+      				finit();
+      				//alert("Tinymce fertig!");
+      			}
+      	});
+    </script>
+    <script type="text/javascript">
+      	//var Token;
+      	var markers = [];
+      	var map = null;
+      	var map2 = null;
+      	var markerCluster = null;
+      	var infoWindow = new google.maps.InfoWindow({ 
+  		//size: new google.maps.Size(150,50)
+  		maxWidth: 300
+	});
+	//preload images
+	//$.fn.preload = function() { 
+	//	this.each(function(){ 
+	//		$('<img/>')[0].src = this; 
+	//	}); 
+	//} 
+
+	var createMarker = function(coordinate, Ueberschrift, Beschreibung, visit, Foto, Stadt, Land, Land_kurz, ROWID) {
+		if (visit == '1') {
+	  	var image = new google.maps.MarkerImage('beachflag.png',
+      		// This marker is 20 pixels wide by 32 pixels tall.
+      		new google.maps.Size(20, 32),
+      		// The origin for this image is 0,0.
+      		new google.maps.Point(0,0),
+      		// The anchor for this image is the base of the flagpole at 0,32.
+      		new google.maps.Point(0, 32));
+      		} else if (visit == '2') {
+      		var image = new google.maps.MarkerImage('favorit.png',
+			new google.maps.Size(20, 32),
+			new google.maps.Point(0,0),
+			new google.maps.Point(0, 32));
+		} else {
+		var image = new google.maps.MarkerImage('notvisited1.png',
+			new google.maps.Size(20, 32),
+			new google.maps.Point(0,0),
+			new google.maps.Point(0, 32));
+		}
+		var shadow = new google.maps.MarkerImage('beachflag_shadow.png',
+      			// The shadow image is larger in the horizontal dimension while the position and offset are the same as for the main image.
+      			new google.maps.Size(37, 32),
+      			new google.maps.Point(0,0),
+      			new google.maps.Point(0, 32));
+      			// Shapes define the clickable region of the icon.
+      			// The type defines an HTML &lt;area&gt; element 'poly' which traces out a polygon as a series of X,Y points. The final coordinate closes the poly by connecting to the first coordinate.
+      		var shape = {
+      			coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+      			type: 'poly'
+      		};
+      		//var arr = coordinate.toString().split(",");			
+      		//var latlng = new google.maps.LatLng(arr[0], arr[1]);
+	  	  
+      		var marker = new google.maps.Marker({
+          		map: map,
+          		id: ROWID,
+          		position: coordinate,
+          		shadow: shadow,
+          		shape: shape,
+          		title: Ueberschrift,
+          		icon: image, //new google.maps.MarkerImage('fusion_tables-32.png')
+          		mycategory: visit,
+          		mycoordinate: coordinate,
+          		mybeschreibung: Beschreibung,
+          		myfoto: Foto,
+          		mystadt: Stadt,
+          		myland: Land,
+          		mylandkurz: Land_kurz,
+          	});
+          	if (visit == '0' && !document.getElementById("0box").checked){
+          		marker.visible = false;
+          	}
+          	//marker.mycategory = visit;
+          	//marker.myname = coordinate;
+
+          	markers.push(marker);
+          
+          	//google.maps.event.addListener(marker, 'click', function(event) {
+          	// infoWindow.setPosition(coordinate);
+          	//infoWindow.setContent(Ueberschrift + '<br> ' + Beschreibung);
+          	//infoWindow.open(map); 
+          	//});
+          	var content = "<div style='font-family: sans-serif;'><b>" + Ueberschrift + "<\/b><br><br>";
+          	if (Foto === '') {       
+			content += "<img height='50' src='default.jpg'/><br>";
+			Foto = "default.jpg";
+		} else {
+			//preload image
+			//syntax: $(['img1.jpg','img2.jpg','img3.jpg']).preload(); 
+			//$([Foto]).preload();
+			if (!$.browser.msie) {
+				var pic_real_width, pic_real_height;
+				$("<img/>") // Make in memory copy of image to avoid css issues
+	  				.attr("src", Foto)
+	  				.load(function() {
+	  					pic_real_width = this.width;   // Note: $(this).width() will not
+	  					pic_real_height = this.height; // work for in memory images.
+	  					//alert(pic_real_width);
+	  					//alert(pic_real_height);
+	  					//content += "<div align='center'><img style='max-height:150px;max-width:300px;' height='" + pic_real_height + "' width='" + pic_real_width + "' src='" + Foto + "'/></div>";//<br>";
+	  				});
+	  			content += "<div align='center'><img style='max-height:150px;max-width:300px;' height='" + pic_real_height + "' width='" + pic_real_width + "' src='" + Foto + "'/></div>";//<br>";
+	  		} else {
+	  			content += "<div align='center'><img style='max-height:150px;max-width:300px;' src='" + Foto + "'/></div>";//<br>";
+	  		}
+	  	}  
+	  	
+	  	if (Beschreibung != '') {
+	  		content += Beschreibung;
+	  	} else {
+	  		content += "<br>";
+	  	}
+	  	content += "<table style='border-collapse:collapse' border='0'>";//"<br><br><table>";
+	  	if (Stadt != '') {
+	  		content += "<tr><td style='padding-left:0px;'><b>Stadt:<\/b><\/td><td>" + Stadt + "<\/td><\/tr>";
+	  	}
+	  	if (Land_kurz != '') {
+	  		content += "<tr><td style='padding-left:0px;'><b>Land:<\/b><\/td><td><img style='vertical-align:middle;' height='16' src='https://flagpedia.net/data/flags/small/" + Land_kurz.toLowerCase() + ".png'/> " + Land + " (" + Land_kurz + ")<\/td><\/tr>";
+	  	}
+	  	content += "<\/table><\/div>";
+	  	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+	  		var contentadmin = "<span class='admin'><br><table><tr><td><a class='button button-blue' style='color: #fff;' href='javascript:loeschen();'>Löschen</a></td><td><a class='button button-green' style='color: #fff;' href='javascript:updatemarker();'>Update</a></td></tr></table></span>"
+		} else {
+	  		var contentadmin = "<span class='admin'><br><table><tr><td><a href='javascript:loeschen();'><img src='icon-trash.gif' alt='Löschen'/></a></td><td><a href='javascript:updatemarker();'><img src='edit_ico.png' alt='Update Marker'/></a></td></tr></table></span>"
+	  	}
+		//var infowindow = new google.maps.InfoWindow({
+        	//	content: content
+	        //});
+	        google.maps.event.addListener(marker, 'click', function() {
+	        	markerdelete = marker;
+	        	/*if (!$.browser.msie) { 
+	        		$.fancybox.showLoading();
+	        		$('<img />').attr('src', Foto).load(function(){
+	        			//if (!$.browser.msie) {$.fancybox.hideLoading();}
+	        			$.fancybox.hideLoading();
+	        			if (zugriff == 3) {infoWindow.setContent(content + contentadmin); } else {infoWindow.setContent(content);}
+	        			//infoWindow.setContent(content);
+	        			infoWindow.open(map,marker);	
+	        		});
+	        	} else {*/
+	        		if (zugriff == 3) {infoWindow.setContent(content + contentadmin); } else {infoWindow.setContent(content);}
+	        		//infoWindow.setContent(content);
+	        		infoWindow.open(map,marker);
+	        		//markerdelete = marker;
+	        		//if (zugriff == 3) {$('span.admin').show(); } else {$('span.admin').hide();}
+	        	//}
+	        	//if (zugriff == 3) {$('span.admin').show(); } else {$('span.admin').hide();}
+	        		        	
+	        	/*preloadimages([Foto]).done(function(images){
+	        		//$.fancybox.hideLoading();
+	        		//call back codes, for example:
+	        		infoWindow.setContent(content);
+	        		infoWindow.open(map,marker);
+	        		markerdelete = marker;
+	        		if (zugriff == 3) {$('span.admin').show(); } else {$('span.admin').hide();}
+	        		//infowindow.open(map,marker); //alle bleiben offen
+	        		//nochmal öffnen um volle größe zu erlangen...
+	        		//google.maps.event.addListenerOnce(infoWindow, 'domready', function(){
+	        		//	infoWindow.open(map,marker);
+	        		//});
+	        	})*/	
+        	});
+        	//google.maps.event.addListener(marker, 'rightclick', function() {
+        	//	if (zugriff == 3) { alert("bin da");}
+    		//});
+        	if (loading == 1) {//wird bei "newentry" und update ausgeführt
+        		markerClusterer.addMarker(marker);//, opt_nodraw:boolean)
+        		markerdelete = marker;
+        		loading = 0;
+        	}
+        };
+        function preloadimages(arr){
+	var newimages=[], loadedimages=0
+	var postaction=function(){}
+	var arr=(typeof arr!="object")? [arr] : arr
+	function imageloadpost(){
+		loadedimages++
+		if (loadedimages==arr.length){
+			postaction(newimages) //call postaction and pass in newimages array as parameter
+		}
+	}
+	for (var i=0; i<arr.length; i++){
+		newimages[i]=new Image()
+		newimages[i].src=arr[i]
+		newimages[i].onload=function(){
+			imageloadpost()
+		}
+		newimages[i].onerror=function(){
+			imageloadpost()
+		}
+	}
+	return { //return blank object with done() method
+		done:function(f){
+			postaction=f || postaction //remember user defined callback functions to be called when images load
+		}
+	}
+      }
+
+
+      function show(category) {
+      	for (var i=0; i<markers.length; i++) {
+          if (markers[i].mycategory == category) {
+            markers[i].setVisible(true);
+          }
+        }
+        // == check the checkbox ==
+        document.getElementById(category+"box").checked = true;
+        markerClusterer.repaint();
+      }
+
+      function hide(category) {
+        for (var i=0; i<markers.length; i++) {
+          if (markers[i].mycategory == category) {
+            markers[i].setVisible(false);
+          }
+        }
+        // == clear the checkbox ==
+        document.getElementById(category+"box").checked = false;
+        // == close the info window, in case its open on a marker that we just hid
+        infoWindow.close();
+        //markerClusterer.clearMarkers();
+       markerClusterer.repaint();
+      }
+
+      function boxclick(box,category) {
+        if (category == "3") {
+        	if (box.checked) {
+        		markerClusterer.setMap(map);
+        	} else {
+        		markerClusterer.setMap(null);
+        	}
+        	return;
+        }
+        if (box.checked) {
+          show(category);
+        } else {
+          hide(category);
+        }
+        // == rebuild the side bar
+        //makeSidebar();
+      }
+      
+      var markerdelete;
+      var bestaetigung;
+      function loeschen() {
+      	bestaetigung = 0;
+        $.fancybox.open("Wollen Sie diesen Marker wirklich löschen?<br><br><br><div align=\"right\"><a class=\"button button-green\" style=\"color: #fff;\" href=\"javascript:bestaetigung=1;$.fancybox.close();\">Löschen<\/a><a title=\"Close\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">Abbruch<\/a><\/div>", { 
+        		afterClose : function() { if (bestaetigung == 1) {loeschen2(); }}, 
+        		closeBtn : false,
+        		helpers : {
+				title : null, //{
+				//	type : 'float' // 'float', 'inside', 'outside', null or 'over'
+				//},
+				overlay : {
+					opacity: .56,
+					css: { cursor: 'default' },
+					closeClick: false
+				}}
+			});
+      }
+      function loeschen2() {
+        $.fancybox.showLoading();
+      	//DELETE FROM 1tqv1e7y689555xxx5_eeee345ee_CvWxxxhg9gc WHERE rowid='1'
+      	var tableId = '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs';
+        var insert = [];
+        insert.push('DELETE FROM ');
+        insert.push(tableId);
+        insert.push(' WHERE ROWID=');
+        insert.push("'" + markerdelete.id + "'");
+        
+        var jetzt = new Date();
+        if (Math.round((jetzt.getTime()-refresh.getTime())/1000) >= 3500) {
+        	//console.log("Ich update den Token, dann gehts weiter");
+        	gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, function (ret) {
+        		refresh = new Date();
+        		query(insert.join(''), function (ret) {
+        			if(ret == "Statuscode: 1") {
+        				markerdelete.setMap(null);
+        				markerClusterer.removeMarker(markerdelete);
+        			} else {
+        				alert(ret);
+        			}
+        		});
+        	});
+        } else {
+        	query(insert.join(''), function (ret) {
+        		if(ret == "Statuscode: 1") {
+        			markerdelete.setMap(null);
+        			markerClusterer.removeMarker(markerdelete);
+        		} else {
+        			alert(ret);
+        		}
+        	});
+        }
+      }
+      
+      function updatemarker() {
+      	$('#ueberschrift').val(markerdelete.title);
+      	$('#beschreibung').val(markerdelete.mybeschreibung);
+      	//daten ins tinymce übernehmen
+      	//if (init == 1) {tinyMCE.get('beschreibung').setContent(markerdelete.mybeschreibung, {format : 'raw'});}
+      	$('#koordinaten').val(markerdelete.mycoordinate);
+      	$('#visit').val(markerdelete.mycategory);
+      	$('#foto').val(markerdelete.myfoto);
+      	$('#ort').val(markerdelete.mystadt);
+      	$('#land').val(markerdelete.myland);
+      	$('#land_kurz').val(markerdelete.mylandkurz);
+      	$('#adresse').val("");
+      	//$('#insert-data-output').val("Daten erfolgreich übernommen!");
+      	$("#btn_update").css('display', '');
+      	$("#btn_newentry").css('display', 'none');
+      	$("#someID").click();
+      }
+      function updatemarker2(callback) {
+        if (loading != 0) { 
+        	if (loading == 2) {
+      			callback("Das Update wird bereits durchgeführt, bitte warten!");
+      		} else {
+      			callback("Geocoder arbeitet, bitte warten!");
+      		}
+      		return; 
+      	}
+      	loading = 2;
+      	//prüfen ob leer
+      	if ($('#ueberschrift').val() == '' || $('#koordinaten').val() == ''){
+      		$('#insert-data-output').val("Abbruch: Bitte füllen Sie die Pflichtfelder 'Adresse' und 'Überschrift' aus!");
+      		loading = 0;
+      		return;
+      	}
+      	//buttons sperren/ausblenden
+      	//$("#btn_search").css('display', 'none');
+      	//$("#btn_close").css('display', 'none');
+      	//$("#btn_update").css('display', 'none');
+      	$("#fancybox-overlay2").show();
+	$.fancybox.showLoading();
+        $('#insert-data-output').val(" ");
+      	alte_adresse = "";
+        //textarea updaten
+        //tinyMCE.triggerSave();
+        $('#beschreibung').val(tinyMCE.get('beschreibung').getContent());
+        
+        //UPDATE <table_id> SET <column_name> = <value>, <column_name> = <value> WHERE ROWID = <row_id>
+      	//alert(markerdelete.id);
+        var tableId = '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs';
+        var insert = [];
+        insert.push('UPDATE ');
+        insert.push(tableId);
+        insert.push(' SET '); //(\'Überschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz)
+        insert.push("\'Überschrift\' = '" + $('#ueberschrift').val() + "', ");
+        insert.push("Beschreibung = '" + $('#beschreibung').val() + "', ");
+        insert.push("Location = '" + $('#koordinaten').val() + "', ");
+        insert.push("Visit = '" + $('#visit').val() + "', ");
+        insert.push("Foto = '" + $('#foto').val() + "', ");
+        insert.push("Stadt = '" + $('#ort').val() + "', ");
+        insert.push("Land = '" + $('#land').val() + "', ");
+        insert.push("Land_kurz = '" + $('#land_kurz').val() + "'");
+        insert.push(" WHERE ROWID = '" + markerdelete.id + "'");
+        //alert(insert);
+        //checktoken
+        //var retObj = gapi.auth.getToken();
+        //console.log(retObj.access_token + " expires in " + retObj.expires_in);
+        //test
+        //console.log(clientId + scopes);
+        
+        //refresh token
+        var jetzt = new Date();
+        //console.log("Zeitunterschied gerundet in S: " + Math.round((jetzt.getTime()-refresh.getTime())/1000));
+        if (Math.round((jetzt.getTime()-refresh.getTime())/1000) >= 3500) {
+           //console.log("Ich update den Token, dann gehts weiter");
+           gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, function (ret) {
+        	//var retObj = gapi.auth.getToken();
+        	//console.log(retObj);
+        	refresh = new Date();
+        	//query ausführen nach refresh token
+        	query(insert.join(''), function (ret) {
+        	callback(ret); 
+        	//$("#btn_search").css('display', '');
+        	//$("#btn_close").css('display', '');
+        	//$("#btn_update").css('display', '');
+        	$("#fancybox-overlay2").hide();
+        	$.fancybox.hideLoading();
+        	loading = 1;
+        	markerdelete.setMap(null);
+        	markerClusterer.removeMarker(markerdelete);
+        	createMarker($('#koordinaten').val(), $('#ueberschrift').val(), $('#beschreibung').val(), $('#visit').val(), $('#foto').val(), $('#ort').val(), $('#land').val(), $('#land_kurz').val(), markerdelete.id);
+        	////markerClusterer.addMarker(marker);
+        	if (ret == "Statuscode: 1") {
+        		$.fancybox.close();
+        	}
+        	} );
+           });
+        } else {
+        	query(insert.join(''), function (ret) {
+        	callback(ret);
+        	//$("#btn_search").css('display', '');
+        	//$("#btn_close").css('display', '');
+        	//$("#btn_update").css('display', '');
+        	$("#fancybox-overlay2").hide();
+        	$.fancybox.hideLoading();
+        	loading = 1;
+        	markerdelete.setMap(null);
+        	markerClusterer.removeMarker(markerdelete);
+        	createMarker($('#koordinaten').val(), $('#ueberschrift').val(), $('#beschreibung').val(), $('#visit').val(), $('#foto').val(), $('#ort').val(), $('#land').val(), $('#land_kurz').val(), markerdelete.id);
+        	////markerClusterer.addMarker(marker);
+        	if (ret == "Statuscode: 1") {
+        		$.fancybox.close();
+        	}
+        	} );
+        }
+      }
+      
+      function newentry(callback) { 
+        if (loading != 0) {
+        	if (loading == 1) {
+      			callback("Es wird bereits hinzugefügt, bitte warten!");
+      		} else {
+      			callback("Geocoder arbeitet, bitte warten!");
+      		}
+      		return; 
+      	}
+      	loading = 1;
+      	//prüfen ob leer
+      	if ($('#ueberschrift').val() == '' || $('#koordinaten').val() == ''){
+      		$('#insert-data-output').val("Abbruch: Bitte füllen Sie die Pflichtfelder 'Adresse' und 'Überschrift' aus!");
+      		loading = 0;
+      		return;
+      	}
+      	//button sperren/verbergen
+      	//$("#btn_search").css('display', 'none');
+      	//$("#btn_close").css('display', 'none');
+      	//$("#btn_newentry").css('display', 'none');
+      	$("#fancybox-overlay2").show();
+	$.fancybox.showLoading();
+      	$('#insert-data-output').val(" ");
+        alte_adresse = "";
+        //textarea updaten
+        //tinyMCE.triggerSave();
+        $('#beschreibung').val(tinyMCE.get('beschreibung').getContent());
+        
+        //alert("Token: " + Token);
+	var tableId = '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs';
+        var insert = [];
+        insert.push('INSERT INTO ');
+        insert.push(tableId);
+        insert.push(' (\'Überschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz) VALUES (');
+        insert.push("'" + $('#ueberschrift').val() + "', ");
+        insert.push("'" + $('#beschreibung').val() + "', ");
+        insert.push("'" + $('#koordinaten').val() + "', ");
+        insert.push("'" + $('#visit').val() + "', ");
+        insert.push("'" + $('#foto').val() + "', ");
+        insert.push("'" + $('#ort').val() + "', ");
+        insert.push("'" + $('#land').val() + "', ");
+        insert.push("'" + $('#land_kurz').val() + "'");
+        insert.push(')');
+        
+        var jetzt = new Date();
+        if (Math.round((jetzt.getTime()-refresh.getTime())/1000) >= 3500) {
+        	//console.log("Ich update den Token, dann gehts weiter");
+        	gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, function (ret) {
+        		refresh = new Date();
+        		query(insert.join(''), function (ret) {
+        			callback(ret); 
+        			//$("#btn_search").css('display', '');
+        			//$("#btn_close").css('display', '');
+        			//$("#btn_newentry").css('display', '');
+        			$("#fancybox-overlay2").hide();
+        			$.fancybox.hideLoading();
+        		});
+        	});
+        } else {
+        	query(insert.join(''), function (ret) {
+        		callback(ret); 
+        		//$("#btn_search").css('display', '');
+        		//$("#btn_close").css('display', '');
+        		//$("#btn_newentry").css('display', '');
+        		$("#fancybox-overlay2").hide();
+        		$.fancybox.hideLoading();
+        	});
+        } 
+      }
+
+  	// Send an SQL query to Fusion Tables.
+      function query(query, retour) {
+        //console.log("hier");
+        var lowerCaseQuery = query.toLowerCase();
+        var path = 'fusiontables/v1/query';
+        var callback = function(element) {
+          return function(resp) {
+            var output = resp.substring(0, 1); //JSON.stringify(resp);
+            if (output == "R") {
+            	output = resp.substring(1);
+            	//document.getElementById(element).innerHTML = output;
+            	if (loading == 1) {createMarker($('#koordinaten').val(), $('#ueberschrift').val(), $('#beschreibung').val(), $('#visit').val(), $('#foto').val(), $('#ort').val(), $('#land').val(), $('#land_kurz').val(), output);}
+            	$('#koordinaten').val("");
+            	$('#ueberschrift').val("");
+            	$('#beschreibung').val("");
+            	$('#foto').val("");
+            	$('#ort').val("");
+            	$('#land').val("");
+            	$('#land_kurz').val("");
+            	$('#adresse').val("");
+            	output = "Neue Reihe erfolgreich erstellt. Rowid: " + output;
+            	$(element).val(output);
+            	retour(output);
+            } else {
+            	$.fancybox.hideLoading();
+            	//console.log("war hier");
+            	retour(resp);
+            }
+            
+          };
+        }
+        if (lowerCaseQuery.indexOf('select') != 0 &&
+            lowerCaseQuery.indexOf('show') != 0 &&
+            lowerCaseQuery.indexOf('describe') != 0) {
+
+          var body = 'sql=' + encodeURIComponent(query);
+          runClientRequest({
+            path: path,
+            body: body,
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'Content-Length': body.length
+            },
+            method: 'POST'
+          }, callback('#insert-data-output'));
+
+        } else {
+          runClientRequest({
+            path: path,
+            params: { 'sql': query }
+          }, callback('#select-data-output'));
+        }
+      }
+  	// Execute the client request.
+      function runClientRequest(request, callback) {
+        var restRequest = gapi.client.request(request);
+        //restRequest.execute(callback);
+        restRequest.execute(function(resp) {
+        	//console.log(resp); //resp.status sollte 200 zurückgeben https://groups.google.com/forum/?fromgroups#!topic/fusion-tables-users-group/ilcu87_OM1M
+        	//console.log(resp);
+        	//update und löschen
+        	//columns[0] == "affected_rows"
+        	//rows[0][0] == "1"
+        	//kind == "fusiontables#sqlresponse"
+        	//newentry
+        	//columns[0] == "rowid"
+        	//rows[0][0] == "3601"
+        	//kind == "fusiontables#sqlresponse"
+		 if (resp.error) {
+		 	callback("Fehler: " + resp.error.code + " " + resp.error.message);
+		 } else if (resp.columns[0] == 'rowid') {
+		 	var rows = resp.rows;//['rows'];
+		 	callback("R" + rows[0][0]); //resp.columns + ": " + 
+		 //}else if (resp.kind) {
+		 //	callback(resp.kind);
+		 } else if (resp.columns[0] == 'affected_rows') {
+		 	callback("Statuscode: " + resp.rows[0][0]);
+		 } else {
+		 	callback(resp);
+		 }
+        });
+      }
+      
+      var loading = 0;
+      var alte_adresse;
+      var marker2 = null;
+      function showpreviewmarker(lat, lng){
+      		var latlngbounds = new google.maps.LatLng(lat,lng);
+		if (marker2 != null) {//marker2 != undefined) {
+			//console.log(marker2.getMap());
+			if (marker2.getMap() != null) {
+				marker2.setMap(null);
+				//console.log(marker2.getMap());
+				//console.log("marker setmap null");
+			}
+		}
+		//map2.setCenter(latlngbounds);
+		marker2 = new google.maps.Marker({
+			map: map2,
+			position: latlngbounds,
+			draggable: true
+			//shadow: shadow,
+			//shape: shape,
+			//title: Ueberschrift,
+			//icon: image, //new google.maps.MarkerImage('fusion_tables-32.png')
+		});
+		map2.setCenter(marker2.getPosition());
+		//map2.fitBounds(latlngbounds);
+		/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+			google.maps.event.addListenerOnce(map2, "idle", function () {
+				map2.setCenter(latlngbounds);
+			});
+		}*/
+		google.maps.event.addListener(marker2, 'dragend', function() {
+			if (loading != 0) {
+				$('#insert-data-output').val("Es ist ein Prozess im Gange! Verschieben nicht möglich!");
+				var arr = $('#koordinaten').val().toString().split(","); //new google.maps.LatLng(
+				marker2.setPosition(new google.maps.LatLng(arr[0], arr[1]));
+				return;
+			}
+			//console.log("Position: " + marker2.getPosition());
+			loading = 3;
+			$("#fancybox-overlay2").show();
+			//$("#fancybox-overlay2").css('display', '');
+			$.fancybox.showLoading();
+			alte_adresse = "";
+			$('#land').val('');
+			$('#land_kurz').val('');
+			$('#ort').val('');
+			$('#koordinaten').val('');
+			$('#insert-data-output').val("");
+			$('#adresse').val("");
+			var geocoder = new google.maps.Geocoder();
+			if (geocoder) {
+				geocoder.geocode({'latLng': marker2.getPosition() }, function(results, status) {
+					//console.log(results);
+					var Land = "";
+					var Land_kurz = "";
+					var Ort = "";
+					if (status == google.maps.GeocoderStatus.OK) {
+						//if (results[0]) {
+							//console.log(results[1]);
+        						var coordinate = marker2.getPosition().lat() + "," + marker2.getPosition().lng(); //results[0].geometry.location.lat() + "," + results[0].geometry.location.lng();
+        						$.each(results[0].address_components, function(i,v) {
+        							if ( v.types[0] == "country") {
+									Land = v.long_name
+									Land_kurz = v.short_name;
+								} else if ( v.types[0] == "locality" ) {
+									Ort = v.long_name;
+								}						
+							});
+						$('#insert-data-output').val("Geocode erfolgreich durchgeführt!");
+						//console.log("Pos. geo.: " + results[0].geometry.location.Ya + ", " + results[0].geometry.location.Za)
+						//marker2.setPosition(new google.maps.LatLng(results[0].geometry.location.Ya, results[0].geometry.location.Za));
+						//map2.setCenter(marker2.getPosition());//new google.maps.LatLng(
+						//}
+					} else {
+						Land = "";
+						Land_kurz = "";
+						Ort = "";
+						if (status == "ZERO_RESULTS") {
+							$('#insert-data-output').val("Geocode konnte keine Treffer finden!");
+						} else {
+							$('#insert-data-output').val("Geocode war aus folgendem Grund nicht erfolgreich: " + status);
+						}
+					}
+					$('#land').val(Land);
+					$('#land_kurz').val(Land_kurz);
+					$('#ort').val(Ort);
+					$('#koordinaten').val(coordinate);
+					$("#fancybox-overlay2").hide();
+					$.fancybox.hideLoading();
+					loading = 0;
+					//$('#adresse').attr('readonly', false); 
+					//$("#sucheloading").css('display', 'none');
+				});
+			}
+		});
+      }
+      
+	  
+	  function detailinformationen(addresse, callback) {
+      	if (loading != 0) { 
+      		if (loading == 3) {
+      			callback("Geocoding wird bereits durchgeführt, bitte warten!");
+      		} else {
+      			callback("Geocoding nicht möglich, es läuft bereits ein Update des Markers!");
+      		}
+      		return; 
+      	}
+      	loading = 3;
+      	if (addresse == "") {
+      		callback("Bitte geben Sie eine Adresse ein!");
+      		loading = 0;
+      		return;
+      	} else if (addresse == alte_adresse) {
+      		callback("Geocode wurde bereits mit dieser Adresse durchgeführt!");
+      		loading = 0;
+      		return;
+      	} else {
+      		alte_adresse = addresse;
+      	}
+      	//$('#adresse').attr('readonly', true); 
+      	//$("#sucheloading").css('display', '');
+      	$("#fancybox-overlay2").show();
+	$.fancybox.showLoading();
+      	//$("#btn_newentry").css('display', 'none');
+      	//$("#btn_update").css('display', 'none');
+      	//$("#btn_close").css('display', 'none');
+      	var geocoder = new google.maps.Geocoder();
+      	if (geocoder) {
+      		geocoder.geocode({'address': addresse }, function(results, status) {
+      			var Land = "";
+			var Land_kurz = "";
+			var Ort = "";
+      			if (status == google.maps.GeocoderStatus.OK) {
+        			var coordinate = results[0].geometry.location.lat() + "," + results[0].geometry.location.lng();
+				$.each(results[0].address_components, function(i,v) {
+				//if (results[1]) {
+				//Land = results[1].formatted_address;
+				//}
+					if ( v.types[0] == "country") {
+						Land = v.long_name
+						Land_kurz = v.short_name;
+					} else if ( v.types[0] == "locality" ) {
+						Ort = v.long_name;
+					}
+				});
+				callback("Geocode erfolgreich durchgeführt!");
+				//vorschaukarte
+				showpreviewmarker(results[0].geometry.location.lat(),results[0].geometry.location.lng());
+			} else {
+				Land = "";
+				Land_kurz = "";
+				Ort = "";
+				if (status == "ZERO_RESULTS") {
+					callback("Geocode konnte keine Treffer finden!");
+				} else {
+					callback("Geocode war aus folgendem Grund nicht erfolgreich: " + status);
+				}
+      			}
+      			//console.log(results);
+      			$('#land').val(Land);
+      			//$('#land').hide(0, function(){$(this).show();});
+      			$('#land_kurz').val(Land_kurz);
+      			//$('#land_kurz').hide(0, function(){$(this).show();});
+      			$('#ort').val(Ort);
+      			//$('#ort').hide(0, function(){$(this).show();});
+      			$('#koordinaten').val(coordinate);
+      			//$('#koordinaten').hide(0, function(){$(this).show();});
+			//callback("Land: " + Land + " (" + Land_kurz + "), Ort: " + Ort + ", Koord.:" + coordinate);
+			loading = 0;
+			//$('#adresse').attr('readonly', false); 
+			//$("#sucheloading").css('display', 'none');
+			$("#fancybox-overlay2").hide();
+			$.fancybox.hideLoading();
+        	});
+        }
+    }
+
+      function logout(){
+			zugriff = 1;
+			$.fancybox.close();
+			var popup_window = window.open('https://www.google.com/accounts/Logout','logout_from_google','width=900,height=600,menubar=no,status=no,location=no,toolbar=no,scrollbars=no,top=20,left=20');
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+				$("#btn_mapeditor").css('display', 'none');
+				$("#btn_authorize-button").attr('class', 'button button-blue');
+			} else {
+				$("#someID").css('display', 'none');
+			}
+			$("#Trennzeichen").css('display', 'none');
+			//$("span.admin").hide();
+			//setTimeout(function() {popup_window.close ();},3000);
+			$("span.imgswap").css('background-image', 'url(schluessel.png)');
+			$("#schluessel_grau").attr("src","schluessel_grau.png");
+			}
+      
+      function login() {	
+      		infoWindow.close();
+      		switch (zugriff) {
+      			case 0:
+      				$.fancybox.open("Auth loading, please try later!");
+      				break;
+      			case 1:
+      				//handleAuthClick();
+      				handleAuthClick(function(num) {
+      					//alert(num);
+      					login();
+      				});
+      				break;
+      			case 2:
+      				$.fancybox.showLoading();
+      				some_function(function(num) {
+      					//alert(num);
+      					//login();
+      					//if (num == 3) {
+      					//	$("#someID").click();
+      					//} else {
+      					//	$.fancybox.open("You have no rights to edit the map!");
+      					//}
+      					//$("#someID").fancybox().trigger('click');
+      					//$("#inline1").fancybox().trigger('click');
+      				})
+      				break;
+      			case 3:
+      				//$("#someID").click();
+      				$.fancybox.open("Sie sind bereits angemeldet, wollen Sie sich abmelden?<br><br><br><div align=\"right\"><a class=\"button button-green\" style=\"color: #fff;\" href=\"javascript:logout();\">Abmelden<\/a><a title=\"Close\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">Abbruch<\/a><\/div>", {
+      					closeBtn : false,
+      					helpers : { 
+      						title : null, //{
+      						overlay : {
+							opacity: .56,
+							css: { cursor: 'default' },
+							closeClick: false
+						}
+					}
+					});
+      				break;
+      			case 4:
+      				//$.fancybox.open("You have no rights to edit the map!");
+      				$.fancybox.open("Sie sind bereits angemeldet und haben keine Rechte zum Bearbeiten! Wollen Sie sich abmelden?<br><br><br><div align=\"right\"><a class=\"button button-green\" style=\"color: #fff;\" href=\"javascript:logout();\">Abmelden<\/a><a title=\"Close\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">Abbruch<\/a><\/div>", {
+      					closeBtn : false,
+      					helpers : { 
+      						title : null, //{
+      						overlay : {
+							opacity: .56,
+							css: { cursor: 'default' },
+							closeClick: false
+						}
+					}
+				});
+      				break;
+      		}
+      }
+
+      function some_function(callback) {
+	//Token = gapi.auth.getToken().access_token;
+		//console.log(callback);
+        //gapi.client.load('plus', 'v1', function() {
+          //var request = gapi.client.plus.people.get({
+          //  'userId': 'me'
+          //});
+         // request.execute(function(resp) {
+          	$.fancybox.hideLoading()
+		//console.log(resp.id);
+		if (false) { //resp.id == "114011431363595298712") {
+			zugriff = 3;
+		 	//$("img.einbild").css('background-image', 'url(schluessel_login.png)');
+		 	$("span.imgswap").css('background-image', 'url(schluessel_login.png)');
+		 	$("#schluessel_grau").attr("src","schluessel_graugruen.png");
+		 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+		 		$("#btn_mapeditor").css('display', '');
+		 		$("#btn_authorize-button").attr('class', 'button button-green');
+		 	} else {
+		 		$("#someID").css('display', '');
+		 		$("#Trennzeichen").css('display', '');
+		 	}
+		 	//$("span.admin").show();
+		 	//$("span.admin").css('display', '');
+		 	$.fancybox.open("Sie wurden erfolgreich eingeloggt!<br>Sie können mittels der Schaltfläche \'map editor\' einen Eintrag hinzufügen!<br><br><br><div align=\"right\"><a title=\"OK\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">OK<\/a><\/div>", {
+		 		closeBtn : false,
+      				helpers : { 
+      					title : null, //{
+      					overlay : {
+						opacity: .56,
+						css: { cursor: 'default' },
+						closeClick: false
+					}
+				}
+			});
+		 } else {
+		 	zugriff = 4;
+		 	//$("img.einbild").css('background-image', 'url(schluessel_rot.png)');
+		 	$("span.imgswap").css('background-image', 'url(schluessel_rot.png)');
+		 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+		 		$("#btn_mapeditor").css('display', 'none');
+		 	} else {
+		 		$("#someID").css('display', 'none');
+		 	}
+		 	$("#Trennzeichen").css('display', 'none');
+		 	//$("span.admin").hide();
+		 	//$.fancybox.open("You have no rights to edit the map!");
+		 	$.fancybox.open("Sie haben keine Rechte zum Bearbeiten! Wollen Sie sich abmelden?<br><br><br><div align=\"right\"><a class=\"button button-green\" style=\"color: #fff;\" href=\"javascript:logout();\">Abmelden<\/a><a title=\"Close\" class=\"button button-blue\" style=\"color: #fff;\" href=\"javascript:$.fancybox.close();\">Abbruch<\/a><\/div>", {
+      					closeBtn : false,
+      					helpers : { 
+      						title : null, //{
+      						overlay : {
+							opacity: .56,
+							css: { cursor: 'default' },
+							closeClick: false
+						}
+					}
+			});
+		 }
+		 callback(zugriff);
+         // });
+        //});
+        
+	//gapi.client.load('oauth2', 'v2', function() {
+	//	var request = gapi.client.oauth2.userinfo.get();
+	//	request.execute(function(resp) {
+	//	 $.fancybox.hideLoading()
+	//	 if (resp.email == "xx") {
+	//	 	zugriff = 3;
+	//	 	//$("img.einbild").css('background-image', 'url(schluessel_login.png)');
+	//	 	$("span.imgswap").css('background-image', 'url(schluessel_login.png)');
+	//	 } else {
+	//	 	zugriff = 4;
+	//	 	//$("img.einbild").css('background-image', 'url(schluessel_rot.png)');
+	//	 	$("span.imgswap").css('background-image', 'url(schluessel_rot.png)');
+	//	 }
+	//	 callback(zugriff);
+	//});
+       //});
+		//callback(zugriff);
+      }
+     
+      function finit() {
+      	loading += 1;
+      	if (loading == 3) {
+      		loading = 0;
+      		$.fancybox.hideLoading();
+      	}
+      }
+      
+      $(".various").fancybox({
+      		beforeClose 	: function() { 
+      					tinyMCE.execCommand('mceRemoveControl', false, 'beschreibung');
+      					$('#insert-data-output').val("");
+      					$("#btn_update").css('display', 'none');
+      					$("#btn_newentry").css('display', '');
+      					$('#ueberschrift').val("");
+      					$('#beschreibung').val("");
+      					$('#koordinaten').val("");
+      					$('#visit').val("1");
+      					$('#foto').val("");
+      					$('#ort').val("");
+      					$('#land').val("");
+      					$('#land_kurz').val("");
+      					$('#adresse').val("");
+      					alte_adresse = "";
+      					
+      				},
+      		beforeShow	:  function() { 	
+      					//}
+      					if (zugriff !=3) { 
+      						return false; 
+      					} else { 
+      						if ($.browser.msie) { //Internet explorer bug? force refresh of empty input boxes....
+      							$('#land').hide(0, function(){$(this).show();});
+      							$('#land_kurz').hide(0, function(){$(this).show();});
+      							$('#ort').hide(0, function(){$(this).show();});
+      							$('#koordinaten').hide(0, function(){$(this).show();});
+      							$('#insert-data-output').hide(0, function(){$(this).show();});
+      							$('#ueberschrift').hide(0, function(){$(this).show();});
+      							$('#beschreibung').hide(0, function(){$(this).show();});
+      							$('#foto').hide(0, function(){$(this).show();});
+      							$('#adresse').hide(0, function(){$(this).show();});
+      						}
+      						return true;
+      						//$.fancybox.cancel();
+      					}
+      				}, // $(".various").cancel(); },
+      		afterShow	: function() {
+      					$("#fancybox-overlay2").hide();
+      					loading = 1;
+      					$.fancybox.showLoading();
+      					//if (map2 == null) {
+      					/*	map2 = new google.maps.Map(document.getElementById('mapDiv2'), {
+      							center: new google.maps.LatLng(47.070714,15.439503999999943),
+      							zoom: 6,
+      							mapTypeId: google.maps.MapTypeId.ROADMAP
+      							});	
+      						//$('#mapDiv2').html("");*/
+      					//}
+      					if ($('#koordinaten').val() == '') {
+      						infoWindow.close();
+      						/*if (marker2 != null) {//marker2 != undefined) {
+      							if (marker2.getMap() != null) {
+      								marker2.setMap(null);
+      							}
+      						}*/
+      						map2 = new google.maps.Map(document.getElementById('mapDiv2'), {
+      							center: new google.maps.LatLng(47.070714,15.439503999999943),
+      							zoom: 6,
+      							mapTypeId: google.maps.MapTypeId.ROADMAP
+      							});
+      						google.maps.event.addListenerOnce(map2, "idle", function () {
+      							finit();
+      							//alert("karte fertig");
+        					});
+      					} else {
+      						var arr = $('#koordinaten').val().toString().split(",");
+      						//map2.setCenter();
+      						map2 = new google.maps.Map(document.getElementById('mapDiv2'), {
+      							center: $('#koordinaten').val(), // new google.maps.LatLng(arr[0], arr[1]),
+      							zoom: 6,
+      							mapTypeId: google.maps.MapTypeId.ROADMAP
+      							});
+      						google.maps.event.addListenerOnce(map2, "idle", function () {
+      							finit();
+      							//alert("karte fertig");
+        					});
+      						showpreviewmarker($('#koordinaten').val());//arr[0], arr[1]);
+      					}
+      					//if (init == 0) {
+      					tinyMCE.execCommand('mceAddControl',false,'beschreibung');
+      					//}
+      					/*$('textarea.tinymce').tinymce({
+      						script_url : 'tiny_mce/tiny_mce.js',
+      						theme : "advanced",
+      						plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+      						theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,formatselect,fontselect,fontsizeselect,preview",
+      						theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,image,cleanup,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+      						theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,nonbreaking",
+      						theme_advanced_toolbar_location : "top",
+      						theme_advanced_toolbar_align : "left",
+      						theme_advanced_statusbar_location : "bottom",
+      						theme_advanced_resizing : true
+      					});*/
+      					//setTimeout("tinyMCE.execCommand('mceRemoveControl', false, 'beschreibung');", 3000);
+      					//tinyMCE.execCommand('mceRemoveControl', false, 'beschreibung');
+      				},
+      		afterClose	: function() {
+      					//$.fancybox.showLoading();
+      				},
+		maxWidth	: 946,
+		maxHeight	: 590,
+		fitToView	: false,
+		width		: '946px',
+		height		: '590px',
+		autoSize	: false,
+		closeClick	: false,
+		closeBtn	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		scrolling	: 'no',
+		padding		: 10,
+		helpers : { 
+			title : null, //{
+			//	type : 'float' // 'float', 'inside', 'outside', null or 'over'
+			//},
+			overlay : {
+				opacity: .56,
+				css: { cursor: 'default' },
+				closeClick: false
+			}}
+	});	
+
+	function bgSize() {
+		//var a = $("#addressBox"),
+		var e = $("h1"),
+		g = $("#legDiv"),
+		h = $("#legWrap"),
+		k = $("#description"),
+		p = $("#descriptionWrap"),
+		q = $("#topAd"),
+		w = $("#dataBG"),
+		v = $("#topButtons"),
+		o = $("#topBar"),
+		G = $("#adWrap"),
+		F = $("#titleDiv"),
+		r = $("#featureLinks"),
+		Q = $("#page"),
+		A = $("#mapDirections"),
+		u = $("#mapWrap"),
+		I = $("#mapBorder"),
+		W = $("#buttonsDivMap"),
+		S = $("html"),
+		O = $("#searchForm");
+		//$(map_div).outerWidth() < 700 && a.css("width", 150);
+		$(map_div).outerWidth() < 600 ? (e.css("font-size", "13px").css("font-weight", "bold"), g.css("font-size", "10px"), k.css("font-size", "11px"), q.css("width", $(map_div).outerWidth() + "px"), q.outerHeight() && q.css("height", u.outerWidth() >= 728 ? 28 : 64), w.hide(), S.css("overflow", "hidden"), g.height() || g.hide(), W.hide()) : (w.show(), W.show());
+		k.outerHeight() || g.css("text-align", "center");
+		//iphone || android ? O.hide() : $(map_div).outerWidth() <= 500 && O.outerWidth() ? (a.css("width", $(map_div).outerWidth() - 113), $(map_div).outerWidth() > 300 && locale == "us" && a.attr("title", "Search " + e.text()), e.html("")) : F.css("width", $(map_div).outerWidth() - (v.outerWidth() + 30));
+		e.show();
+		v.show();
+		r.show();
+		$(map_div).css("height", $(window).height() - (o.outerHeight() + p.outerHeight() + (G.outerHeight() ? u.outerWidth() >= 728 ? 28 : u.outerWidth() <= 234 ? 0 : 64 : 0) + h.outerHeight()));
+		$(window).height() < 359 && (h.hide(), p.hide(), G.hide(), $(map_div).css("height", $(window).height() - o.outerHeight()), u.css("height", $(map_div).outerHeight() + o.outerHeight()));
+		$(window).height() >= 359 && (h.show(), p.show(), G.show(), u.css("height", $(map_div).outerHeight() + o.outerHeight() + p.outerHeight() + h.outerHeight()));// + G.outerHeight()));
+		//var temp = $(map_div).outerHeight() + o.outerHeight() + p.outerHeight() + h.outerHeight() + G.outerHeight();
+		//console.log("height: " + $(map_div).outerHeight() + " / " + o.outerHeight() + " / " + p.outerHeight() + " / " + h.outerHeight() + " / " + G.outerHeight() + " / Summe: " + temp);
+		h.css("top", o.outerHeight());
+		I.css("top", o.outerHeight());
+		//u.css("height", $(map_div).outerHeight() + o.outerHeight() + p.outerHeight() + h.outerHeight() + G.outerHeight());
+		Q.css("top", u.outerHeight() + o.outerHeight());
+		A.css("height", $(map_div).height())
+	}
+
+	function dId(a) {
+		return document.getElementById(a)
+	}
+	
+       function initialize() {
+      	//simpleInit();
+        map_div = dId("mapDiv");
+        
+        if ($.browser.msie) {$('html').css('overflow', 'hidden');};
+        // $('html').css('overflow', 'hidden'); 
+        bgSize();
+      	map = new google.maps.Map(document.getElementById('mapDiv'), {
+		center: new google.maps.LatLng(30, 9.04881249999994),
+		zoom: 2,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
+	google.maps.event.addListenerOnce(map, "idle", function () {
+        	$(map_div).css("overflow") != "visible" && ($(map_div).css("overflow", "visible"), $(map_div).children().css("overflow", "visible").css("z-index", 0).children().css("overflow", "visible").css("z-index", 0), $("#topBar").css("z-index", 99), $("#topBG").css("z-index", 99).css("height", $("#topBar").outerHeight()))
+        });
+        window.onorientationchange = function () {
+        	bgSize()
+        };
+        window.onresize = function () {
+        	bgSize()
+        };
+    
+	//markerCluster = new MarkerClusterer(map); //, markers);
+	//infoWindow = new google.maps.InfoWindow();
+        
+        
+        /*var Laender=0;
+    	var Staedte = 0;
+        test(function(ret) { 
+        	test2(function(ret){
+        		document.getElementById ('description1').innerHTML = "<b>Wir haben " + Staedte + " Städte in " + Laender + " unterschiedlichen Ländern gesehen.</b>"; 
+        		});
+        });*/
+        
+        test2(function(ret){
+        	 //nix zu tun
+        });
+        function test2(callback) {
+			var clicks = db.collection("Countries_JP").orderBy("land_kurz");
+		clicks.get()
+		.then((querySnapshot) => {
+		    //console.log('Anzahl Datensatz: ' + querySnapshot.size); 
+			var Land_temp;
+			var Besucht = 0;
+        	var Unterschiedlich = 0;
+			querySnapshot.forEach((doc) => {
+				//flagge
+				var image = new google.maps.MarkerImage('beachflag.png',
+					// This marker is 20 pixels wide by 32 pixels tall.
+					new google.maps.Size(20, 32),
+					// The origin for this image is 0,0.
+					new google.maps.Point(0,0),
+					// The anchor for this image is the base of the flagpole at 0,32.
+					new google.maps.Point(0, 32));
+      			// Shapes define the clickable region of the icon.
+      			// The type defines an HTML &lt;area&gt; element 'poly' which traces out a polygon as a series of X,Y points. The final coordinate closes the poly by connecting to the first coordinate.
+				var shape = {
+					coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+					type: 'poly'
+				};
+				
+				//Koordinaten
+				var point = new google.maps.LatLng(doc.data().lat, doc.data().lng);
+				//marker
+				
+				createMarker(point, doc.data().ueberschrift || '', doc.data().beschreibung || '', doc.data().visit, doc.data().foto || '', doc.data().stadt || '', doc.data().land, doc.data().land_kurz, doc.id);		
+				//Länder und Unterschiede
+				if (doc.data().visit != 0) {
+					Besucht += 1;
+        			if (Land_temp != doc.data().land_kurz) {
+        				Land_temp = doc.data().land_kurz;
+        				Unterschiedlich += 1;
+        			}
+        		}
+			});
+			$("#description1").html("Wir haben " + Besucht + " Städte in " + Unterschiedlich + " unterschiedlichen Ländern gesehen."); 
+			
+			markerClusterer = new MarkerClusterer(map, markers, {
+             			ignoreHidden: true,
+             			minimumClusterSize: 2,
+             			imagePath: "m"
+             		});
+			callback(Besucht);
+			
+		})
+		.catch((error) => {
+			console.log("Error getting documents: ", error);
+		});
+		
+        	/*var query = "SELECT \'Überschrift\', Beschreibung, Location, Visit, Foto, Stadt, Land, Land_kurz, ROWID FROM " + '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs' + " ORDER BY Land_kurz";
+        	var encodedQuery = encodeURIComponent(query);
+        	var url = ['https://www.googleapis.com/fusiontables/v1/query'];
+        	url.push('?sql=' + encodedQuery);
+        	url.push('&callback=?');
+        	var z = 0;
+        	var y = 0;
+        	$.ajax({
+        		url: url.join(''),
+        		dataType: 'jsonp',
+        		success: function (data) {
+        			var rows = data['rows'];
+        			var Land_kurz_temp;
+        			for (var i in rows) {
+        				var Ueberschrift = rows[i][0];
+        				var Beschreibung = rows[i][1];
+        				var address = rows[i][2];
+        				var visit = rows[i][3];   
+        				var Foto = rows[i][4];
+        				var Stadt = rows[i][5];
+        				var Land = rows[i][6];
+        				var Land_kurz = rows[i][7];
+        				var ROWID = rows[i][8];
+        				createMarker(address, Ueberschrift, Beschreibung, visit, Foto, Stadt, Land, Land_kurz, ROWID);
+        				if (visit != 0) {
+        					z += 1;
+        					
+        					if (Land_kurz_temp != Land_kurz) {
+        						Land_kurz_temp = Land_kurz;
+        						y += 1;
+        					}
+        				}
+        			}
+        		}           
+        	}).complete(function() { 
+        		markerClusterer = new MarkerClusterer(map, markers, {
+             			ignoreHidden: true,
+             			minimumClusterSize: 2,
+             			imagePath: "m"
+             		});
+             		$("#description1").html("<b>Wir haben " + z + " Städte in " + y + " unterschiedlichen Ländern gesehen.</b>"); 
+             		callback(z);
+             	});*/
+        }
+    
+        /*function test(callback) {
+		var query = "SELECT Land, COUNT() FROM " + '1z7zREu534pFknc_DN9kq9jKaQgRovHFqWh_i4Rs' + " WHERE Visit > 0 GROUP BY Land";
+		var encodedQuery = encodeURIComponent(query);
+		// Construct the URL
+		var url = ['https://www.googleapis.com/fusiontables/v1/query'];
+		url.push('?sql=' + encodedQuery);
+		url.push('&callback=?');
+		// Send the JSONP request using jQuery
+		$.ajax({
+			url: url.join(''),
+			dataType: 'jsonp',
+			success: function (data) {
+				var rows = data['rows'];
+				//var Laender = 0;
+				for (var i in rows) {
+                        		//console.log("Antwort: " + rows[i][0] + " " + rows[i][1]);
+                        		Laender += 1;
+                        		//Staedte += rows[i][1];
+                        	}         
+                        	//$("description").text("©2018 MCPat. Wir haben " + z + " Städte in " + Laender + " unterschiedlichen Ländern gesehen.");
+                        }
+               }).complete(function() { 
+        		callback(Laender);
+               });
+        }*/
+
+        //var geocoder = new google.maps.Geocoder();
+        //function codeLatLng(e, Ueberschrift, Beschreibung, visit, Foto) {
+        // if (geocoder) {
+        //  geocoder.geocode({'address': e }, function(results, status) {
+        //   if (status == google.maps.GeocoderStatus.OK) {
+        //    			var coordinate = results[0].geometry.location;
+        //			createMarker(coordinate, Ueberschrift, Beschreibung, visit, Foto);
+        //  			} else {
+        //    			alert("Geocode was not successful for the following reason: " + status);
+        //  			}
+        //    		//windowControl(e);
+        //  });
+        // }
+        //}
+ 
+	//show("0");
+        //hide("0");
+        //hide("2");
+        
+        //var markers = [];
+        //for (var i = 0; i < 100; i++) {
+        //  var dataPhoto = data.photos[i];
+        //  var latLng = new google.maps.LatLng(dataPhoto.latitude,
+        //      dataPhoto.longitude);
+        //  var marker = new google.maps.Marker({
+        //    map: map,
+        //    position: latLng
+        //  });
+        //   markers.push(marker);
+        //}  
+	
+      					
+        gapi.auth.init(handleClientLoad);
+  }                                                               				
+  	//$().ready(function() {
+      	//});
+	//google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+  </head>
+  <body onload="initialize()">
+    <div id="mapWrap">
+	<div id="topBG"></div>
+	<div id="topBar">
+		<h1 class="hide"><div id="titleDiv">Jessi's und Patrick's Reisekarte</div></h1>
+		<div id="topButtons" ><a id="btn_mapeditor" title="Map Editor" class="button button-green" style="padding: 4px 18px;color: #fff;display:none" href="javascript:$('#someID').click();">Map Editor</a><a class="various" href="#inline1" id="someID" style="display:none" title="Map Editor"><img src="edit_ico.png" alt="Map Editor"/></a><span id="Trennzeichen" style="display:none ;">&#183;</span><a id="btn_authorize-button" title="Login/Logout" class="button button-blue" style="padding: 4px 18px;color: #fff;display:none" href="javascript:login();">Login/Logout</a><a style="display:none;" id="authorize-button" href="javascript:login();" title="Login/Logout"><!--<img src="blind.gif" class="einbild" alt="Login" />--><span class="imgswap"><img id="schluessel_grau" src="schluessel_grau.png" alt="Login"/></span></a></div><!--style="display: none;" id="authorize-button" -->
+	</div>
+	<div id="mapBorder">
+		<div id="mapDiv"></div>
+	</div><div id="legWrap" style="top: 45px; "><div id="legDiv" style="display: block; "><!--<form action="#">--><span id="legendDesc">Unsere Ziele: </span><input type="checkbox" id="1box" checked="yes" onclick="boxclick(this,'1')" /><span style="background-image: url(beachflag_small.png); background-repeat:no-repeat; ">Gesehen</span>&nbsp;&nbsp;<input type="checkbox" id="2box" checked="yes" onclick="boxclick(this,'2')" /><span style="background-image: url(favorit_small.png); background-repeat:no-repeat; ">Favorit</span>&nbsp;&nbsp;<input type="checkbox" id="0box" onclick="boxclick(this,'0')" /><span style="background-image: url(notvisited.png); background-repeat:no-repeat; ">Geplant</span>&nbsp;&nbsp;<input type="checkbox" id="3box" checked="yes" onclick="boxclick(this,'3')" />Markercluster<!--</form>--></div></div>
+	<div id="descriptionWrap"><div id="description">Copyright &copy; 2014-<script>document.write(new Date().getFullYear())</script> MCPat. <span id="description1"></span></div></div>
+	</div>
+	
+</body>
+<div id="inline1" style="display:none;width:946px;height:590px">
+			<!--<h2>Map Editor</h2>
+			<p>-->
+				<table>
+				<tr><td>Adresse:</td><td><input id="adresse" style="border: 1px solid #A4A4A4; width: 200px; padding: 1px;" type="text" />&nbsp;<a title="Suche" id="btn_search" class="button button-green" style="color: #fff;" href="javascript:detailinformationen($('#adresse').val(), function(ret){$('#insert-data-output').val(ret); });"><img id="sucheloading" style="vertical-align:middle; margin-right: 10px; display:none;" height="16px" width="16px" src="loading_transparent2.gif" alt="Loading"/>Suche</a></td><td rowspan=11 valign=top ><div id="mapDiv2" style="width: 250px; height: 400px"></div></td></tr>
+				<tr><td>Ort:</td><td><input id="ort" style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" readonly /></td></tr>
+				<tr><td>Land:</td><td><input id="land" style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" readonly /></td></tr>
+				<tr><td>Länderkürzel:</td><td><input style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 30px; padding: 1px;" id="land_kurz" type="text" readonly /></td></tr>
+				<tr><td>Koordinaten<font color="#ff0000">*</font>:</td><td><input style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" id="koordinaten" type="text" readonly /></td></tr>
+				<tr><td>Besuchstatus:</td><td>
+					<select id="visit" style="border: 1px solid #A4A4A4; width: 120px; padding: 1px;" >
+						<option value="0">Nicht gesehen</option>
+						<option value="1" selected="selected">Gesehen</option>
+						<option value="2">Favorit</option>
+					</select></td></tr>
+				<tr><td>Fotourl:</td><td><input id="foto" style="border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" /></td></tr>
+				<tr><td>Überschrift<font color="#ff0000">*</font>:</td><td><input id="ueberschrift" style="border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" /></td></tr>
+				<!--<tr><td>Beschreibung:</td><td><input id="beschreibung" style="border: 1px solid #A4A4A4;" type="text" size="70" ></td></tr>-->
+				<tr><td>Beschreibung:</td><td><textarea id="beschreibung" style='border: 1px solid #A4A4A4; width: 597px; height: 197px; padding: 1px;' class="tinymce"></textarea></td></tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr><td>Debug:</td><td><input id="insert-data-output" style="background-color: #BDBDBD; border: 1px solid #A4A4A4; width: 593px; padding: 1px;" type="text" readonly /></td></tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr><td><font color="#ff0000">*</font> Pflichtfeld</td></tr>
+				</table>
+			<!--</p>
+			<p>-->
+			<div align="right">
+				<a id="btn_newentry" title="Add" class="button button-green" style="color: #fff;" href="javascript:newentry(function(ret){$('#insert-data-output').val(ret);});">Hinzufügen</a>
+				<a id="btn_update" title="Add" class="button button-green" style="color: #fff; display:none;" href="javascript:updatemarker2(function(ret){$('#insert-data-output').val(ret);});">Update</a>
+				<a id="btn_close" title="Close" class="button button-blue" style="color: #fff;" href="javascript:$.fancybox.close();">Abbruch</a>
+				<!--<div id="fancybox-loading"><div></div></div>-->
+				<div id="fancybox-overlay2" style="cursor: default; opacity: 0; display: block; width: 100%; height: 100%;" class="overlay-fixed"></div>
+			</div>
+			<!--</p>-->
+			</div>	
+</html>
