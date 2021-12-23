@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Date: Thu, 23 Dec 2021 12:37:42 +0000
+MD5Sum:
+ 8a6683f6614745fdfa77f6e0056824db              828 Packages
+ 831914779350c538f509fdc4452b4fc3              534 Packages.gz
+ 304b7eb207e44a519dde986635beb316               38 Release
+SHA1:
+ 0aa32728a81a721b48b385388f59be8790cc5013              828 Packages
+ 347eb326c79592e5c286fa2634b645f922b5d537              534 Packages.gz
+ aaca58e4b8691c86006dd3df0d37db0cd07876dc               38 Release
+SHA256:
+ 505a2c2f9205e81bfb970fc9a08a523dbb8aab22471b88ef730d16fc66338d9c              828 Packages
+ fce98581daeb40a8405e72d54da257b152b31c26d55b207f140f78a52fb53452              534 Packages.gz
+ 90c88462536ecbf7294d329d4f508dd26d6edb0a2edb590104cfda478a0cc72f               38 Release
+SHA512:
+ b755e927e666d529a3b5e2db1c03618efffa23772e9eed2323e9b90a8fc8be02f254604ca917c9a45fa008b47741c2afaffc4fa3884383ffc1950c39c79fd548              828 Packages
+ afb27ec89026dc4766c0fbcc81dc1b5cd01d936d119188dc7cdd9d1ebc58d8a01f33fdd247a6ef9a1e7c5f728417fd510a724793ab8e67e353f970d24a24078a              534 Packages.gz
+ cfe5a2f0af1a16cb8c154c3c053a500dba014ae39bce9f38e026a8f1f07fde16d440727ba42ad39789e3ee3beb8b30d8ee393c2c5518d23bddeab5c58a18748d               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIcBAEBAgAGBQJhxG2nAAoJEJhS9ozAAAzLPxYP/A1D9DvIxgVtlFr3NelTM3k5
+wDW+d5Zt+DDHHJUENZs3nStRsc5QsXd8aOswsCjaYwxhbaX+yJPuVT3IkotlXfbw
+bkJr1KZiyT/PBBCQ61eOyH69/hCejuUnQ5AYYx8CH7HCaxaJCSaExXoRAqiiSsMj
+wpQpzAv3w/f/h44EKNYljoE5nsc1c1cfcJ3V9ikMpc+dlwErxpEP32/E/QHxw0Hd
+g+nD1+loP0zDnQmT2ILGMQD4MyCg+pJLyeXd4d2rC5cQxIlASbufmrHgwA6SUZF8
+QAT7rcYJ1CA2dZ4+WdCpCvz4vP/fNj4PW8uGXGcrTkSnajJg4bazQUSHiAfM3rYV
+AF1Z6aDql2GoPYynJu/aEMGLamX3x7JCAHC+AFUbnH8qAAgUhVta2wacMuVRKriq
+B5bA1KC2spoKQktxF9tqjaZHACCXGecrKSewFsMI2eLk9iN2r3wXuvCSQda45Cpk
+a7NoL/brDmzm/DX28obbV4fl5RZsF2znCb+qZXDqxjsw6cyXRsP1PgwajWW9SUFq
+TTd/pyfUV7QED0uFMSUb34gDP+0loobRy5aiPRHUfHlwt5IGS4wJTCKXWWeZv5Mu
+idhfBRLEVHVvdEYddqpoHQuPLlwKbKh3ssDEOyC4EM8WqXjqx6c5hmMPDGaw8WsP
+bEFlpm7uHfV8w7Yo+tP3
+=Kw1s
+-----END PGP SIGNATURE-----
