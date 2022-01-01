@@ -1,0 +1,28 @@
+Origin: github.mcpat.com
+Label: apt repository
+Codename: unifi
+Date: Sat, 01 Jan 2022 23:23:03 UTC
+Architectures: arm64
+Components: main
+Description: Unifi package repo
+MD5Sum:
+ 3199680c7fc65ef2a81ea1f5e842d186 738 main/binary-arm64/Packages
+ aa68538b1e0e0bfe7a1d0f7ec47352f8 499 main/binary-arm64/Packages.gz
+ 6ddec992b89fcfbfb376a44d3ca0c8c5 115 main/binary-arm64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
+ 59c49b3cca44921560ad9f80b8086c2e 116 main/source/Release
+SHA1:
+ ef3926c2b8430f30d03ac98492baea5c247d070b 738 main/binary-arm64/Packages
+ 1d13dd172b8693f3f487aedaced3701c750ee3b4 499 main/binary-arm64/Packages.gz
+ 4e0bb99cd48bc52691f5a7d3f828f947b710b14f 115 main/binary-arm64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
+ 8b8ed1967517f06bfd1a3835b1073af80d3bb7cc 116 main/source/Release
+SHA256:
+ 16978dfef7f7d19e69097279e17b386d8ff1bc05aa9bd0ab1beb32f2d1bee27e 738 main/binary-arm64/Packages
+ 8c80e7990430eca8d8605734f4d6217acbf0befd284ddb42b8953c33a4ce0caf 499 main/binary-arm64/Packages.gz
+ 7b1fd2058a9f44c504e15a8ca963dd05519c9a81e1c72f16ec7a2bd3c74c8f36 115 main/binary-arm64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
+ b69958d19850adf73b4cc9a3f50cff5124e57f75cc38530ea98074dc48902857 116 main/source/Release

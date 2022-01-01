@@ -1,0 +1,5 @@
+Component: main
+Origin: github.mcpat.com
+Label: apt repository
+Architecture: arm64
+Description: Unifi package repo
