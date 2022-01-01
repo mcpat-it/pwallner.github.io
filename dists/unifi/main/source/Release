@@ -1,5 +1,0 @@
-Component: main
-Origin: github.mcpat.com
-Label: apt repository
-Architecture: source
-Description: Unifi debian package repo
