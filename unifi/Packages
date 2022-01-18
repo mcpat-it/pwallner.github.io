@@ -8,14 +8,63 @@ Source: glibc
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Depends: libgcc-s1, libcrypt1
 Filename: ./libc6_2.26_arm64.deb
-Size: 1017240
-MD5sum: 6dc74f81a7908502561a0aa8b9257f27
-SHA1: e5bbd6e4b35af00d0f70b747271a1cd03613d2c5
-SHA256: d51ccae9181ddad5d6cabe07b2602ff23581bbe4377a7c5bce352fa94571c935
-SHA512: 498cdbd8bf8126c6faaf1776c3bdc37e5668671c4fa60c9d85ecc91a68d67f9b3f01ecb0a12f760d3099cfd5442c58075bf43a1e52ea07183ab3988d03daaa75
+Size: 2687880
+MD5sum: 1d1fb2b6bbe273e8632b41eafdae79f1
+SHA1: 3d9b9bcd10df2476f4eac55419f31e13c58839fe
+SHA256: 3026d2e71a561556b752da76d11434d75ef539f88a22d5130cadae6890c1d2af
+SHA512: 639d611f5525a631d1acddf8823e0861757eb9b048d2388a9743b5ce2152b723fa438f3c83d07d114460ea2de625106f306145c2560729dd6ca6282dede7e5d8
 Homepage: https://www.gnu.org/software/libc/libc.html
 Description: GNU C Library: Shared libraries
  Contains the standard libraries that are used by nearly all programs on
  the system. This package includes shared versions of the standard C library
  and the standard math library, as well as many others.
+
+Package: libcrypt1
+Architecture: arm64
+Version: 1:2.26
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: libxcrypt
+Maintainer: MCPat <no-reply@mcpat.com>
+Depends: libc6 (>= 2.26)
+Filename: ./libcrypt1_2.26_arm64.deb
+Size: 14794
+MD5sum: 43f3b51386af05b6d8dc15bfb53d6a41
+SHA1: 174652dab19f930d16fe421e7ea02d300c7a0cbf
+SHA256: dc7f7165c1b4fca628aa962d6ff6f1d54e2de58806a8484b6eca0224db54380b
+SHA512: bebf4b4fa92e76679074b22533b8085a41c5c34491365324e42f3acca2800c777caec86c86af9d50e6f244a04e066ece6bcaf27da7bbf5e198cb9fb4bb806f55
+Description: libcrypt shared library
+ libxcrypt is a modern library for one-way hashing of passwords.
+ It supports DES, MD5, NTHASH, SUNMD5, SHA-2-256, SHA-2-512, and
+ bcrypt-based password hashes
+ It provides the traditional Unix 'crypt' and 'crypt_r' interfaces,
+ as well as a set of extended interfaces like 'crypt_gensalt'.
+Protected: yes
+Important: yes
+
+Package: libgcc-s1
+Architecture: arm64
+Version: 6.4.0
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-10
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 95
+Provides: libgcc1 (= 1:6.4.0)
+Depends: libc6 (>= 2.26)
+Filename: ./libgcc-s1_6.4.0_arm64.deb
+Size: 107322
+MD5sum: 596aaa3be22f37a4579e1c0da12d1d35
+SHA1: 1c85d3728aee0722950dac03cbd4937f804fa37f
+SHA256: e17c3f7c1594422ac4b47c768ac5bdba2d4832cc68287a1c6becef2b81d21f80
+SHA512: e2d8e005b7ee27ab47162ebd8548d4e54f91a9d6a374ea5d0c1fd296d431b1bf48526428ab29babdf4265eaf846d58e35eda5398f5eaccc7c04b1b9125753100
+Homepage: http://gcc.gnu.org/
+Description: GCC support library
+ Shared version of the support library, a library of internal subroutines
+ that GCC uses to overcome shortcomings of particular machines, or
+ special needs for some languages.
+Protected: yes
+Important: yes
 
