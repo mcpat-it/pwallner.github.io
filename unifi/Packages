@@ -8,11 +8,11 @@ Source: glibc
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Depends: libgcc-s1, libcrypt1
 Filename: ./libc6_2.26_arm64.deb
-Size: 2687880
-MD5sum: 1d1fb2b6bbe273e8632b41eafdae79f1
-SHA1: 3d9b9bcd10df2476f4eac55419f31e13c58839fe
-SHA256: 3026d2e71a561556b752da76d11434d75ef539f88a22d5130cadae6890c1d2af
-SHA512: 639d611f5525a631d1acddf8823e0861757eb9b048d2388a9743b5ce2152b723fa438f3c83d07d114460ea2de625106f306145c2560729dd6ca6282dede7e5d8
+Size: 2703536
+MD5sum: 4889cdb3bfd16b580bc9e261ed784433
+SHA1: 8cc9c9f8440b2ae9815bd1a6191c31f690ab4bcf
+SHA256: af95b91d5c8d7940d18c4dc32eaeca5d0879bc546a1d4037f9d988827ba5ae91
+SHA512: 741d3b640aecc17394e108e216d982127c02c0e5154ebcabedfe8fb64d8ffbcfb3e044eaea81cf74a71f94016bef491a707676282cff59936aecb02cc3fc523c
 Homepage: https://www.gnu.org/software/libc/libc.html
 Description: GNU C Library: Shared libraries
  Contains the standard libraries that are used by nearly all programs on
