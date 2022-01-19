@@ -1,3 +1,24 @@
+Package: libc6
+Architecture: arm64
+Version: 2.26
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: glibc
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Depends: libgcc-s1, libcrypt1
+Filename: ./libc6_2.26_arm64.deb
+Size: 2703536
+MD5sum: 4889cdb3bfd16b580bc9e261ed784433
+SHA1: 8cc9c9f8440b2ae9815bd1a6191c31f690ab4bcf
+SHA256: af95b91d5c8d7940d18c4dc32eaeca5d0879bc546a1d4037f9d988827ba5ae91
+SHA512: 741d3b640aecc17394e108e216d982127c02c0e5154ebcabedfe8fb64d8ffbcfb3e044eaea81cf74a71f94016bef491a707676282cff59936aecb02cc3fc523c
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Shared libraries
+ Contains the standard libraries that are used by nearly all programs on
+ the system. This package includes shared versions of the standard C library
+ and the standard math library, as well as many others.
+
 Package: libcrypt1
 Architecture: arm64
 Version: 1:2.26
